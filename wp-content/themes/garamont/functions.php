@@ -26,15 +26,22 @@ function create_post_type()
     );
 }
 
-// Enlever l'éditeur visuel d'une page
-function wpse_58501_page_can_richedit( $can )
-{
-    global $post;
+/**
+ * Hide editor for specific page templates.
+ *
+ */
+add_action( 'admin_init', 'hide_editor' );
 
-    if ( 16 == $post->ID )
-    return false;
+function hide_editor() {
+// Get the Post ID.
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+    if( !isset( $post_id ) ) return;
 
-    return $can;
+// Get the name of the Page Template file.
+    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+    if($template_file == 'lycee.php'){ // edit the template name
+        remove_post_type_support('page', 'editor');
+    }
 }
 
 ?>
