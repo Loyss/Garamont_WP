@@ -1589,7 +1589,27 @@
   }
 }
 /*********Formation*********/
+.formations .margin-top-row-1 {
+  margin-top: 50px;
+}
+.formations .corner-top-left {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  width: 200px;
+}
+.formations .corner-top-right {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .formations .visuel-formations {
+  margin-top: 75px;
   position: relative;
   max-height: 70vh;
   overflow: hidden;
@@ -1696,7 +1716,7 @@
   border-color: transparent;
 }
 .formations .tab-content {
-  padding-top: 20px;
+  padding-top: 0;
   padding-bottom: 20px;
 }
 .formations .tab-content #toutes a {
@@ -1724,7 +1744,7 @@
 }
 .formations .tab-content .item p {
   float: right;
-  width: 45%;
+  width: 48%;
   line-height: 60px;
   font-size: 1.1em;
 }
@@ -1735,7 +1755,7 @@
 }
 .formations .tab-content .item-1,
 .formations .tab-content .triangle-1 {
-  top: 1px;
+  top: 2px;
 }
 .formations .tab-content .item-2,
 .formations .tab-content .triangle-2 {
@@ -1748,7 +1768,7 @@
 }
 .formations .tab-content .item-3,
 .formations .tab-content .triangle-3 {
-  bottom: 1px;
+  bottom: 2px;
 }
 .formations .tab-content .item-4,
 .formations .tab-content .triangle-4 {
@@ -1784,6 +1804,7 @@
 .formations .tab-content .nav-side {
   float: right;
   margin-right: 10px;
+  margin-left: 15px;
   padding-left: 0;
 }
 .formations .tab-content .nav-side li {
@@ -1805,6 +1826,7 @@
   font-weight: bold;
 }
 .formations .tab-content .nav-side li.title {
+  margin-top: 20px;
   margin-bottom: 100px;
   border-bottom: none;
 }
@@ -1818,6 +1840,15 @@
 }
 .formations .tab-content .nav-side li.title .vert {
   color: #1fa17e;
+}
+@media (max-width: 950px) {
+  .formations .margin-top-row-1 {
+    margin-top: 100px;
+  }
+  .formations .corner-top-left,
+  .formations .corner-top-right {
+    width: 170px;
+  }
 }
 /*********contact*********/
 .contact {

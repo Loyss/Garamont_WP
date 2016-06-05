@@ -245,7 +245,10 @@ Template Name: Formations
         <div class="tab-content hidden-xs">
             <div role="tabpanel" class="tab-pane fade in active hidden-xs" id="toutes">
                 <div class="container">
-                    <div class="row">
+                    <img class="corner-top-left" src="<?php bloginfo('template_directory'); ?>/img/formation_fond2.png" alt="">
+                    <img class="corner-top-right" src="<?php bloginfo('template_directory'); ?>/img/formation_fond2.png" alt="">
+
+                    <div class="row margin-top-row-1">
                         <div class="col-md-5 col-md-offset-1 margin-top-sm-xs-20">
                             <a href="javascript:;" id="losange-ind_graph">
                                 <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/ind_grap.png" alt="">
