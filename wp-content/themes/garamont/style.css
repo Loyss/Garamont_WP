@@ -1362,12 +1362,13 @@
   text-align: center;
   overflow: hidden;
   cursor: default;
+  padding-left: 0;
 }
 .projets-tabs .simplefilter li {
   font-family: 'Lato', sans-serif;
   display: inline-block;
   height: 34px;
-  margin: 0 15px 10px;
+  /*margin: 0 15px 10px;*/
   padding: 0 20px;
   font-size: 13px;
   font-weight: 400;
@@ -1452,16 +1453,12 @@
 .projets-visuels {
   overflow: hidden;
 }
-.projets-visuels .projets-visuels img {
-  width: 100%;
-}
 .projets-visuels .projets-visuels .projets-items {
   margin: 0 0 0 0;
   position: relative;
 }
-.projets-visuels .projets-visuels .projets-items .images-projets {
-  height: 380px;
-  overflow: hidden;
+.projets-visuels .projets-visuels .projets-items .images-projets img {
+  width: 100%;
 }
 .projets-visuels .projets-visuels .projets-items .mask {
   opacity: 0;
@@ -2055,6 +2052,9 @@
   }
 }
 @media (max-width: 991px) {
+  .projets-visuels .projets-visuels .projets-items .images-projets {
+    height: auto;
+  }
   .lycee .titre {
     text-align: center;
   }
@@ -2136,6 +2136,9 @@
   }
 }
 @media (max-width: 560px) {
+  .projets-tabs .simplefilter li {
+    width: 60%;
+  }
   .home #carousel-example-generic .arrow {
     position: relative;
     bottom: 60px;

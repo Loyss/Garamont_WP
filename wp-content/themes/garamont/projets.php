@@ -58,7 +58,7 @@ Template Name: Projets
         <div class="row no-margin projets-visuels">
             <?php $myquery = new WP_Query(array('post_type' => 'projets')); ?>
             <?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
-            <div class="col-md-4 no-padding projets-items filtr-item" data-category="<?php the_field('tag_projet') ?>">
+            <div class="col-md-4 col-sm-12 no-padding projets-items filtr-item" data-category="<?php the_field('tag_projet') ?>">
                 <a href="#<?php the_field('numero_projet') ?>" class="portfolio-link" data-toggle="modal">
                     <div class="images-projets">
                         <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
