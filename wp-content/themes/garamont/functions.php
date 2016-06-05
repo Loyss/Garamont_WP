@@ -26,12 +26,8 @@ function create_post_type()
     );
 }
 
-/**
- * Hide editor for specific page templates.
- *
- */
+// Hide editor for specific page templates.
 add_action( 'admin_init', 'hide_editor' );
-
 function hide_editor() {
 // Get the Post ID.
     $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
@@ -42,6 +38,13 @@ function hide_editor() {
     if($template_file == 'lycee.php'){ // edit the template name
         remove_post_type_support('page', 'editor');
     }
+}
+
+// Hide category from admin menu wordpress
+add_action('admin_menu', 'my_remove_menus');
+function my_remove_menus() {
+    remove_menu_page('edit.php');
+    remove_menu_page('edit-comments.php');
 }
 
 ?>
