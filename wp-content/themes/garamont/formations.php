@@ -311,7 +311,7 @@ Template Name: Formations
                                 <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/artisanat.png" alt="">
                             </a>
                             <div class="row">
-                                <a href="javascript:;" class="a-artisanat">
+                                <a href="javascript:;" class="a-com-visuelle">
                                     <div class="item item-2 text-center padding-right-20">
                                         <p><span>Communication visuelle</span></p>
                                     </div>
@@ -325,7 +325,7 @@ Template Name: Formations
                                 <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/design.png" alt="">
                             </a>
                             <div class="row">
-                                <a href="javascript:;" class="a-design">
+                                <a href="javascript:;" class="a-com-medias-impr">
                                     <div class="item item-2 text-center padding-right-20">
                                         <p><span>Communication et médias imprimés</span></p>
                                     </div>
@@ -429,38 +429,70 @@ Template Name: Formations
 
             <div role="tabpanel" class="tab-pane fade" id="artisanat">
                 <div class="container-fluid">
-                    <div class="col-md-3 title-div col-sm-3 sidebar">
-                        <div class="col-md-4 col-sm-4 text-center vert">
-                            <h4>bac pro</h4>
-                        </div>
-                        <div class="col-md-8 col-sm-8 text-center border-left">
-                            <h4>artisanat des métiers d'arts</h4>
-                        </div>
+                    <div class="col-md-3 col-sm-3 sidebar">
+                        <ul class="nav-side" role="tablist">
+                            <li role="presentation" class="active title">
+                                <a href="#artisanat_gen" aria-controls="artisanat_gen" role="tab" data-toggle="tab">
+                                    <div class="col-md-4 col-sm-4 text-center vert">
+                                        <h4>bac pro</h4>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 text-center border-left">
+                                        <h4>artisanat des métiers d'arts</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="col-md-offset-4">
+                                <a href="#com-visuelle" id="a-com-visuelle-2" aria-controls="e-impr" role="tab" data-toggle="tab">Communication visuelle</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-md-7 col-sm-7 text-div">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="artisanat_gen">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="com-visuelle">
+                                <h2>Communication visuelle</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div role="tabpanel" class="tab-pane fade" id="design">
                 <div class="container-fluid">
-                    <div class="col-md-3 title-div col-sm-3 sidebar">
-                        <div class="col-md-4 col-sm-4 text-center vert">
-                            <h4>bac pro</h4>
-                        </div>
-                        <div class="col-md-8 col-sm-8 text-center border-left">
-                            <h4>design graphique</h4>
-                        </div>
+                    <div class="col-md-3 col-sm-3 sidebar">
+                        <ul class="nav-side" role="tablist">
+                            <li role="presentation" class="active title">
+                                <a href="#design_gen" aria-controls="design_gen" role="tab" data-toggle="tab">
+                                    <div class="col-md-4 col-sm-4 text-center vert">
+                                        <h4>bac pro</h4>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 text-center border-left">
+                                        <h4>design graphique</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="col-md-offset-4">
+                                <a href="#com-medias-impr" id="a-com-medias-impr-2" aria-controls="com-medias-impr" role="tab" data-toggle="tab">Communication visuelle</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-md-7 col-sm-7 text-div">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="design_gen">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="com-medias-impr">
+                                <h2>Communication visuelle</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
