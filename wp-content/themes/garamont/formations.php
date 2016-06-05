@@ -79,7 +79,7 @@ Template Name: Formations
                     <a class="collapsed" href="#collapse2_1" role="button" data-toggle="collapse" data-parent="#collapse2"  aria-expanded="false" aria-controls="collapse2_1">
                         <h5>
                             <i class="fa fa-caret-right" aria-hidden="true"></i>
-                            Production imprimée
+                            Études et réalisation de produits imprimés
                         </h5>
                     </a>
                     <div id="collapse2_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
@@ -91,12 +91,12 @@ Template Name: Formations
                     <a class="collapsed" href="#collapse2_2" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse2_2">
                         <h5>
                             <i class="fa fa-caret-right" aria-hidden="true"></i>
-                            Production graphique
+                            Études et réalisation de produits graphiques
                         </h5>
                     </a>
                     <div id="collapse2_2" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
                         <div class="margin-left-60">
-                            <?php the_field('production_graphique') ?>
+                            <?php the_field('études_et_realisation_de_produits_graphiques') ?>
                         </div>
                     </div>
 
