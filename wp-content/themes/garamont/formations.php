@@ -223,7 +223,7 @@ Template Name: Formations
 
                     <div class="row margin-top-row-1">
                         <div class="col-md-5 col-md-offset-1 margin-top-sm-xs-20">
-                            <a href="javascript:;" id="losange-ind_graph">
+                            <a href="javascript:;" class="losange-ind_graph">
                                 <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/ind_grap.png" alt="">
                             </a>
                             <div class="row">
