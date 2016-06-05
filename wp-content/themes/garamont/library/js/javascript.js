@@ -68,6 +68,7 @@ $(document).ready(function(){
         $("#a-com-medias-impr-2").trigger("click");
     });
 
+
     //Animation des hr de la page home
     setTimeout(function(){
         $('.trans--grow').addClass('grow');

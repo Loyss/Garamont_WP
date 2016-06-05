@@ -162,22 +162,24 @@ Template Name: Accueil
                         <div class="teamrow row">
                             <div class="team-item col-xs-12 col-sm-2 col-sm-offset-2">
                                 <div class="tream-entry">
-                                    <a href="formations.php" class="team-img">
-                                        <img src="img/projet-portrait-1.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <div class="team-hover table-view">
-                                        <div class="cell-view">
-                                            <div class="team-name">
-                                                <div class="h5">
-                                                    Formation
+                                    <a href="javascript:;">
+                                        <div class="team-img a-home-ind">
+                                            <img src="img/projet-portrait-1.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="team-hover table-view">
+                                            <div class="cell-view">
+                                                <div class="team-name">
+                                                    <div class="h5">
+                                                        Formation
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="team-social">
+                                                    Façonnage industriel <br> et routage
                                                 </div>
                                             </div>
-                                            <hr>
-                                            <div class="team-social">
-                                                Façonnage industriel <br> et routage
-                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="team-item col-xs-12 col-sm-2">

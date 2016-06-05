@@ -183,18 +183,6 @@ Template Name: Formations
                 </a>
             </li>
 
-            <a class="col-xs-offset-2 col-xs-10 visible-xs formation-xs a-ind" href="javascript:;">
-                <i class="fa fa-caret-right" aria-hidden="true"></i> Façonnage industriel et routage
-            </a>
-            <a class="col-xs-offset-2 col-xs-10 visible-xs formation-xs" href="">
-                <i class="fa fa-caret-right" aria-hidden="true"></i>
-                Production imprimée
-            </a>
-            <a class="col-xs-offset-2 col-xs-10 visible-xs formation-xs" href="">
-                <i class="fa fa-caret-right" aria-hidden="true"></i>
-                Production graphique
-            </a>
-
             <li role="presentation" class="col-md-2 col-sm-5 col-xs-12 text-center margin-top-xs-10">
                 <a href="#com_grap" aria-controls="com_grap" role="tab" data-toggle="tab" id="li-com_graph">
                   <span class="vert">
@@ -204,14 +192,7 @@ Template Name: Formations
                     Communication et industrie graphique
                 </a>
             </li>
-
-            <a class="col-xs-offset-2 col-xs-10 visible-xs formation-xs" href="javascript:;" id="a-ind">
-                <i class="fa fa-caret-right" aria-hidden="true"></i> Études et réalisation de produits imprimés
-            </a>
-            <a class="col-xs-offset-2 col-xs-10 visible-xs formation-xs" href="javascript:;" id="a-ind">
-                <i class="fa fa-caret-right" aria-hidden="true"></i> Études et réalisation de produits graphiques
-            </a>
-
+            
             <li role="presentation" class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-12 text-center margin-top-xs-10">
                 <a href="#artisanat" aria-controls="artisanat" role="tab" data-toggle="tab" id="li-artisanat">
                 <span class="vert">
