@@ -8,7 +8,7 @@ Template Name: Formations
 
     <div class="formations garamond">
         <div class="container-fluid visuel-formations no-padding">
-            <img src="img/img_formations.jpg" alt="">
+            <img src="<?php bloginfo('template_directory'); ?>/img/img_formations.jpg" alt="">
             <div class="mask"></div>
             <h1 class="text-center garamond">Formations</h1>
         </div>
@@ -247,7 +247,9 @@ Template Name: Formations
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5 col-md-offset-1 margin-top-sm-xs-20">
-                            <a href="javascript:;" id="losange-ind_graph"><img class="losange" src="img/ind_grap.png" alt=""></a>
+                            <a href="javascript:;" id="losange-ind_graph">
+                                <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/ind_grap.png" alt="">
+                            </a>
                             <div class="row">
                                 <a href="javascript:;" class="a-ind">
                                     <div class="item item-1 text-center padding-right-20">
@@ -277,7 +279,9 @@ Template Name: Formations
                             </div>
                         </div>
                         <div class="col-md-5 margin-top-sm-xs-20">
-                            <a href="javascript:;" class="losange-com_graph"><img class="losange" src="img/com_graph.png" alt=""></a>
+                            <a href="javascript:;" class="losange-com_graph">
+                                <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/com_graph.png" alt="">
+                            </a>
                             <div class="row">
                                 <a href="javascript:;" class="a-e-impr">
                                     <div class="item item-4 text-center padding-right-20">
@@ -300,7 +304,9 @@ Template Name: Formations
                     </div>
                     <div class="row margin-top-20">
                         <div class="col-md-5 col-md-offset-1">
-                            <a href="javascript:;" class="a-artisanat"><img class="losange" src="img/artisanat.png" alt=""></a>
+                            <a href="javascript:;" class="a-artisanat">
+                                <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/artisanat.png" alt="">
+                            </a>
                             <div class="row">
                                 <a href="javascript:;" class="a-artisanat">
                                     <div class="item item-2 text-center padding-right-20">
@@ -312,7 +318,9 @@ Template Name: Formations
                             </div>
                         </div>
                         <div class="col-md-5 margin-top-sm-xs-20">
-                            <a href="javascript:;" class="a-design"><img class="losange" src="img/design.png" alt=""></a>
+                            <a href="javascript:;" class="a-design">
+                                <img class="losange" src="<?php bloginfo('template_directory'); ?>/img/design.png" alt="">
+                            </a>
                             <div class="row">
                                 <a href="javascript:;" class="a-design">
                                     <div class="item item-2 text-center padding-right-20">

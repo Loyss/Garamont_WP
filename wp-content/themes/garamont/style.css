@@ -1590,7 +1590,6 @@
 }
 /*********Formation*********/
 .formations .visuel-formations {
-  margin-top: 75px;
   position: relative;
   max-height: 70vh;
   overflow: hidden;
