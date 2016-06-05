@@ -24,9 +24,7 @@ Template Name: Formations
                 </h4>
             </a>
             <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                </p>
+                <?php the_field('industries_graphiques') ?>
                 <div class="panel-group formation-xs" id="accordion" role="tablist" aria-multiselectable="true">
                     <a class="collapsed" href="#collapse1_1" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse1_1">
                         <h5>
@@ -35,9 +33,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse1_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('façonnage_industriel_et_routage') ?>
                     </div>
 
                     <a class="collapsed" href="#collapse1_2" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse1_2">
@@ -47,9 +43,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse1_2" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('production_imprimee') ?>
                     </div>
 
                     <a class="collapsed" href="#collapse1_3" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse1_3">
@@ -59,9 +53,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse1_3" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('production_graphique') ?>
                     </div>
                 </div>
             </div>
@@ -76,9 +68,7 @@ Template Name: Formations
                 </h4>
             </a>
             <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus ad animi at aut beatae debitis distinctio facilis fuga illo laboriosam nulla quibusdam quidem sed, sint veritatis voluptate voluptates voluptatum.
-                </p>
+                <?php the_field('communication_et_industrie_graphique') ?>
                 <div class="panel-group formation-xs" id="accordion" role="tablist" aria-multiselectable="true">
                     <a class="collapsed" href="#collapse2_1" role="button" data-toggle="collapse" data-parent="#collapse2"  aria-expanded="false" aria-controls="collapse2_1">
                         <h5>
@@ -87,9 +77,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse2_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('études_et_realisation_de_produits_imprimes') ?>
                     </div>
 
                     <a class="collapsed" href="#collapse2_2" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse2_2">
@@ -99,9 +87,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse2_2" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('production_graphique') ?>
                     </div>
 
                 </div>
@@ -117,9 +103,7 @@ Template Name: Formations
                 </h4>
             </a>
             <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur dolorem doloribus, dolorum eligendi fugit ipsam labore magnam molestias optio porro quam quas quibusdam quos reprehenderit sequi veniam, vitae voluptatibus!
-                </p>
+                <?php the_field('artisanat_des_métiers_darts') ?>
                 <div class="panel-group formation-xs" id="accordion" role="tablist" aria-multiselectable="true">
                     <a class="collapsed" href="#collapse3_1" role="button" data-toggle="collapse" data-parent="#collapse2"  aria-expanded="false" aria-controls="collapse3_1">
                         <h5>
@@ -128,9 +112,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse3_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('communication_visuelle') ?>
                     </div>
                 </div>
             </div>
@@ -145,9 +127,7 @@ Template Name: Formations
                 </h4>
             </a>
             <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="heading4">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur dolorem doloribus, dolorum eligendi fugit ipsam labore magnam molestias optio porro quam quas quibusdam quos reprehenderit sequi veniam, vitae voluptatibus!
-                </p>
+                <?php the_field('design_graphique') ?>
                 <div class="panel-group formation-xs" id="accordion" role="tablist" aria-multiselectable="true">
                     <a class="collapsed" href="#collapse4_1" role="button" data-toggle="collapse" data-parent="#collapse2"  aria-expanded="false" aria-controls="collapse4_1">
                         <h5>
@@ -156,9 +136,7 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse4_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores, id laudantium magni maxime minus natus nobis perferendis sequi tenetur ullam veniam. Adipisci corporis cum cumque excepturi, laudantium libero quos!
-                        </p>
+                        <?php the_field('communication_et_medias_imprimes') ?>
                     </div>
                 </div>
             </div>
@@ -348,19 +326,16 @@ Template Name: Formations
                     <div class="col-md-7 col-sm-7 text-div">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="ind_graph_gen">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                                <?php the_field('industries_graphiques') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="ind">
-                                <h2>Façonnage industriel et routage</h2>
+                                <?php the_field('façonnage_industriel_et_routage') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane fade " id="prod-impr">
-                                <h2>Production imprimée</h2>
+                                <?php the_field('production_imprimee') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="prod-graph">
-                                <h2>Production graphique</h2>
+                                <?php the_field('production_graphique') ?>
                             </div>
                         </div>
                     </div>
@@ -392,16 +367,13 @@ Template Name: Formations
                     <div class="col-md-7 col-sm-7 text-div">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="com_graph_gen">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                                <?php the_field('communication_et_industrie_graphique') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="e-impr">
-                                <h2>Études et réalisation de produits imprimés</h2>
+                                <?php the_field('études_et_realisation_de_produits_imprimes') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane fade " id="e-graph">
-                                <h2>Études et réalisation de produits graphiques</h2>
+                                <?php the_field('études_et_realisation_de_produits_graphiques') ?>
                             </div>
                         </div>
                     </div>
@@ -430,13 +402,10 @@ Template Name: Formations
                     <div class="col-md-7 col-sm-7 text-div">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="artisanat_gen">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                                <?php the_field('artisanat_des_métiers_darts') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="com-visuelle">
-                                <h2>Communication visuelle</h2>
+                                <?php the_field('communication_visuelle') ?>
                             </div>
                         </div>
                     </div>
@@ -465,20 +434,16 @@ Template Name: Formations
                     <div class="col-md-7 col-sm-7 text-div">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="design_gen">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab blanditiis dolorem reprehenderit. Aspernatur culpa dolorum explicabo, fugit hic nihil omnis sed tempora. Eaque earum enim fugiat, fugit saepe sed tenetur.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad animi aspernatur at autem consequatur dolore ea eius excepturi itaque libero quis quo reiciendis sunt tenetur ut, voluptates, voluptatum. Iusto.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae commodi consectetur consequuntur deserunt error, exercitationem, in natus, nihil obcaecati officia optio provident sapiente similique suscipit tempora vero!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, debitis dolorem ea fuga, incidunt laudantium magnam maxime minus nam necessitatibus obcaecati placeat quod similique sit totam vel veritatis voluptate!</p>
+                                <?php the_field('design_graphique') ?>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="com-medias-impr">
-                                <h2>Communication et médias imprimés</h2>
+                                <?php the_field('communication_et_medias_imprimes') ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 <?php get_footer(); ?>
