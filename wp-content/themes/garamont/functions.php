@@ -38,6 +38,9 @@ function hide_editor() {
     if($template_file == 'lycee.php'){ // edit the template name
         remove_post_type_support('page', 'editor');
     }
+    if($template_file == 'formations.php'){ // edit the template name
+        remove_post_type_support('page', 'editor');
+    }
 }
 
 // Hide category from admin menu wordpress

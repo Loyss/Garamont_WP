@@ -33,7 +33,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse1_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('façonnage_industriel_et_routage') ?>
+                        <div class="margin-left-60">
+                            <?php the_field('façonnage_industriel_et_routage') ?>
+                        </div>
                     </div>
 
                     <a class="collapsed" href="#collapse1_2" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse1_2">
@@ -43,7 +45,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse1_2" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('production_imprimee') ?>
+                        <div class="margin-left-60">
+                            <?php the_field('production_imprimee') ?>
+                        </div>
                     </div>
 
                     <a class="collapsed" href="#collapse1_3" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse1_3">
@@ -53,7 +57,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse1_3" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('production_graphique') ?>
+                        <div class="margin-left-60">
+                            <?php the_field('production_graphique') ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +83,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse2_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('études_et_realisation_de_produits_imprimes') ?>
+                        <div class="margin-left-60">
+                            <?php the_field('études_et_realisation_de_produits_imprimes') ?>
+                        </div>
                     </div>
 
                     <a class="collapsed" href="#collapse2_2" role="button" data-toggle="collapse" data-parent="#collapse1"  aria-expanded="false" aria-controls="collapse2_2">
@@ -87,7 +95,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse2_2" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('production_graphique') ?>
+                        <div class="margin-left-60">
+                            <?php the_field('production_graphique') ?>
+                        </div>
                     </div>
 
                 </div>
@@ -112,7 +122,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse3_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('communication_visuelle') ?>
+                        <div class="margin-left-60">
+                            <?php the_field('communication_visuelle') ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,7 +148,9 @@ Template Name: Formations
                         </h5>
                     </a>
                     <div id="collapse4_1" class="collapse" role="tabpanel" aria-labelledby="heading1.1">
-                        <?php the_field('communication_et_medias_imprimes') ?>
+                       <div class="margin-left-60">
+                           <?php the_field('communication_et_medias_imprimes') ?>
+                       </div>
                     </div>
                 </div>
             </div>
