@@ -35,7 +35,15 @@ Template Name: Lycée
             <div class="row bg-gris">
                 <div class="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1">
                     <div class="row img-row">
-                        <img src="<?php the_field('image_lycee_1') ?>" alt="">
+                        <?php
+
+                        $image = get_field('image_lycee_1');
+
+                        if( !empty($image) ): ?>
+
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                        <?php endif; ?>
                     </div>
                     <div class="row img-row">
                         <img src="<?php bloginfo('template_directory'); ?>/img/elements_2.png" alt="">
@@ -48,7 +56,15 @@ Template Name: Lycée
             <div class="row p2">
                 <div class="col-md-5 col-md-offset-0 visible-xs visible-sm col-xs-10 col-xs-offset-1">
                     <div class="row img-row">
-                        <img src="img/img_lycee.JPG" alt="">
+                        <?php
+
+                        $image = get_field('image_lycee_2');
+
+                        if( !empty($image) ): ?>
+
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                        <?php endif; ?>
                     </div>
                     <div class="row img-row">
                         <img src="<?php bloginfo('template_directory'); ?>/img/elements_3.png" alt="">
@@ -59,7 +75,15 @@ Template Name: Lycée
                 </div>
                 <div class="col-md-5 col-md-offset-0 hidden-xs hidden-sm col-xs-10 col-xs-offset-1">
                     <div class="row img-row">
-                        <img src="img/img_lycee.JPG" alt="">
+                        <?php
+
+                        $image = get_field('image_lycee_2');
+
+                        if( !empty($image) ): ?>
+
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                        <?php endif; ?>
                     </div>
                     <div class="row img-row">
                         <img src="<?php bloginfo('template_directory'); ?>/img/elements_3.png" alt="">
@@ -69,7 +93,15 @@ Template Name: Lycée
             <div class="row bg-gris">
                 <div class="col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1">
                     <div class="row img-row">
-                        <img src="img/img_lycee.JPG" alt="">
+                        <?php
+
+                        $image = get_field('image_lycee_3');
+
+                        if( !empty($image) ): ?>
+
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                        <?php endif; ?>
                     </div>
                     <div class="row img-row">
                         <img src="<?php bloginfo('template_directory'); ?>/img/elements_2.png" alt="">
