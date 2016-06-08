@@ -24,7 +24,19 @@ function create_post_type()
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
+
+    register_post_type('actualites',
+        array(
+            'labels' => array(
+                'name' => 'Actualités',
+                'singular_name' => 'Actualité'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
 }
+
 
 // Hide editor for specific page templates.
 add_action( 'admin_init', 'hide_editor' );
@@ -35,12 +47,20 @@ function hide_editor() {
 
 // Get the name of the Page Template file.
     $template_file = get_post_meta($post_id, '_wp_page_template', true);
-    if($template_file == 'lycee.php'){ // edit the template name
+    if($template_file == 'lycee.php'){ // Page lycée
         remove_post_type_support('page', 'editor');
     }
-    if($template_file == 'formations.php'){ // edit the template name
+    if($template_file == 'formations.php'){ // Page Formation
         remove_post_type_support('page', 'editor');
     }
+    if($template_file == 'home.php'){ // Page Accueil
+        remove_post_type_support('page', 'editor');
+    }
+}
+// Hide editor for custom post type.
+add_action('init', 'my_rem_editor_from_post_type');
+function my_rem_editor_from_post_type() {
+    remove_post_type_support( 'actualites', 'editor' );
 }
 
 // Hide category from admin menu wordpress
@@ -49,5 +69,6 @@ function my_remove_menus() {
     remove_menu_page('edit.php');
     remove_menu_page('edit-comments.php');
 }
+
 
 ?>

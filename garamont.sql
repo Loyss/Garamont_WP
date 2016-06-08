@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.10
+-- version 4.2.10
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Jun 05, 2016 at 08:30 PM
--- Server version: 5.5.42
--- PHP Version: 5.6.10
+-- Client :  localhost:3306
+-- Généré le :  Mer 08 Juin 2016 à 17:02
+-- Version du serveur :  5.5.38
+-- Version de PHP :  5.6.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,20 +14,20 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `garamont`
+-- Base de données :  `garamont`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_commentmeta`
+-- Structure de la table `gt_commentmeta`
 --
 
 CREATE TABLE `gt_commentmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL,
+`meta_id` bigint(20) unsigned NOT NULL,
   `comment_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
@@ -36,11 +36,11 @@ CREATE TABLE `gt_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_comments`
+-- Structure de la table `gt_comments`
 --
 
 CREATE TABLE `gt_comments` (
-  `comment_ID` bigint(20) unsigned NOT NULL,
+`comment_ID` bigint(20) unsigned NOT NULL,
   `comment_post_ID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `comment_author` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
   `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -58,20 +58,20 @@ CREATE TABLE `gt_comments` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_comments`
+-- Contenu de la table `gt_comments`
 --
 
 INSERT INTO `gt_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
-(1, 1, 'Monsieur WordPress', '', 'https://wordpress.org/', '', '2016-06-03 15:53:10', '2016-06-03 13:53:10', 'Bonjour, ceci est un commentaire.\nPour supprimer un commentaire, connectez-vous et affichez les commentaires de cet article. Vous pourrez alors les modifier ou les supprimer.', 0, '1', '', '', 0, 0);
+(1, 1, 'Monsieur WordPress', '', 'https://wordpress.org/', '', '2016-06-03 15:53:10', '2016-06-03 13:53:10', 'Bonjour, ceci est un commentaire.\nPour supprimer un commentaire, connectez-vous et affichez les commentaires de cet article. Vous pourrez alors les modifier ou les supprimer.', 0, 'post-trashed', '', '', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_links`
+-- Structure de la table `gt_links`
 --
 
 CREATE TABLE `gt_links` (
-  `link_id` bigint(20) unsigned NOT NULL,
+`link_id` bigint(20) unsigned NOT NULL,
   `link_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -89,18 +89,18 @@ CREATE TABLE `gt_links` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_options`
+-- Structure de la table `gt_options`
 --
 
 CREATE TABLE `gt_options` (
-  `option_id` bigint(20) unsigned NOT NULL,
+`option_id` bigint(20) unsigned NOT NULL,
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=177 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=221 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_options`
+-- Contenu de la table `gt_options`
 --
 
 INSERT INTO `gt_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -207,7 +207,7 @@ INSERT INTO `gt_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:4:{i:1465177991;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1465221278;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1465221402;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:4:{i:1465437191;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1465480478;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1465480602;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (115, '_site_transient_timeout_browser_de2a995d3ac4915f71f8186e7c74590f', '1465566799', 'yes'),
 (116, '_site_transient_browser_de2a995d3ac4915f71f8186e7c74590f', 'a:9:{s:8:"platform";s:9:"Macintosh";s:4:"name";s:6:"Chrome";s:7:"version";s:13:"50.0.2661.102";s:10:"update_url";s:28:"http://www.google.com/chrome";s:7:"img_src";s:49:"http://s.wordpress.org/images/browsers/chrome.png";s:11:"img_src_ssl";s:48:"https://wordpress.org/images/browsers/chrome.png";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
 (117, 'can_compress_scripts', '1', 'yes'),
@@ -245,27 +245,27 @@ INSERT INTO `gt_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (153, '_site_transient_available_translations', 'a:81:{s:2:"ar";a:8:{s:8:"language";s:2:"ar";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-10 15:55:55";s:12:"english_name";s:6:"Arabic";s:11:"native_name";s:14:"العربية";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/ar.zip";s:3:"iso";a:2:{i:1;s:2:"ar";i:2;s:3:"ara";}s:7:"strings";a:1:{s:8:"continue";s:16:"المتابعة";}}s:3:"ary";a:8:{s:8:"language";s:3:"ary";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-13 14:44:00";s:12:"english_name";s:15:"Moroccan Arabic";s:11:"native_name";s:31:"العربية المغربية";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.5.2/ary.zip";s:3:"iso";a:2:{i:1;s:2:"ar";i:3;s:3:"ary";}s:7:"strings";a:1:{s:8:"continue";s:16:"المتابعة";}}s:2:"az";a:8:{s:8:"language";s:2:"az";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-12 22:48:01";s:12:"english_name";s:11:"Azerbaijani";s:11:"native_name";s:16:"Azərbaycan dili";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/az.zip";s:3:"iso";a:2:{i:1;s:2:"az";i:2;s:3:"aze";}s:7:"strings";a:1:{s:8:"continue";s:5:"Davam";}}s:3:"azb";a:8:{s:8:"language";s:3:"azb";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-12-11 22:42:10";s:12:"english_name";s:17:"South Azerbaijani";s:11:"native_name";s:29:"گؤنئی آذربایجان";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.4.2/azb.zip";s:3:"iso";a:2:{i:1;s:2:"az";i:3;s:3:"azb";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"bg_BG";a:8:{s:8:"language";s:5:"bg_BG";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-03 14:05:41";s:12:"english_name";s:9:"Bulgarian";s:11:"native_name";s:18:"Български";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/bg_BG.zip";s:3:"iso";a:2:{i:1;s:2:"bg";i:2;s:3:"bul";}s:7:"strings";a:1:{s:8:"continue";s:12:"Напред";}}s:5:"bn_BD";a:8:{s:8:"language";s:5:"bn_BD";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-01 06:39:12";s:12:"english_name";s:7:"Bengali";s:11:"native_name";s:15:"বাংলা";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/bn_BD.zip";s:3:"iso";a:1:{i:1;s:2:"bn";}s:7:"strings";a:1:{s:8:"continue";s:23:"এগিয়ে চল.";}}s:5:"bs_BA";a:8:{s:8:"language";s:5:"bs_BA";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-19 23:16:37";s:12:"english_name";s:7:"Bosnian";s:11:"native_name";s:8:"Bosanski";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/bs_BA.zip";s:3:"iso";a:2:{i:1;s:2:"bs";i:2;s:3:"bos";}s:7:"strings";a:1:{s:8:"continue";s:7:"Nastavi";}}s:2:"ca";a:8:{s:8:"language";s:2:"ca";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 06:38:51";s:12:"english_name";s:7:"Catalan";s:11:"native_name";s:7:"Català";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/ca.zip";s:3:"iso";a:2:{i:1;s:2:"ca";i:2;s:3:"cat";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continua";}}s:3:"ceb";a:8:{s:8:"language";s:3:"ceb";s:7:"version";s:5:"4.4.3";s:7:"updated";s:19:"2016-02-16 15:34:57";s:12:"english_name";s:7:"Cebuano";s:11:"native_name";s:7:"Cebuano";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.4.3/ceb.zip";s:3:"iso";a:2:{i:2;s:3:"ceb";i:3;s:3:"ceb";}s:7:"strings";a:1:{s:8:"continue";s:7:"Padayun";}}s:5:"cs_CZ";a:8:{s:8:"language";s:5:"cs_CZ";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2016-02-11 18:32:36";s:12:"english_name";s:5:"Czech";s:11:"native_name";s:12:"Čeština‎";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.4.2/cs_CZ.zip";s:3:"iso";a:2:{i:1;s:2:"cs";i:2;s:3:"ces";}s:7:"strings";a:1:{s:8:"continue";s:11:"Pokračovat";}}s:2:"cy";a:8:{s:8:"language";s:2:"cy";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 14:21:06";s:12:"english_name";s:5:"Welsh";s:11:"native_name";s:7:"Cymraeg";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/cy.zip";s:3:"iso";a:2:{i:1;s:2:"cy";i:2;s:3:"cym";}s:7:"strings";a:1:{s:8:"continue";s:6:"Parhau";}}s:5:"da_DK";a:8:{s:8:"language";s:5:"da_DK";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 15:42:12";s:12:"english_name";s:6:"Danish";s:11:"native_name";s:5:"Dansk";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/da_DK.zip";s:3:"iso";a:2:{i:1;s:2:"da";i:2;s:3:"dan";}s:7:"strings";a:1:{s:8:"continue";s:12:"Forts&#230;t";}}s:14:"de_CH_informal";a:8:{s:8:"language";s:14:"de_CH_informal";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-12 20:03:25";s:12:"english_name";s:23:"(Switzerland, Informal)";s:11:"native_name";s:21:"Deutsch (Schweiz, Du)";s:7:"package";s:73:"https://downloads.wordpress.org/translation/core/4.5.2/de_CH_informal.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:6:"Weiter";}}s:5:"de_CH";a:8:{s:8:"language";s:5:"de_CH";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-12 19:26:41";s:12:"english_name";s:20:"German (Switzerland)";s:11:"native_name";s:17:"Deutsch (Schweiz)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/de_CH.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:10:"Fortfahren";}}s:12:"de_DE_formal";a:8:{s:8:"language";s:12:"de_DE_formal";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-02 08:22:25";s:12:"english_name";s:15:"German (Formal)";s:11:"native_name";s:13:"Deutsch (Sie)";s:7:"package";s:71:"https://downloads.wordpress.org/translation/core/4.5.2/de_DE_formal.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:10:"Fortfahren";}}s:5:"de_DE";a:8:{s:8:"language";s:5:"de_DE";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-01 09:24:14";s:12:"english_name";s:6:"German";s:11:"native_name";s:7:"Deutsch";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/de_DE.zip";s:3:"iso";a:1:{i:1;s:2:"de";}s:7:"strings";a:1:{s:8:"continue";s:6:"Weiter";}}s:2:"el";a:8:{s:8:"language";s:2:"el";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-25 18:37:03";s:12:"english_name";s:5:"Greek";s:11:"native_name";s:16:"Ελληνικά";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/el.zip";s:3:"iso";a:2:{i:1;s:2:"el";i:2;s:3:"ell";}s:7:"strings";a:1:{s:8:"continue";s:16:"Συνέχεια";}}s:5:"en_AU";a:8:{s:8:"language";s:5:"en_AU";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-13 06:26:11";s:12:"english_name";s:19:"English (Australia)";s:11:"native_name";s:19:"English (Australia)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/en_AU.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_ZA";a:8:{s:8:"language";s:5:"en_ZA";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-28 11:29:02";s:12:"english_name";s:22:"English (South Africa)";s:11:"native_name";s:22:"English (South Africa)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/en_ZA.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_CA";a:8:{s:8:"language";s:5:"en_CA";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-10 05:23:57";s:12:"english_name";s:16:"English (Canada)";s:11:"native_name";s:16:"English (Canada)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/en_CA.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_NZ";a:8:{s:8:"language";s:5:"en_NZ";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-26 02:00:05";s:12:"english_name";s:21:"English (New Zealand)";s:11:"native_name";s:21:"English (New Zealand)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/en_NZ.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:5:"en_GB";a:8:{s:8:"language";s:5:"en_GB";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-13 12:51:07";s:12:"english_name";s:12:"English (UK)";s:11:"native_name";s:12:"English (UK)";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/en_GB.zip";s:3:"iso";a:3:{i:1;s:2:"en";i:2;s:3:"eng";i:3;s:3:"eng";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continue";}}s:2:"eo";a:8:{s:8:"language";s:2:"eo";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 10:58:49";s:12:"english_name";s:9:"Esperanto";s:11:"native_name";s:9:"Esperanto";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/eo.zip";s:3:"iso";a:2:{i:1;s:2:"eo";i:2;s:3:"epo";}s:7:"strings";a:1:{s:8:"continue";s:8:"Daŭrigi";}}s:5:"es_VE";a:8:{s:8:"language";s:5:"es_VE";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-28 13:08:25";s:12:"english_name";s:19:"Spanish (Venezuela)";s:11:"native_name";s:21:"Español de Venezuela";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_VE.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_PE";a:8:{s:8:"language";s:5:"es_PE";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-16 17:35:43";s:12:"english_name";s:14:"Spanish (Peru)";s:11:"native_name";s:17:"Español de Perú";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_PE.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_MX";a:8:{s:8:"language";s:5:"es_MX";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-12 21:06:55";s:12:"english_name";s:16:"Spanish (Mexico)";s:11:"native_name";s:19:"Español de México";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_MX.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_GT";a:8:{s:8:"language";s:5:"es_GT";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-13 12:43:00";s:12:"english_name";s:19:"Spanish (Guatemala)";s:11:"native_name";s:21:"Español de Guatemala";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_GT.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_CL";a:8:{s:8:"language";s:5:"es_CL";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-19 16:39:25";s:12:"english_name";s:15:"Spanish (Chile)";s:11:"native_name";s:17:"Español de Chile";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_CL.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_CO";a:8:{s:8:"language";s:5:"es_CO";s:7:"version";s:6:"4.3-RC";s:7:"updated";s:19:"2015-08-04 06:10:33";s:12:"english_name";s:18:"Spanish (Colombia)";s:11:"native_name";s:20:"Español de Colombia";s:7:"package";s:65:"https://downloads.wordpress.org/translation/core/4.3-RC/es_CO.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_ES";a:8:{s:8:"language";s:5:"es_ES";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-28 13:34:35";s:12:"english_name";s:15:"Spanish (Spain)";s:11:"native_name";s:8:"Español";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_ES.zip";s:3:"iso";a:1:{i:1;s:2:"es";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"es_AR";a:8:{s:8:"language";s:5:"es_AR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-19 21:32:12";s:12:"english_name";s:19:"Spanish (Argentina)";s:11:"native_name";s:21:"Español de Argentina";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/es_AR.zip";s:3:"iso";a:2:{i:1;s:2:"es";i:2;s:3:"spa";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:2:"et";a:8:{s:8:"language";s:2:"et";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-12 11:11:25";s:12:"english_name";s:8:"Estonian";s:11:"native_name";s:5:"Eesti";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/et.zip";s:3:"iso";a:2:{i:1;s:2:"et";i:2;s:3:"est";}s:7:"strings";a:1:{s:8:"continue";s:6:"Jätka";}}s:2:"eu";a:8:{s:8:"language";s:2:"eu";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-23 22:05:23";s:12:"english_name";s:6:"Basque";s:11:"native_name";s:7:"Euskara";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/eu.zip";s:3:"iso";a:2:{i:1;s:2:"eu";i:2;s:3:"eus";}s:7:"strings";a:1:{s:8:"continue";s:8:"Jarraitu";}}s:5:"fa_IR";a:8:{s:8:"language";s:5:"fa_IR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-27 18:29:46";s:12:"english_name";s:7:"Persian";s:11:"native_name";s:10:"فارسی";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/fa_IR.zip";s:3:"iso";a:2:{i:1;s:2:"fa";i:2;s:3:"fas";}s:7:"strings";a:1:{s:8:"continue";s:10:"ادامه";}}s:2:"fi";a:8:{s:8:"language";s:2:"fi";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-02 13:28:41";s:12:"english_name";s:7:"Finnish";s:11:"native_name";s:5:"Suomi";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/fi.zip";s:3:"iso";a:2:{i:1;s:2:"fi";i:2;s:3:"fin";}s:7:"strings";a:1:{s:8:"continue";s:5:"Jatka";}}s:5:"fr_BE";a:8:{s:8:"language";s:5:"fr_BE";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 07:33:47";s:12:"english_name";s:16:"French (Belgium)";s:11:"native_name";s:21:"Français de Belgique";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/fr_BE.zip";s:3:"iso";a:2:{i:1;s:2:"fr";i:2;s:3:"fra";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuer";}}s:5:"fr_FR";a:8:{s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-01 09:16:29";s:12:"english_name";s:15:"French (France)";s:11:"native_name";s:9:"Français";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/fr_FR.zip";s:3:"iso";a:1:{i:1;s:2:"fr";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuer";}}s:5:"fr_CA";a:8:{s:8:"language";s:5:"fr_CA";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-29 19:30:46";s:12:"english_name";s:15:"French (Canada)";s:11:"native_name";s:19:"Français du Canada";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/fr_CA.zip";s:3:"iso";a:2:{i:1;s:2:"fr";i:2;s:3:"fra";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuer";}}s:2:"gd";a:8:{s:8:"language";s:2:"gd";s:7:"version";s:5:"4.3.4";s:7:"updated";s:19:"2015-09-24 15:25:30";s:12:"english_name";s:15:"Scottish Gaelic";s:11:"native_name";s:9:"Gàidhlig";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.3.4/gd.zip";s:3:"iso";a:3:{i:1;s:2:"gd";i:2;s:3:"gla";i:3;s:3:"gla";}s:7:"strings";a:1:{s:8:"continue";s:15:"Lean air adhart";}}s:5:"gl_ES";a:8:{s:8:"language";s:5:"gl_ES";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-22 23:06:30";s:12:"english_name";s:8:"Galician";s:11:"native_name";s:6:"Galego";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/gl_ES.zip";s:3:"iso";a:2:{i:1;s:2:"gl";i:2;s:3:"glg";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:3:"haz";a:8:{s:8:"language";s:3:"haz";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-12-05 00:59:09";s:12:"english_name";s:8:"Hazaragi";s:11:"native_name";s:15:"هزاره گی";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.4.2/haz.zip";s:3:"iso";a:1:{i:3;s:3:"haz";}s:7:"strings";a:1:{s:8:"continue";s:10:"ادامه";}}s:5:"he_IL";a:8:{s:8:"language";s:5:"he_IL";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-16 13:14:11";s:12:"english_name";s:6:"Hebrew";s:11:"native_name";s:16:"עִבְרִית";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/he_IL.zip";s:3:"iso";a:1:{i:1;s:2:"he";}s:7:"strings";a:1:{s:8:"continue";s:8:"המשך";}}s:5:"hi_IN";a:8:{s:8:"language";s:5:"hi_IN";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-13 11:24:52";s:12:"english_name";s:5:"Hindi";s:11:"native_name";s:18:"हिन्दी";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/hi_IN.zip";s:3:"iso";a:2:{i:1;s:2:"hi";i:2;s:3:"hin";}s:7:"strings";a:1:{s:8:"continue";s:12:"जारी";}}s:2:"hr";a:8:{s:8:"language";s:2:"hr";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-07 12:13:44";s:12:"english_name";s:8:"Croatian";s:11:"native_name";s:8:"Hrvatski";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/hr.zip";s:3:"iso";a:2:{i:1;s:2:"hr";i:2;s:3:"hrv";}s:7:"strings";a:1:{s:8:"continue";s:7:"Nastavi";}}s:5:"hu_HU";a:8:{s:8:"language";s:5:"hu_HU";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-03 06:34:38";s:12:"english_name";s:9:"Hungarian";s:11:"native_name";s:6:"Magyar";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/hu_HU.zip";s:3:"iso";a:2:{i:1;s:2:"hu";i:2;s:3:"hun";}s:7:"strings";a:1:{s:8:"continue";s:10:"Folytatás";}}s:2:"hy";a:8:{s:8:"language";s:2:"hy";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2016-02-04 07:13:54";s:12:"english_name";s:8:"Armenian";s:11:"native_name";s:14:"Հայերեն";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.4.2/hy.zip";s:3:"iso";a:2:{i:1;s:2:"hy";i:2;s:3:"hye";}s:7:"strings";a:1:{s:8:"continue";s:20:"Շարունակել";}}s:5:"id_ID";a:8:{s:8:"language";s:5:"id_ID";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-06 12:11:53";s:12:"english_name";s:10:"Indonesian";s:11:"native_name";s:16:"Bahasa Indonesia";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/id_ID.zip";s:3:"iso";a:2:{i:1;s:2:"id";i:2;s:3:"ind";}s:7:"strings";a:1:{s:8:"continue";s:9:"Lanjutkan";}}s:5:"is_IS";a:8:{s:8:"language";s:5:"is_IS";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-02 15:13:48";s:12:"english_name";s:9:"Icelandic";s:11:"native_name";s:9:"Íslenska";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/is_IS.zip";s:3:"iso";a:2:{i:1;s:2:"is";i:2;s:3:"isl";}s:7:"strings";a:1:{s:8:"continue";s:6:"Áfram";}}s:5:"it_IT";a:8:{s:8:"language";s:5:"it_IT";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-04 10:32:30";s:12:"english_name";s:7:"Italian";s:11:"native_name";s:8:"Italiano";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/it_IT.zip";s:3:"iso";a:2:{i:1;s:2:"it";i:2;s:3:"ita";}s:7:"strings";a:1:{s:8:"continue";s:8:"Continua";}}s:2:"ja";a:8:{s:8:"language";s:2:"ja";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-27 00:36:15";s:12:"english_name";s:8:"Japanese";s:11:"native_name";s:9:"日本語";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/ja.zip";s:3:"iso";a:1:{i:1;s:2:"ja";}s:7:"strings";a:1:{s:8:"continue";s:9:"続ける";}}s:5:"ka_GE";a:8:{s:8:"language";s:5:"ka_GE";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 09:29:35";s:12:"english_name";s:8:"Georgian";s:11:"native_name";s:21:"ქართული";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/ka_GE.zip";s:3:"iso";a:2:{i:1;s:2:"ka";i:2;s:3:"kat";}s:7:"strings";a:1:{s:8:"continue";s:30:"გაგრძელება";}}s:5:"ko_KR";a:8:{s:8:"language";s:5:"ko_KR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-08 02:07:38";s:12:"english_name";s:6:"Korean";s:11:"native_name";s:9:"한국어";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/ko_KR.zip";s:3:"iso";a:2:{i:1;s:2:"ko";i:2;s:3:"kor";}s:7:"strings";a:1:{s:8:"continue";s:6:"계속";}}s:5:"lt_LT";a:8:{s:8:"language";s:5:"lt_LT";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-10 06:34:16";s:12:"english_name";s:10:"Lithuanian";s:11:"native_name";s:15:"Lietuvių kalba";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/lt_LT.zip";s:3:"iso";a:2:{i:1;s:2:"lt";i:2;s:3:"lit";}s:7:"strings";a:1:{s:8:"continue";s:6:"Tęsti";}}s:5:"mk_MK";a:8:{s:8:"language";s:5:"mk_MK";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-12 13:55:28";s:12:"english_name";s:10:"Macedonian";s:11:"native_name";s:31:"Македонски јазик";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/mk_MK.zip";s:3:"iso";a:2:{i:1;s:2:"mk";i:2;s:3:"mkd";}s:7:"strings";a:1:{s:8:"continue";s:16:"Продолжи";}}s:2:"mr";a:8:{s:8:"language";s:2:"mr";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-16 06:42:31";s:12:"english_name";s:7:"Marathi";s:11:"native_name";s:15:"मराठी";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/mr.zip";s:3:"iso";a:2:{i:1;s:2:"mr";i:2;s:3:"mar";}s:7:"strings";a:1:{s:8:"continue";s:25:"सुरु ठेवा";}}s:5:"ms_MY";a:8:{s:8:"language";s:5:"ms_MY";s:7:"version";s:5:"4.4.3";s:7:"updated";s:19:"2016-01-28 05:41:39";s:12:"english_name";s:5:"Malay";s:11:"native_name";s:13:"Bahasa Melayu";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.4.3/ms_MY.zip";s:3:"iso";a:2:{i:1;s:2:"ms";i:2;s:3:"msa";}s:7:"strings";a:1:{s:8:"continue";s:8:"Teruskan";}}s:5:"my_MM";a:8:{s:8:"language";s:5:"my_MM";s:7:"version";s:6:"4.1.11";s:7:"updated";s:19:"2015-03-26 15:57:42";s:12:"english_name";s:17:"Myanmar (Burmese)";s:11:"native_name";s:15:"ဗမာစာ";s:7:"package";s:65:"https://downloads.wordpress.org/translation/core/4.1.11/my_MM.zip";s:3:"iso";a:2:{i:1;s:2:"my";i:2;s:3:"mya";}s:7:"strings";a:1:{s:8:"continue";s:54:"ဆက်လက်လုပ်ဆောင်ပါ။";}}s:5:"nb_NO";a:8:{s:8:"language";s:5:"nb_NO";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-13 12:35:50";s:12:"english_name";s:19:"Norwegian (Bokmål)";s:11:"native_name";s:13:"Norsk bokmål";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/nb_NO.zip";s:3:"iso";a:2:{i:1;s:2:"nb";i:2;s:3:"nob";}s:7:"strings";a:1:{s:8:"continue";s:8:"Fortsett";}}s:5:"nl_NL";a:8:{s:8:"language";s:5:"nl_NL";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-13 08:12:50";s:12:"english_name";s:5:"Dutch";s:11:"native_name";s:10:"Nederlands";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/nl_NL.zip";s:3:"iso";a:2:{i:1;s:2:"nl";i:2;s:3:"nld";}s:7:"strings";a:1:{s:8:"continue";s:8:"Doorgaan";}}s:12:"nl_NL_formal";a:8:{s:8:"language";s:12:"nl_NL_formal";s:7:"version";s:5:"4.4.3";s:7:"updated";s:19:"2016-01-20 13:35:50";s:12:"english_name";s:14:"Dutch (Formal)";s:11:"native_name";s:20:"Nederlands (Formeel)";s:7:"package";s:71:"https://downloads.wordpress.org/translation/core/4.4.3/nl_NL_formal.zip";s:3:"iso";a:2:{i:1;s:2:"nl";i:2;s:3:"nld";}s:7:"strings";a:1:{s:8:"continue";s:8:"Doorgaan";}}s:5:"nn_NO";a:8:{s:8:"language";s:5:"nn_NO";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-11 07:36:04";s:12:"english_name";s:19:"Norwegian (Nynorsk)";s:11:"native_name";s:13:"Norsk nynorsk";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/nn_NO.zip";s:3:"iso";a:2:{i:1;s:2:"nn";i:2;s:3:"nno";}s:7:"strings";a:1:{s:8:"continue";s:9:"Hald fram";}}s:3:"oci";a:8:{s:8:"language";s:3:"oci";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-25 06:38:00";s:12:"english_name";s:7:"Occitan";s:11:"native_name";s:7:"Occitan";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.5.2/oci.zip";s:3:"iso";a:2:{i:1;s:2:"oc";i:2;s:3:"oci";}s:7:"strings";a:1:{s:8:"continue";s:9:"Contunhar";}}s:5:"pl_PL";a:8:{s:8:"language";s:5:"pl_PL";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-18 16:39:27";s:12:"english_name";s:6:"Polish";s:11:"native_name";s:6:"Polski";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/pl_PL.zip";s:3:"iso";a:2:{i:1;s:2:"pl";i:2;s:3:"pol";}s:7:"strings";a:1:{s:8:"continue";s:9:"Kontynuuj";}}s:2:"ps";a:8:{s:8:"language";s:2:"ps";s:7:"version";s:6:"4.1.11";s:7:"updated";s:19:"2015-03-29 22:19:48";s:12:"english_name";s:6:"Pashto";s:11:"native_name";s:8:"پښتو";s:7:"package";s:62:"https://downloads.wordpress.org/translation/core/4.1.11/ps.zip";s:3:"iso";a:2:{i:1;s:2:"ps";i:2;s:3:"pus";}s:7:"strings";a:1:{s:8:"continue";s:19:"دوام ورکړه";}}s:5:"pt_PT";a:8:{s:8:"language";s:5:"pt_PT";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-17 23:58:57";s:12:"english_name";s:21:"Portuguese (Portugal)";s:11:"native_name";s:10:"Português";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/pt_PT.zip";s:3:"iso";a:1:{i:1;s:2:"pt";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"pt_BR";a:8:{s:8:"language";s:5:"pt_BR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-27 18:35:51";s:12:"english_name";s:19:"Portuguese (Brazil)";s:11:"native_name";s:20:"Português do Brasil";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/pt_BR.zip";s:3:"iso";a:2:{i:1;s:2:"pt";i:2;s:3:"por";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuar";}}s:5:"ro_RO";a:8:{s:8:"language";s:5:"ro_RO";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-01 05:36:12";s:12:"english_name";s:8:"Romanian";s:11:"native_name";s:8:"Română";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/ro_RO.zip";s:3:"iso";a:2:{i:1;s:2:"ro";i:2;s:3:"ron";}s:7:"strings";a:1:{s:8:"continue";s:9:"Continuă";}}s:5:"ru_RU";a:8:{s:8:"language";s:5:"ru_RU";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-13 18:04:14";s:12:"english_name";s:7:"Russian";s:11:"native_name";s:14:"Русский";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/ru_RU.zip";s:3:"iso";a:2:{i:1;s:2:"ru";i:2;s:3:"rus";}s:7:"strings";a:1:{s:8:"continue";s:20:"Продолжить";}}s:5:"sk_SK";a:8:{s:8:"language";s:5:"sk_SK";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-29 09:53:12";s:12:"english_name";s:6:"Slovak";s:11:"native_name";s:11:"Slovenčina";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/sk_SK.zip";s:3:"iso";a:2:{i:1;s:2:"sk";i:2;s:3:"slk";}s:7:"strings";a:1:{s:8:"continue";s:12:"Pokračovať";}}s:5:"sl_SI";a:8:{s:8:"language";s:5:"sl_SI";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-11-26 00:00:18";s:12:"english_name";s:9:"Slovenian";s:11:"native_name";s:13:"Slovenščina";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.4.2/sl_SI.zip";s:3:"iso";a:2:{i:1;s:2:"sl";i:2;s:3:"slv";}s:7:"strings";a:1:{s:8:"continue";s:8:"Nadaljuj";}}s:2:"sq";a:8:{s:8:"language";s:2:"sq";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-09 09:01:28";s:12:"english_name";s:8:"Albanian";s:11:"native_name";s:5:"Shqip";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/sq.zip";s:3:"iso";a:2:{i:1;s:2:"sq";i:2;s:3:"sqi";}s:7:"strings";a:1:{s:8:"continue";s:6:"Vazhdo";}}s:5:"sr_RS";a:8:{s:8:"language";s:5:"sr_RS";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-10 08:00:57";s:12:"english_name";s:7:"Serbian";s:11:"native_name";s:23:"Српски језик";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/sr_RS.zip";s:3:"iso";a:2:{i:1;s:2:"sr";i:2;s:3:"srp";}s:7:"strings";a:1:{s:8:"continue";s:14:"Настави";}}s:5:"sv_SE";a:8:{s:8:"language";s:5:"sv_SE";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-14 14:47:49";s:12:"english_name";s:7:"Swedish";s:11:"native_name";s:7:"Svenska";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/sv_SE.zip";s:3:"iso";a:2:{i:1;s:2:"sv";i:2;s:3:"swe";}s:7:"strings";a:1:{s:8:"continue";s:9:"Fortsätt";}}s:2:"th";a:8:{s:8:"language";s:2:"th";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-22 14:05:41";s:12:"english_name";s:4:"Thai";s:11:"native_name";s:9:"ไทย";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/th.zip";s:3:"iso";a:2:{i:1;s:2:"th";i:2;s:3:"tha";}s:7:"strings";a:1:{s:8:"continue";s:15:"ต่อไป";}}s:2:"tl";a:8:{s:8:"language";s:2:"tl";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-11-27 15:51:36";s:12:"english_name";s:7:"Tagalog";s:11:"native_name";s:7:"Tagalog";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.4.2/tl.zip";s:3:"iso";a:2:{i:1;s:2:"tl";i:2;s:3:"tgl";}s:7:"strings";a:1:{s:8:"continue";s:10:"Magpatuloy";}}s:5:"tr_TR";a:8:{s:8:"language";s:5:"tr_TR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-21 01:31:12";s:12:"english_name";s:7:"Turkish";s:11:"native_name";s:8:"Türkçe";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/tr_TR.zip";s:3:"iso";a:2:{i:1;s:2:"tr";i:2;s:3:"tur";}s:7:"strings";a:1:{s:8:"continue";s:5:"Devam";}}s:5:"ug_CN";a:8:{s:8:"language";s:5:"ug_CN";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-31 09:50:18";s:12:"english_name";s:6:"Uighur";s:11:"native_name";s:9:"Uyƣurqə";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/ug_CN.zip";s:3:"iso";a:2:{i:1;s:2:"ug";i:2;s:3:"uig";}s:7:"strings";a:1:{s:8:"continue";s:26:"داۋاملاشتۇرۇش";}}s:2:"uk";a:8:{s:8:"language";s:2:"uk";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-05-23 09:33:59";s:12:"english_name";s:9:"Ukrainian";s:11:"native_name";s:20:"Українська";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.5.2/uk.zip";s:3:"iso";a:2:{i:1;s:2:"uk";i:2;s:3:"ukr";}s:7:"strings";a:1:{s:8:"continue";s:20:"Продовжити";}}s:2:"vi";a:8:{s:8:"language";s:2:"vi";s:7:"version";s:5:"4.4.2";s:7:"updated";s:19:"2015-12-09 01:01:25";s:12:"english_name";s:10:"Vietnamese";s:11:"native_name";s:14:"Tiếng Việt";s:7:"package";s:61:"https://downloads.wordpress.org/translation/core/4.4.2/vi.zip";s:3:"iso";a:2:{i:1;s:2:"vi";i:2;s:3:"vie";}s:7:"strings";a:1:{s:8:"continue";s:12:"Tiếp tục";}}s:5:"zh_TW";a:8:{s:8:"language";s:5:"zh_TW";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-12 09:08:07";s:12:"english_name";s:16:"Chinese (Taiwan)";s:11:"native_name";s:12:"繁體中文";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/zh_TW.zip";s:3:"iso";a:2:{i:1;s:2:"zh";i:2;s:3:"zho";}s:7:"strings";a:1:{s:8:"continue";s:6:"繼續";}}s:5:"zh_CN";a:8:{s:8:"language";s:5:"zh_CN";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-04-17 03:29:01";s:12:"english_name";s:15:"Chinese (China)";s:11:"native_name";s:12:"简体中文";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/zh_CN.zip";s:3:"iso";a:2:{i:1;s:2:"zh";i:2;s:3:"zho";}s:7:"strings";a:1:{s:8:"continue";s:6:"继续";}}}', 'yes'),
 (161, '_site_transient_timeout_popular_importers_fr_FR', '1465234175', 'yes'),
 (162, '_site_transient_popular_importers_fr_FR', 'a:2:{s:9:"importers";a:8:{s:7:"blogger";a:4:{s:4:"name";s:7:"Blogger";s:11:"description";s:86:"Install the Blogger importer to import posts, comments, and users from a Blogger blog.";s:11:"plugin-slug";s:16:"blogger-importer";s:11:"importer-id";s:7:"blogger";}s:9:"wpcat2tag";a:4:{s:4:"name";s:29:"Categories and Tags Converter";s:11:"description";s:109:"Install the category/tag converter to convert existing categories to tags or tags to categories, selectively.";s:11:"plugin-slug";s:18:"wpcat2tag-importer";s:11:"importer-id";s:9:"wpcat2tag";}s:11:"livejournal";a:4:{s:4:"name";s:11:"LiveJournal";s:11:"description";s:82:"Install the LiveJournal importer to import posts from LiveJournal using their API.";s:11:"plugin-slug";s:20:"livejournal-importer";s:11:"importer-id";s:11:"livejournal";}s:11:"movabletype";a:4:{s:4:"name";s:24:"Movable Type and TypePad";s:11:"description";s:99:"Install the Movable Type importer to import posts and comments from a Movable Type or TypePad blog.";s:11:"plugin-slug";s:20:"movabletype-importer";s:11:"importer-id";s:2:"mt";}s:4:"opml";a:4:{s:4:"name";s:8:"Blogroll";s:11:"description";s:61:"Install the blogroll importer to import links in OPML format.";s:11:"plugin-slug";s:13:"opml-importer";s:11:"importer-id";s:4:"opml";}s:3:"rss";a:4:{s:4:"name";s:3:"RSS";s:11:"description";s:58:"Install the RSS importer to import posts from an RSS feed.";s:11:"plugin-slug";s:12:"rss-importer";s:11:"importer-id";s:3:"rss";}s:6:"tumblr";a:4:{s:4:"name";s:6:"Tumblr";s:11:"description";s:84:"Install the Tumblr importer to import posts &amp; media from Tumblr using their API.";s:11:"plugin-slug";s:15:"tumblr-importer";s:11:"importer-id";s:6:"tumblr";}s:9:"wordpress";a:4:{s:4:"name";s:9:"WordPress";s:11:"description";s:130:"Install the WordPress importer to import posts, pages, comments, custom fields, categories, and tags from a WordPress export file.";s:11:"plugin-slug";s:18:"wordpress-importer";s:11:"importer-id";s:9:"wordpress";}}s:10:"translated";b:0;}', 'yes'),
-(171, '_site_transient_timeout_theme_roots', '1465137508', 'yes'),
-(172, '_site_transient_theme_roots', 'a:4:{s:8:"garamont";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
-(174, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:6:"locale";s:5:"fr_FR";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1465135711;s:15:"version_checked";s:5:"4.5.2";s:12:"translations";a:0:{}}', 'yes'),
-(175, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465135715;s:7:"checked";a:4:{s:8:"garamont";s:0:"";s:13:"twentyfifteen";s:3:"1.5";s:14:"twentyfourteen";s:3:"1.7";s:13:"twentysixteen";s:3:"1.2";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
-(176, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465135713;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:6:"3.1.11";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:57:"https://downloads.wordpress.org/plugin/akismet.3.1.11.zip";s:6:"tested";s:5:"4.5.2";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:18:"wordpress-importer";s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"0.6.1";s:7:"updated";s:19:"2015-10-07 09:23:06";s:7:"package";s:85:"https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.6.1/fr_FR.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:3:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:5:"4.4.7";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:71:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:41:"wordpress-importer/wordpress-importer.php";O:8:"stdClass":6:{s:2:"id";s:5:"14975";s:4:"slug";s:18:"wordpress-importer";s:6:"plugin";s:41:"wordpress-importer/wordpress-importer.php";s:11:"new_version";s:5:"0.6.1";s:3:"url";s:49:"https://wordpress.org/plugins/wordpress-importer/";s:7:"package";s:67:"https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip";}}}', 'yes');
+(213, '_site_transient_timeout_theme_roots', '1465395800', 'yes'),
+(214, '_site_transient_theme_roots', 'a:4:{s:8:"garamont";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
+(216, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:6:"locale";s:5:"fr_FR";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/fr_FR/wordpress-4.5.2.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.5.2";s:7:"version";s:5:"4.5.2";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.4";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1465394002;s:15:"version_checked";s:5:"4.5.2";s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:4:"core";s:4:"slug";s:7:"default";s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"4.5.2";s:7:"updated";s:19:"2016-06-07 11:35:05";s:7:"package";s:64:"https://downloads.wordpress.org/translation/core/4.5.2/fr_FR.zip";s:10:"autoupdate";b:1;}}}', 'yes'),
+(217, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465394005;s:7:"checked";a:4:{s:8:"garamont";s:0:"";s:13:"twentyfifteen";s:3:"1.5";s:14:"twentyfourteen";s:3:"1.7";s:13:"twentysixteen";s:3:"1.2";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
+(218, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1465394004;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:6:"3.1.11";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:57:"https://downloads.wordpress.org/plugin/akismet.3.1.11.zip";s:6:"tested";s:5:"4.5.2";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:6:"plugin";s:4:"slug";s:18:"wordpress-importer";s:8:"language";s:5:"fr_FR";s:7:"version";s:5:"0.6.1";s:7:"updated";s:19:"2015-10-07 09:23:06";s:7:"package";s:85:"https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.6.1/fr_FR.zip";s:10:"autoupdate";b:1;}}s:9:"no_update";a:3:{s:30:"advanced-custom-fields/acf.php";O:8:"stdClass":6:{s:2:"id";s:5:"21367";s:4:"slug";s:22:"advanced-custom-fields";s:6:"plugin";s:30:"advanced-custom-fields/acf.php";s:11:"new_version";s:5:"4.4.7";s:3:"url";s:53:"https://wordpress.org/plugins/advanced-custom-fields/";s:7:"package";s:71:"https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.7.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}s:41:"wordpress-importer/wordpress-importer.php";O:8:"stdClass":6:{s:2:"id";s:5:"14975";s:4:"slug";s:18:"wordpress-importer";s:6:"plugin";s:41:"wordpress-importer/wordpress-importer.php";s:11:"new_version";s:5:"0.6.1";s:3:"url";s:49:"https://wordpress.org/plugins/wordpress-importer/";s:7:"package";s:67:"https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip";}}}', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_postmeta`
+-- Structure de la table `gt_postmeta`
 --
 
 CREATE TABLE `gt_postmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL,
+`meta_id` bigint(20) unsigned NOT NULL,
   `post_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=963 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1725 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_postmeta`
+-- Contenu de la table `gt_postmeta`
 --
 
 INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -275,19 +275,19 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6, 2, '_wp_desired_post_slug', 'page-d-exemple'),
 (7, 6, '_edit_last', '1'),
 (8, 6, '_wp_page_template', 'home.php'),
-(9, 6, '_edit_lock', '1465055590:1'),
+(9, 6, '_edit_lock', '1465397961:1'),
 (10, 8, '_edit_last', '1'),
 (11, 8, '_wp_page_template', 'contact.php'),
 (12, 8, '_edit_lock', '1465052533:1'),
 (13, 10, '_edit_last', '1'),
 (14, 10, '_wp_page_template', 'formations.php'),
-(15, 10, '_edit_lock', '1465151331:1'),
+(15, 10, '_edit_lock', '1465248965:1'),
 (16, 12, '_edit_last', '1'),
 (17, 12, '_wp_page_template', 'entreprise.php'),
 (18, 12, '_edit_lock', '1464965679:1'),
 (19, 14, '_edit_last', '1'),
 (20, 14, '_wp_page_template', 'projets.php'),
-(21, 14, '_edit_lock', '1464966821:1'),
+(21, 14, '_edit_lock', '1465249000:1'),
 (22, 16, '_edit_last', '1'),
 (23, 16, '_wp_page_template', 'lycee.php'),
 (24, 16, '_edit_lock', '1465142385:1'),
@@ -712,12 +712,12 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (503, 48, '_horaire-2', 'field_575191d678748'),
 (504, 48, 'lieu-2', 'CCIP - 27 avenenu de Friedland - 75008'),
 (505, 48, '_lieu-2', 'field_575191ed78749'),
-(506, 48, 'information-2', '01 55 65 66 72'),
+(506, 48, 'information-2', '01 55 65 66 72');
+INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (507, 48, '_information-2', 'field_575191f97874a'),
 (508, 48, 'en_savoir_+', ''),
 (509, 48, '_en_savoir_+', 'field_575193177874b'),
-(510, 48, 'titre-3', 'Marchés Publics');
-INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(510, 48, 'titre-3', 'Marchés Publics'),
 (511, 48, '_titre-3', 'field_575193bc52c13'),
 (512, 48, 'sous-titre-3', 'Trois offres de marchés publics sont en cours actuellement :'),
 (513, 48, '_sous-titre-3', 'field_575193c752c14'),
@@ -744,11 +744,11 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (536, 51, '_categorie_2', 'field_57519a446231d'),
 (537, 51, 'categorie_3', '3'),
 (538, 51, '_categorie_3', 'field_57519a4b6231e'),
-(539, 14, 'categorie_1', 'Web'),
+(539, 14, 'categorie_1', 'Cubisme'),
 (540, 14, '_categorie_1', 'field_57519a3b6231c'),
-(541, 14, 'categorie_2', 'Graphisme'),
+(541, 14, 'categorie_2', 'Pointillisme'),
 (542, 14, '_categorie_2', 'field_57519a446231d'),
-(543, 14, 'categorie_3', 'Impression'),
+(543, 14, 'categorie_3', 'Expressionniste'),
 (544, 14, '_categorie_3', 'field_57519a4b6231e'),
 (545, 52, '_edit_last', '1'),
 (546, 52, '_edit_lock', '1464965792:1'),
@@ -764,8 +764,8 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (557, 53, 'hide_on_screen', ''),
 (558, 53, '_edit_lock', '1465140714:1'),
 (560, 55, '_edit_last', '1'),
-(561, 55, '_edit_lock', '1464982118:1'),
-(562, 55, 'date_projet', '1 Janvier 2016'),
+(561, 55, '_edit_lock', '1465249169:1'),
+(562, 55, 'date_projet', '4 juin 1937'),
 (563, 55, '_date_projet', 'field_57519ae6c744b'),
 (564, 55, 'tag_projet', '1'),
 (565, 55, '_tag_projet', 'field_57519b08c744c'),
@@ -773,22 +773,22 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (567, 55, '_numero_projet', 'field_57519b1ec744d'),
 (568, 56, '_wp_attached_file', '2016/06/formation.jpg'),
 (569, 56, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:700;s:6:"height";i:495;s:4:"file";s:21:"2016/06/formation.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"formation-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"formation-300x212.jpg";s:5:"width";i:300;s:6:"height";i:212;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"1";s:8:"keywords";a:0:{}}}'),
-(570, 55, '_thumbnail_id', '56'),
+(570, 55, '_thumbnail_id', '88'),
 (571, 57, '_edit_last', '1'),
-(572, 57, '_edit_lock', '1464991135:1'),
+(572, 57, '_edit_lock', '1465250094:1'),
 (573, 58, '_wp_attached_file', '2016/06/projet.jpg'),
 (574, 58, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:659;s:6:"height";i:550;s:4:"file";s:18:"2016/06/projet.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"projet-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:18:"projet-300x250.jpg";s:5:"width";i:300;s:6:"height";i:250;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(575, 57, '_thumbnail_id', '58'),
-(576, 57, 'date_projet', '10 Février 2016'),
+(575, 57, '_thumbnail_id', '84'),
+(576, 57, 'date_projet', '1911'),
 (577, 57, '_date_projet', 'field_57519ae6c744b'),
-(578, 57, 'tag_projet', '2'),
+(578, 57, 'tag_projet', '3'),
 (579, 57, '_tag_projet', 'field_57519b08c744c'),
 (580, 57, 'numero_projet', '2'),
 (581, 57, '_numero_projet', 'field_57519b1ec744d'),
 (582, 59, '_edit_last', '1'),
-(583, 59, '_edit_lock', '1464982103:1'),
-(584, 59, '_thumbnail_id', '56'),
-(585, 59, 'date_projet', '23 Mars 2016'),
+(583, 59, '_edit_lock', '1465250089:1'),
+(584, 59, '_thumbnail_id', '94'),
+(585, 59, 'date_projet', '1600'),
 (586, 59, '_date_projet', 'field_57519ae6c744b'),
 (587, 59, 'tag_projet', '3'),
 (588, 59, '_tag_projet', 'field_57519b08c744c'),
@@ -803,11 +803,11 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (598, 60, '_categorie_3', 'field_57519a4b6231e'),
 (600, 53, 'field_5751da808771b', 'a:14:{s:3:"key";s:19:"field_5751da808771b";s:5:"label";s:20:"Nom de la catégorie";s:4:"name";s:13:"nom_categorie";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
 (602, 53, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:7:"projets";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
-(603, 59, 'nom_categorie', 'Impression'),
+(603, 59, 'nom_categorie', 'Expressionnisme'),
 (604, 59, '_nom_categorie', 'field_5751da808771b'),
-(605, 55, 'nom_categorie', 'Web'),
+(605, 55, 'nom_categorie', 'Cubisme'),
 (606, 55, '_nom_categorie', 'field_5751da808771b'),
-(607, 57, 'nom_categorie', 'Graphisme'),
+(607, 57, 'nom_categorie', 'Expressionnisme'),
 (608, 57, '_nom_categorie', 'field_5751da808771b'),
 (609, 61, '_edit_last', '1'),
 (610, 61, '_edit_lock', '1465046093:1'),
@@ -831,7 +831,7 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (629, 64, 'position', 'acf_after_title'),
 (630, 64, 'layout', 'default'),
 (631, 64, 'hide_on_screen', ''),
-(632, 64, '_edit_lock', '1465138226:1'),
+(632, 64, '_edit_lock', '1465382196:1'),
 (635, 64, 'field_5752d9b0d46f5', 'a:11:{s:3:"key";s:19:"field_5752d9b0d46f5";s:5:"label";s:16:"1er Image lycée";s:4:"name";s:13:"image_lycee_1";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}'),
 (636, 64, 'field_5752da0dd46f6', 'a:11:{s:3:"key";s:19:"field_5752da0dd46f6";s:5:"label";s:12:"Paragraphe 1";s:4:"name";s:12:"paragraphe_1";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}'),
 (637, 64, 'field_5752da42d46f7', 'a:11:{s:3:"key";s:19:"field_5752da42d46f7";s:5:"label";s:18:"2ème Image Lycée";s:4:"name";s:13:"image_lycee_2";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}'),
@@ -850,13 +850,13 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (657, 61, '_wp_trash_meta_time', '1465053200'),
 (658, 61, '_wp_desired_post_slug', 'projet-4'),
 (659, 66, '_edit_last', '1'),
-(660, 66, '_edit_lock', '1465053848:1'),
-(661, 66, '_thumbnail_id', '62'),
-(662, 66, 'date_projet', '12 Juin 2016'),
+(660, 66, '_edit_lock', '1465250458:1'),
+(661, 66, '_thumbnail_id', '93'),
+(662, 66, 'date_projet', '1913'),
 (663, 66, '_date_projet', 'field_57519ae6c744b'),
-(664, 66, 'nom_categorie', 'Graphisme'),
+(664, 66, 'nom_categorie', 'Expressionnisme'),
 (665, 66, '_nom_categorie', 'field_5751da808771b'),
-(666, 66, 'tag_projet', '2'),
+(666, 66, 'tag_projet', '3'),
 (667, 66, '_tag_projet', 'field_57519b08c744c'),
 (668, 66, 'numero_projet', '4'),
 (669, 66, '_numero_projet', 'field_57519b1ec744d'),
@@ -1138,16 +1138,763 @@ INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (959, 81, 'design_graphique', 'Vivamus tincidunt metus a venenatis tincidunt. Suspendisse tristique feugiat consequat. Fusce bibendum diam a viverra tincidunt. Maecenas in enim aliquam, tempus mauris vel, interdum arcu. Nulla facilisi. Nulla facilisi. Mauris arcu lacus, feugiat sed aliquet ut, lobortis vestibulum felis. Vivamus hendrerit ipsum et turpis iaculis finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer placerat diam eros, nec efficitur sem lacinia quis. Aenean in scelerisque tortor. Pellentesque ornare pellentesque diam, nec rutrum lectus dapibus ac. Phasellus at bibendum mi, eget tincidunt elit. Integer sed massa ut mauris semper ultrices.'),
 (960, 81, '_design_graphique', 'field_57544925f95f4'),
 (961, 81, 'communication_et_medias_imprimes', 'Vivamus tincidunt metus a venenatis tincidunt. Suspendisse tristique feugiat consequat. Fusce bibendum diam a viverra tincidunt. Maecenas in enim aliquam, tempus mauris vel, interdum arcu. Nulla facilisi. Nulla facilisi. Mauris arcu lacus, feugiat sed aliquet ut, lobortis vestibulum felis. Vivamus hendrerit ipsum et turpis iaculis finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer placerat diam eros, nec efficitur sem lacinia quis. Aenean in scelerisque tortor. Pellentesque ornare pellentesque diam, nec rutrum lectus dapibus ac. Phasellus at bibendum mi, eget tincidunt elit. Integer sed massa ut mauris semper ultrices.'),
-(962, 81, '_communication_et_medias_imprimes', 'field_575463ecf045e');
+(962, 81, '_communication_et_medias_imprimes', 'field_575463ecf045e'),
+(963, 82, 'categorie_1', 'Cubisme'),
+(964, 82, '_categorie_1', 'field_57519a3b6231c'),
+(965, 82, 'categorie_2', 'Pointillisme'),
+(966, 82, '_categorie_2', 'field_57519a446231d'),
+(967, 82, 'categorie_3', 'Expressionniste'),
+(968, 82, '_categorie_3', 'field_57519a4b6231e'),
+(969, 84, '_wp_attached_file', '2016/06/Expressionnisme-2.jpg'),
+(970, 84, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:29:"2016/06/Expressionnisme-2.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:29:"Expressionnisme-2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:29:"Expressionnisme-2-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(971, 85, '_wp_attached_file', '2016/06/Expressionnisme-3.jpg'),
+(972, 85, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:29:"2016/06/Expressionnisme-3.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:29:"Expressionnisme-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:29:"Expressionnisme-3-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(973, 86, '_wp_attached_file', '2016/06/Expressionnisme.jpg'),
+(974, 86, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:27:"2016/06/Expressionnisme.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"Expressionnisme-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:27:"Expressionnisme-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(975, 87, '_wp_attached_file', '2016/06/cubisme-2.jpg'),
+(976, 87, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:21:"2016/06/cubisme-2.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"cubisme-2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"cubisme-2-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(977, 88, '_wp_attached_file', '2016/06/cubisme.jpg'),
+(978, 88, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:19:"2016/06/cubisme.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:19:"cubisme-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:19:"cubisme-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(979, 89, '_wp_attached_file', '2016/06/pointillisme-2.jpg'),
+(980, 89, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:26:"2016/06/pointillisme-2.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"pointillisme-2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"pointillisme-2-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(981, 90, '_wp_attached_file', '2016/06/pointillisme-3.jpg'),
+(982, 90, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:26:"2016/06/pointillisme-3.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"pointillisme-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"pointillisme-3-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(983, 91, '_wp_attached_file', '2016/06/pointillisme.jpg'),
+(984, 91, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:24:"2016/06/pointillisme.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"pointillisme-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:24:"pointillisme-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(985, 93, '_wp_attached_file', '2016/06/Expressionnisme-3-1.jpg'),
+(986, 93, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:31:"2016/06/Expressionnisme-3-1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:31:"Expressionnisme-3-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:31:"Expressionnisme-3-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(987, 94, '_wp_attached_file', '2016/06/Expressionnisme-1.jpg'),
+(988, 94, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:29:"2016/06/Expressionnisme-1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:29:"Expressionnisme-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:29:"Expressionnisme-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(989, 98, '_wp_attached_file', '2016/06/pointillisme-2-1.jpg'),
+(990, 98, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:28:"2016/06/pointillisme-2-1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"pointillisme-2-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"pointillisme-2-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(991, 99, '_wp_attached_file', '2016/06/pointillisme-3-1.jpg'),
+(992, 99, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:28:"2016/06/pointillisme-3-1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"pointillisme-3-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"pointillisme-3-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(993, 100, '_wp_attached_file', '2016/06/pointillisme-1.jpg'),
+(994, 100, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:600;s:6:"height";i:400;s:4:"file";s:26:"2016/06/pointillisme-1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"pointillisme-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"pointillisme-1-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(995, 97, '_thumbnail_id', '100'),
+(996, 97, '_edit_last', '1'),
+(997, 97, 'date_projet', '1890'),
+(998, 97, '_date_projet', 'field_57519ae6c744b'),
+(999, 97, 'nom_categorie', 'Pointillisme'),
+(1000, 97, '_nom_categorie', 'field_5751da808771b'),
+(1001, 97, 'tag_projet', '2'),
+(1002, 97, '_tag_projet', 'field_57519b08c744c'),
+(1003, 97, 'numero_projet', '5'),
+(1004, 97, '_numero_projet', 'field_57519b1ec744d'),
+(1005, 97, '_edit_lock', '1465250537:1'),
+(1006, 101, '_edit_last', '1'),
+(1007, 101, '_edit_lock', '1465250710:1'),
+(1008, 101, '_thumbnail_id', '98'),
+(1009, 101, 'date_projet', '1906'),
+(1010, 101, '_date_projet', 'field_57519ae6c744b'),
+(1011, 101, 'nom_categorie', 'Pointillisme'),
+(1012, 101, '_nom_categorie', 'field_5751da808771b'),
+(1013, 101, 'tag_projet', '2'),
+(1014, 101, '_tag_projet', 'field_57519b08c744c'),
+(1015, 101, 'numero_projet', '6');
+INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1016, 101, '_numero_projet', 'field_57519b1ec744d'),
+(1017, 102, '_edit_last', '1'),
+(1018, 102, '_edit_lock', '1465382252:1'),
+(1019, 102, '_thumbnail_id', '99'),
+(1020, 102, 'date_projet', '1892'),
+(1021, 102, '_date_projet', 'field_57519ae6c744b'),
+(1022, 102, 'nom_categorie', 'Pointillisme'),
+(1023, 102, '_nom_categorie', 'field_5751da808771b'),
+(1024, 102, 'tag_projet', '2'),
+(1025, 102, '_tag_projet', 'field_57519b08c744c'),
+(1026, 102, 'numero_projet', '8'),
+(1027, 102, '_numero_projet', 'field_57519b1ec744d'),
+(1028, 103, '_edit_last', '1'),
+(1029, 103, 'field_5757f61c372c0', 'a:11:{s:3:"key";s:19:"field_5757f61c372c0";s:5:"label";s:30:"Formation Image du 1er losange";s:4:"name";s:30:"formation_image_du_1er_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
+(1030, 103, 'field_5757f67f372c1', 'a:14:{s:3:"key";s:19:"field_5757f67f372c1";s:5:"label";s:30:"Formation Hover du 1er losange";s:4:"name";s:30:"formation_hover_du_1er_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
+(1031, 103, 'field_5757f72a372c2', 'a:11:{s:3:"key";s:19:"field_5757f72a372c2";s:5:"label";s:31:"Formation Image du 2eme losange";s:4:"name";s:31:"formation_image_du_2eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}'),
+(1032, 103, 'field_5757f73e372c3', 'a:14:{s:3:"key";s:19:"field_5757f73e372c3";s:5:"label";s:31:"Formation Hover du 2eme losange";s:4:"name";s:31:"formation_hover_du_2eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}'),
+(1033, 103, 'field_5757f74f372c4', 'a:11:{s:3:"key";s:19:"field_5757f74f372c4";s:5:"label";s:31:"Formation Image du 3eme losange";s:4:"name";s:31:"formation_image_du_3eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}'),
+(1034, 103, 'field_5757f75b372c5', 'a:14:{s:3:"key";s:19:"field_5757f75b372c5";s:5:"label";s:31:"Formation Hover du 3eme losange";s:4:"name";s:31:"formation_hover_du_3eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}'),
+(1035, 103, 'field_5757f789372c6', 'a:11:{s:3:"key";s:19:"field_5757f789372c6";s:5:"label";s:31:"Formation Image du 4eme losange";s:4:"name";s:31:"formation_image_du_4eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}'),
+(1036, 103, 'field_5757f79d372c7', 'a:14:{s:3:"key";s:19:"field_5757f79d372c7";s:5:"label";s:31:"Formation Hover du 4eme losange";s:4:"name";s:31:"formation_hover_du_4eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}'),
+(1037, 103, 'field_5757f7b1372c8', 'a:11:{s:3:"key";s:19:"field_5757f7b1372c8";s:5:"label";s:31:"Formation Image du 5eme losange";s:4:"name";s:31:"formation_image_du_5eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}'),
+(1038, 103, 'field_5757f7bc372c9', 'a:14:{s:3:"key";s:19:"field_5757f7bc372c9";s:5:"label";s:31:"Formation Hover du 5eme losange";s:4:"name";s:31:"formation_hover_du_5eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}'),
+(1040, 103, 'position', 'acf_after_title'),
+(1041, 103, 'layout', 'default'),
+(1042, 103, 'hide_on_screen', ''),
+(1043, 103, '_edit_lock', '1465397803:1'),
+(1044, 103, 'field_5757f7e2a5559', 'a:11:{s:3:"key";s:19:"field_5757f7e2a5559";s:5:"label";s:31:"Formation Image du 6eme losange";s:4:"name";s:31:"formation_image_du_6eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}'),
+(1045, 103, 'field_5757f7f2a555a', 'a:14:{s:3:"key";s:19:"field_5757f7f2a555a";s:5:"label";s:31:"Formation Hover du 6eme losange";s:4:"name";s:31:"formation_hover_du_6eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}'),
+(1046, 103, 'field_5757f7fea555b', 'a:11:{s:3:"key";s:19:"field_5757f7fea555b";s:5:"label";s:31:"Formation Image du 7eme losange";s:4:"name";s:31:"formation_image_du_7eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}'),
+(1047, 103, 'field_5757f826a555c', 'a:14:{s:3:"key";s:19:"field_5757f826a555c";s:5:"label";s:31:"Formation Hover du 7eme losange";s:4:"name";s:31:"formation_hover_du_7eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:13;}'),
+(1054, 104, 'image_du_1er_losange_formation', '58'),
+(1055, 104, '_image_du_1er_losange_formation', 'field_5757f61c372c0'),
+(1056, 104, 'hover_1er_losange_formation', ''),
+(1057, 104, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1058, 104, 'image_du_2eme_losange_formation', ''),
+(1059, 104, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1060, 104, 'hover_2eme_losange_formation', ''),
+(1061, 104, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1062, 104, 'image_du_3eme_losange_formation', ''),
+(1063, 104, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1064, 104, 'hover_3eme_losange_formation', ''),
+(1065, 104, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1066, 104, 'image_du_4eme_losange_formation', ''),
+(1067, 104, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1068, 104, 'hover_4eme_losange_formation', ''),
+(1069, 104, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1070, 104, 'image_du_5eme_losange_formation', ''),
+(1071, 104, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1072, 104, 'hover_5eme_losange_formation', ''),
+(1073, 104, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1074, 104, 'image_du_6eme_losange_formation', ''),
+(1075, 104, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1076, 104, 'hover_6eme_losange_formation', ''),
+(1077, 104, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1078, 104, 'image_du_7eme_losange_formation', ''),
+(1079, 104, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1080, 104, 'hover_7eme_losange_formation', ''),
+(1081, 104, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1082, 104, 'image_du_8eme_losange_formation', ''),
+(1083, 104, '_image_du_8eme_losange_formation', 'field_5757f849a555d'),
+(1084, 104, 'hover_8eme_losange_formation', ''),
+(1085, 104, '_hover_8eme_losange_formation', 'field_5757f859a555e'),
+(1086, 104, 'image_du_9eme_losange_formation', ''),
+(1087, 104, '_image_du_9eme_losange_formation', 'field_5757f86da555f'),
+(1088, 104, 'hover_9eme_losange_formation', ''),
+(1089, 104, '_hover_9eme_losange_formation', 'field_5757f87da5560'),
+(1090, 6, 'image_du_1er_losange_formation', '58'),
+(1091, 6, '_image_du_1er_losange_formation', 'field_5757f61c372c0'),
+(1092, 6, 'hover_1er_losange_formation', 'Façonnage industriel et routage'),
+(1093, 6, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1094, 6, 'image_du_2eme_losange_formation', '105'),
+(1095, 6, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1096, 6, 'hover_2eme_losange_formation', 'Production imprimée'),
+(1097, 6, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1098, 6, 'image_du_3eme_losange_formation', '123'),
+(1099, 6, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1100, 6, 'hover_3eme_losange_formation', 'Production Graphique'),
+(1101, 6, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1102, 6, 'image_du_4eme_losange_formation', '122'),
+(1103, 6, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1104, 6, 'hover_4eme_losange_formation', 'Études et réalisation de produits imprimés'),
+(1105, 6, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1106, 6, 'image_du_5eme_losange_formation', '121'),
+(1107, 6, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1108, 6, 'hover_5eme_losange_formation', 'Études et réalisations  de produits graphiques'),
+(1109, 6, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1110, 6, 'image_du_6eme_losange_formation', '120'),
+(1111, 6, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1112, 6, 'hover_6eme_losange_formation', 'Communication visuelle'),
+(1113, 6, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1114, 6, 'image_du_7eme_losange_formation', '119'),
+(1115, 6, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1116, 6, 'hover_7eme_losange_formation', 'Communication et média imprimés'),
+(1117, 6, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1118, 6, 'image_du_8eme_losange_formation', ''),
+(1119, 6, '_image_du_8eme_losange_formation', 'field_5757f849a555d'),
+(1120, 6, 'hover_8eme_losange_formation', ''),
+(1121, 6, '_hover_8eme_losange_formation', 'field_5757f859a555e'),
+(1122, 6, 'image_du_9eme_losange_formation', ''),
+(1123, 6, '_image_du_9eme_losange_formation', 'field_5757f86da555f'),
+(1124, 6, 'hover_9eme_losange_formation', ''),
+(1125, 6, '_hover_9eme_losange_formation', 'field_5757f87da5560'),
+(1126, 105, '_wp_attached_file', '2016/06/protrait-1.jpg'),
+(1127, 105, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:450;s:6:"height";i:533;s:4:"file";s:22:"2016/06/protrait-1.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:22:"protrait-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"protrait-1-253x300.jpg";s:5:"width";i:253;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1128, 106, 'image_du_1er_losange_formation', '58'),
+(1129, 106, '_image_du_1er_losange_formation', 'field_5757f61c372c0'),
+(1130, 106, 'hover_1er_losange_formation', ''),
+(1131, 106, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1132, 106, 'image_du_2eme_losange_formation', '105'),
+(1133, 106, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1134, 106, 'hover_2eme_losange_formation', ''),
+(1135, 106, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1136, 106, 'image_du_3eme_losange_formation', ''),
+(1137, 106, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1138, 106, 'hover_3eme_losange_formation', ''),
+(1139, 106, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1140, 106, 'image_du_4eme_losange_formation', ''),
+(1141, 106, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1142, 106, 'hover_4eme_losange_formation', ''),
+(1143, 106, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1144, 106, 'image_du_5eme_losange_formation', ''),
+(1145, 106, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1146, 106, 'hover_5eme_losange_formation', ''),
+(1147, 106, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1148, 106, 'image_du_6eme_losange_formation', ''),
+(1149, 106, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1150, 106, 'hover_6eme_losange_formation', ''),
+(1151, 106, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1152, 106, 'image_du_7eme_losange_formation', ''),
+(1153, 106, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1154, 106, 'hover_7eme_losange_formation', ''),
+(1155, 106, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1156, 106, 'image_du_8eme_losange_formation', ''),
+(1157, 106, '_image_du_8eme_losange_formation', 'field_5757f849a555d'),
+(1158, 106, 'hover_8eme_losange_formation', ''),
+(1159, 106, '_hover_8eme_losange_formation', 'field_5757f859a555e'),
+(1160, 106, 'image_du_9eme_losange_formation', ''),
+(1161, 106, '_image_du_9eme_losange_formation', 'field_5757f86da555f'),
+(1162, 106, 'hover_9eme_losange_formation', ''),
+(1163, 106, '_hover_9eme_losange_formation', 'field_5757f87da5560'),
+(1164, 107, 'image_du_1er_losange_formation', '58'),
+(1165, 107, '_image_du_1er_losange_formation', 'field_5757f61c372c0'),
+(1166, 107, 'hover_1er_losange_formation', 'Façonnage industriel et routage'),
+(1167, 107, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1168, 107, 'image_du_2eme_losange_formation', '105'),
+(1169, 107, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1170, 107, 'hover_2eme_losange_formation', ''),
+(1171, 107, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1172, 107, 'image_du_3eme_losange_formation', ''),
+(1173, 107, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1174, 107, 'hover_3eme_losange_formation', ''),
+(1175, 107, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1176, 107, 'image_du_4eme_losange_formation', ''),
+(1177, 107, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1178, 107, 'hover_4eme_losange_formation', ''),
+(1179, 107, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1180, 107, 'image_du_5eme_losange_formation', ''),
+(1181, 107, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1182, 107, 'hover_5eme_losange_formation', ''),
+(1183, 107, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1184, 107, 'image_du_6eme_losange_formation', ''),
+(1185, 107, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1186, 107, 'hover_6eme_losange_formation', ''),
+(1187, 107, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1188, 107, 'image_du_7eme_losange_formation', ''),
+(1189, 107, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1190, 107, 'hover_7eme_losange_formation', ''),
+(1191, 107, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1192, 107, 'image_du_8eme_losange_formation', ''),
+(1193, 107, '_image_du_8eme_losange_formation', 'field_5757f849a555d'),
+(1194, 107, 'hover_8eme_losange_formation', ''),
+(1195, 107, '_hover_8eme_losange_formation', 'field_5757f859a555e'),
+(1196, 107, 'image_du_9eme_losange_formation', ''),
+(1197, 107, '_image_du_9eme_losange_formation', 'field_5757f86da555f'),
+(1198, 107, 'hover_9eme_losange_formation', ''),
+(1199, 107, '_hover_9eme_losange_formation', 'field_5757f87da5560'),
+(1200, 1, '_wp_trash_meta_status', 'publish'),
+(1201, 1, '_wp_trash_meta_time', '1465388934'),
+(1202, 1, '_wp_desired_post_slug', 'bonjour-tout-le-monde'),
+(1203, 1, '_wp_trash_meta_comments_status', 'a:1:{i:1;s:1:"1";}'),
+(1204, 109, '_edit_last', '1'),
+(1205, 109, 'field_575810d12b18a', 'a:11:{s:3:"key";s:19:"field_575810d12b18a";s:5:"label";s:16:"Image Actualité";s:4:"name";s:15:"image_actualite";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
+(1206, 109, 'field_575810f62b18b', 'a:14:{s:3:"key";s:19:"field_575810f62b18b";s:5:"label";s:16:"Titre Actualité";s:4:"name";s:15:"titre_actualite";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
+(1207, 109, 'field_575811212b18c', 'a:11:{s:3:"key";s:19:"field_575811212b18c";s:5:"label";s:23:"Contenu de l''actualité";s:4:"name";s:21:"contenu_de_lactualite";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}'),
+(1209, 109, 'position', 'acf_after_title'),
+(1210, 109, 'layout', 'no_box'),
+(1211, 109, 'hide_on_screen', ''),
+(1212, 109, '_edit_lock', '1465391319:1'),
+(1214, 112, '_edit_last', '1'),
+(1215, 112, '_edit_lock', '1465390324:1'),
+(1216, 112, 'image_actualite', '100'),
+(1217, 112, '_image_actualite', 'field_575810d12b18a'),
+(1218, 112, 'titre_actualite', 'Actualité 1'),
+(1219, 112, '_titre_actualite', 'field_575810f62b18b'),
+(1220, 112, 'contenu_de_lactualite', '<p style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel ultrices mi, ut lobortis augue.</p>'),
+(1221, 112, '_contenu_de_lactualite', 'field_575811212b18c'),
+(1222, 113, '_edit_last', '1'),
+(1223, 113, '_edit_lock', '1465390335:1'),
+(1224, 113, 'image_actualite', '99'),
+(1225, 113, '_image_actualite', 'field_575810d12b18a'),
+(1226, 113, 'titre_actualite', 'Actualité 2'),
+(1227, 113, '_titre_actualite', 'field_575810f62b18b'),
+(1228, 113, 'contenu_de_lactualite', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel ultrices mi, ut lobortis augue.'),
+(1229, 113, '_contenu_de_lactualite', 'field_575811212b18c'),
+(1230, 62, '_edit_lock', '1465389960:1'),
+(1231, 114, '_edit_last', '1'),
+(1232, 114, '_edit_lock', '1465393808:1'),
+(1233, 114, 'image_actualite', '98'),
+(1234, 114, '_image_actualite', 'field_575810d12b18a'),
+(1235, 114, 'titre_actualite', 'Actualité 3'),
+(1236, 114, '_titre_actualite', 'field_575810f62b18b'),
+(1237, 114, 'contenu_de_lactualite', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel ultrices mi, ut lobortis augue.'),
+(1238, 114, '_contenu_de_lactualite', 'field_575811212b18c'),
+(1239, 115, '_edit_last', '1'),
+(1240, 115, '_edit_lock', '1465390061:1'),
+(1241, 115, 'image_actualite', '94'),
+(1242, 115, '_image_actualite', 'field_575810d12b18a'),
+(1243, 115, 'titre_actualite', 'Actualité 4'),
+(1244, 115, '_titre_actualite', 'field_575810f62b18b'),
+(1245, 115, 'contenu_de_lactualite', 'Lorem ipsum dolorem iptum ips'),
+(1246, 115, '_contenu_de_lactualite', 'field_575811212b18c'),
+(1247, 116, '_edit_last', '1'),
+(1248, 116, '_edit_lock', '1465390309:1'),
+(1249, 116, 'image_actualite', '91'),
+(1250, 116, '_image_actualite', 'field_575810d12b18a'),
+(1251, 116, 'titre_actualite', 'Actualité 5'),
+(1252, 116, '_titre_actualite', 'field_575810f62b18b'),
+(1253, 116, 'contenu_de_lactualite', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel ultrices mi, ut lobortis augue. Morbi eu lectus nec arcu semper accumsan nec quis ante.'),
+(1254, 116, '_contenu_de_lactualite', 'field_575811212b18c'),
+(1255, 109, 'rule', 'a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:10:"actualites";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(1256, 117, '_edit_last', '1'),
+(1258, 117, 'position', 'normal'),
+(1259, 117, 'layout', 'default'),
+(1260, 117, 'hide_on_screen', ''),
+(1261, 117, '_edit_lock', '1465397995:1'),
+(1262, 117, 'field_57581aece8f6a', 'a:11:{s:3:"key";s:19:"field_57581aece8f6a";s:5:"label";s:28:"Galerie Image du 1er losange";s:4:"name";s:28:"galerie_image_du_1er_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}'),
+(1263, 117, 'field_57581b04e8f6b', 'a:14:{s:3:"key";s:19:"field_57581b04e8f6b";s:5:"label";s:28:"Galerie Hover du 1er losange";s:4:"name";s:28:"galerie_hover_du_1er_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}'),
+(1264, 117, 'field_57581b27e8f6c', 'a:11:{s:3:"key";s:19:"field_57581b27e8f6c";s:5:"label";s:29:"Galerie Image du 2eme losange";s:4:"name";s:29:"galerie_image_du_2eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}'),
+(1265, 117, 'field_57582300e8f6d', 'a:14:{s:3:"key";s:19:"field_57582300e8f6d";s:5:"label";s:29:"Galerie Hover du 2eme losange";s:4:"name";s:29:"galerie_hover_du_2eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}'),
+(1268, 118, 'image_du_1er', '105'),
+(1269, 118, '_image_du_1er', 'field_5757f61c372c0'),
+(1270, 118, 'hover_1er_losange_formation', 'Façonnage industriel et routage'),
+(1271, 118, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1272, 118, 'image_du_2eme_losange_formation', '105'),
+(1273, 118, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1274, 118, 'hover_2eme_losange_formation', ''),
+(1275, 118, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1276, 118, 'image_du_3eme_losange_formation', ''),
+(1277, 118, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1278, 118, 'hover_3eme_losange_formation', ''),
+(1279, 118, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1280, 118, 'image_du_4eme_losange_formation', ''),
+(1281, 118, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1282, 118, 'hover_4eme_losange_formation', ''),
+(1283, 118, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1284, 118, 'image_du_5eme_losange_formation', ''),
+(1285, 118, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1286, 118, 'hover_5eme_losange_formation', ''),
+(1287, 118, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1288, 118, 'image_du_6eme_losange_formation', ''),
+(1289, 118, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1290, 118, 'hover_6eme_losange_formation', ''),
+(1291, 118, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1292, 118, 'image_du_7eme_losange_formation', ''),
+(1293, 118, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1294, 118, 'hover_7eme_losange_formation', ''),
+(1295, 118, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1296, 118, 'image_du_8eme_losange_formation', ''),
+(1297, 118, '_image_du_8eme_losange_formation', 'field_5757f849a555d'),
+(1298, 118, 'hover_8eme_losange_formation', ''),
+(1299, 118, '_hover_8eme_losange_formation', 'field_5757f859a555e'),
+(1300, 118, 'image_du_9eme_losange_formation', ''),
+(1301, 118, '_image_du_9eme_losange_formation', 'field_5757f86da555f'),
+(1302, 118, 'hover_9eme_losange_formation', ''),
+(1303, 118, '_hover_9eme_losange_formation', 'field_5757f87da5560'),
+(1304, 118, 'image_du_1er_losange_galerie', ''),
+(1305, 118, '_image_du_1er_losange_galerie', 'field_57581aece8f6a'),
+(1306, 118, 'hover_1er_losange_galerie', ''),
+(1307, 118, '_hover_1er_losange_galerie', 'field_57581b04e8f6b'),
+(1308, 118, 'image_du_2eme_losange_galerie', ''),
+(1309, 118, '_image_du_2eme_losange_galerie', 'field_57581b27e8f6c'),
+(1310, 118, 'hover_2eme_losange_galerie', ''),
+(1311, 118, '_hover_2eme_losange_galerie', 'field_57582300e8f6d'),
+(1312, 6, 'image_du_1er', '105'),
+(1313, 6, '_image_du_1er', 'field_5757f61c372c0'),
+(1314, 6, 'image_du_1er_losange_galerie', ''),
+(1315, 6, '_image_du_1er_losange_galerie', 'field_57581aece8f6a'),
+(1316, 6, 'hover_1er_losange_galerie', ''),
+(1317, 6, '_hover_1er_losange_galerie', 'field_57581b04e8f6b'),
+(1318, 6, 'image_du_2eme_losange_galerie', ''),
+(1319, 6, '_image_du_2eme_losange_galerie', 'field_57581b27e8f6c'),
+(1320, 6, 'hover_2eme_losange_galerie', ''),
+(1321, 6, '_hover_2eme_losange_galerie', 'field_57582300e8f6d'),
+(1325, 119, '_wp_attached_file', '2016/06/galerie-2.jpg'),
+(1326, 119, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:400;s:6:"height";i:483;s:4:"file";s:21:"2016/06/galerie-2.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"galerie-2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"galerie-2-248x300.jpg";s:5:"width";i:248;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1327, 120, '_wp_attached_file', '2016/06/galerie-3.jpg'),
+(1328, 120, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:400;s:6:"height";i:433;s:4:"file";s:21:"2016/06/galerie-3.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"galerie-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"galerie-3-277x300.jpg";s:5:"width";i:277;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1329, 121, '_wp_attached_file', '2016/06/galerie-4.jpg'),
+(1330, 121, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1000;s:6:"height";i:1200;s:4:"file";s:21:"2016/06/galerie-4.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"galerie-4-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"galerie-4-250x300.jpg";s:5:"width";i:250;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:21:"galerie-4-768x922.jpg";s:5:"width";i:768;s:6:"height";i:922;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:22:"galerie-4-853x1024.jpg";s:5:"width";i:853;s:6:"height";i:1024;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1331, 122, '_wp_attached_file', '2016/06/galerie-5.jpg'),
+(1332, 122, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:500;s:6:"height";i:558;s:4:"file";s:21:"2016/06/galerie-5.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"galerie-5-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"galerie-5-269x300.jpg";s:5:"width";i:269;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1333, 123, '_wp_attached_file', '2016/06/galerie-6.jpg'),
+(1334, 123, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:700;s:6:"height";i:743;s:4:"file";s:21:"2016/06/galerie-6.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"galerie-6-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"galerie-6-283x300.jpg";s:5:"width";i:283;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1335, 124, 'image_du_1er_losange_formation', '58'),
+(1336, 124, '_image_du_1er_losange_formation', 'field_5757f61c372c0'),
+(1337, 124, 'hover_1er_losange_formation', 'Façonnage industriel et routage'),
+(1338, 124, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1339, 124, 'image_du_2eme_losange_formation', '105'),
+(1340, 124, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1341, 124, 'hover_2eme_losange_formation', 'Production imprimée'),
+(1342, 124, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1343, 124, 'image_du_3eme_losange_formation', '123'),
+(1344, 124, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1345, 124, 'hover_3eme_losange_formation', 'Production Graphique'),
+(1346, 124, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1347, 124, 'image_du_4eme_losange_formation', '122'),
+(1348, 124, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1349, 124, 'hover_4eme_losange_formation', 'Études et réalisation de produits imprimés'),
+(1350, 124, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1351, 124, 'image_du_5eme_losange_formation', '121'),
+(1352, 124, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1353, 124, 'hover_5eme_losange_formation', 'Études et réalisations  de produits graphiques'),
+(1354, 124, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1355, 124, 'image_du_6eme_losange_formation', '120'),
+(1356, 124, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1357, 124, 'hover_6eme_losange_formation', 'Communication visuelle'),
+(1358, 124, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1359, 124, 'image_du_7eme_losange_formation', ''),
+(1360, 124, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1361, 124, 'hover_7eme_losange_formation', ''),
+(1362, 124, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1363, 124, 'image_du_8eme_losange_formation', ''),
+(1364, 124, '_image_du_8eme_losange_formation', 'field_5757f849a555d'),
+(1365, 124, 'hover_8eme_losange_formation', ''),
+(1366, 124, '_hover_8eme_losange_formation', 'field_5757f859a555e'),
+(1367, 124, 'image_du_9eme_losange_formation', ''),
+(1368, 124, '_image_du_9eme_losange_formation', 'field_5757f86da555f'),
+(1369, 124, 'hover_9eme_losange_formation', ''),
+(1370, 124, '_hover_9eme_losange_formation', 'field_5757f87da5560'),
+(1371, 124, 'image_du_1er_losange_galerie', ''),
+(1372, 124, '_image_du_1er_losange_galerie', 'field_57581aece8f6a'),
+(1373, 124, 'hover_1er_losange_galerie', ''),
+(1374, 124, '_hover_1er_losange_galerie', 'field_57581b04e8f6b'),
+(1375, 124, 'image_du_2eme_losange_galerie', ''),
+(1376, 124, '_image_du_2eme_losange_galerie', 'field_57581b27e8f6c'),
+(1377, 124, 'hover_2eme_losange_galerie', ''),
+(1378, 124, '_hover_2eme_losange_galerie', 'field_57582300e8f6d'),
+(1380, 125, 'image_du_1er_losange_formation', '58'),
+(1381, 125, '_image_du_1er_losange_formation', 'field_5757f61c372c0'),
+(1382, 125, 'hover_1er_losange_formation', 'Façonnage industriel et routage'),
+(1383, 125, '_hover_1er_losange_formation', 'field_5757f67f372c1'),
+(1384, 125, 'image_du_2eme_losange_formation', '105'),
+(1385, 125, '_image_du_2eme_losange_formation', 'field_5757f72a372c2'),
+(1386, 125, 'hover_2eme_losange_formation', 'Production imprimée'),
+(1387, 125, '_hover_2eme_losange_formation', 'field_5757f73e372c3'),
+(1388, 125, 'image_du_3eme_losange_formation', '123'),
+(1389, 125, '_image_du_3eme_losange_formation', 'field_5757f74f372c4'),
+(1390, 125, 'hover_3eme_losange_formation', 'Production Graphique'),
+(1391, 125, '_hover_3eme_losange_formation', 'field_5757f75b372c5'),
+(1392, 125, 'image_du_4eme_losange_formation', '122'),
+(1393, 125, '_image_du_4eme_losange_formation', 'field_5757f789372c6'),
+(1394, 125, 'hover_4eme_losange_formation', 'Études et réalisation de produits imprimés'),
+(1395, 125, '_hover_4eme_losange_formation', 'field_5757f79d372c7'),
+(1396, 125, 'image_du_5eme_losange_formation', '121'),
+(1397, 125, '_image_du_5eme_losange_formation', 'field_5757f7b1372c8'),
+(1398, 125, 'hover_5eme_losange_formation', 'Études et réalisations  de produits graphiques'),
+(1399, 125, '_hover_5eme_losange_formation', 'field_5757f7bc372c9'),
+(1400, 125, 'image_du_6eme_losange_formation', '120'),
+(1401, 125, '_image_du_6eme_losange_formation', 'field_5757f7e2a5559'),
+(1402, 125, 'hover_6eme_losange_formation', 'Communication visuelle'),
+(1403, 125, '_hover_6eme_losange_formation', 'field_5757f7f2a555a'),
+(1404, 125, 'image_du_7eme_losange_formation', '119'),
+(1405, 125, '_image_du_7eme_losange_formation', 'field_5757f7fea555b'),
+(1406, 125, 'hover_7eme_losange_formation', 'Communication et média imprimés'),
+(1407, 125, '_hover_7eme_losange_formation', 'field_5757f826a555c'),
+(1408, 125, 'image_du_1er_losange_galerie', ''),
+(1409, 125, '_image_du_1er_losange_galerie', 'field_57581aece8f6a'),
+(1410, 125, 'hover_1er_losange_galerie', ''),
+(1411, 125, '_hover_1er_losange_galerie', 'field_57581b04e8f6b'),
+(1412, 125, 'image_du_2eme_losange_galerie', ''),
+(1413, 125, '_image_du_2eme_losange_galerie', 'field_57581b27e8f6c'),
+(1414, 125, 'hover_2eme_losange_galerie', ''),
+(1415, 125, '_hover_2eme_losange_galerie', 'field_57582300e8f6d'),
+(1416, 117, 'field_57582a4f88703', 'a:11:{s:3:"key";s:19:"field_57582a4f88703";s:5:"label";s:29:"Galerie Image du 3eme losange";s:4:"name";s:29:"galerie_image_du_3eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}'),
+(1417, 117, 'field_57582a5f88704', 'a:14:{s:3:"key";s:19:"field_57582a5f88704";s:5:"label";s:29:"Galerie Hover du 3eme losange";s:4:"name";s:29:"galerie_hover_du_3eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}'),
+(1418, 117, 'field_57582a8288705', 'a:11:{s:3:"key";s:19:"field_57582a8288705";s:5:"label";s:29:"Galerie Image du 4eme losange";s:4:"name";s:29:"galerie_image_du_4eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}'),
+(1419, 117, 'field_57582a9488706', 'a:14:{s:3:"key";s:19:"field_57582a9488706";s:5:"label";s:29:"Galerie Hover du 4eme losange";s:4:"name";s:29:"galerie_hover_du_4eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}'),
+(1420, 117, 'field_57582aa288707', 'a:11:{s:3:"key";s:19:"field_57582aa288707";s:5:"label";s:29:"Galerie Image du 5eme losange";s:4:"name";s:29:"galerie_image_du_5eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}'),
+(1421, 117, 'field_57582ab788708', 'a:14:{s:3:"key";s:19:"field_57582ab788708";s:5:"label";s:29:"Galerie Hover du 5eme losange";s:4:"name";s:29:"galerie_hover_du_5eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}'),
+(1422, 117, 'field_57582ac188709', 'a:11:{s:3:"key";s:19:"field_57582ac188709";s:5:"label";s:29:"Galerie Image du 6eme losange";s:4:"name";s:29:"galerie_image_du_6eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}'),
+(1423, 117, 'field_57582b008870a', 'a:14:{s:3:"key";s:19:"field_57582b008870a";s:5:"label";s:29:"Galerie Hover du 6eme losange";s:4:"name";s:29:"galerie_hover_du_6eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}'),
+(1424, 117, 'field_57582b0f8870b', 'a:11:{s:3:"key";s:19:"field_57582b0f8870b";s:5:"label";s:29:"Galerie Image du 7eme losange";s:4:"name";s:29:"galerie_image_du_7eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}'),
+(1425, 117, 'field_57582d1c8870c', 'a:14:{s:3:"key";s:19:"field_57582d1c8870c";s:5:"label";s:29:"Galerie Hover du 7eme losange";s:4:"name";s:29:"galerie_hover_du_7eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:13;}'),
+(1426, 117, 'field_57582d3d8870d', 'a:11:{s:3:"key";s:19:"field_57582d3d8870d";s:5:"label";s:29:"Galerie Image du 8eme losange";s:4:"name";s:29:"galerie_image_du_8eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:14;}'),
+(1427, 117, 'field_57582d4f8870e', 'a:14:{s:3:"key";s:19:"field_57582d4f8870e";s:5:"label";s:29:"Galerie Hover du 8eme losange";s:4:"name";s:29:"galerie_hover_du_8eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:15;}'),
+(1428, 117, 'field_57582d5f8870f', 'a:11:{s:3:"key";s:19:"field_57582d5f8870f";s:5:"label";s:29:"Galerie Image du 9eme losange";s:4:"name";s:29:"galerie_image_du_9eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:16;}'),
+(1429, 117, 'field_57582d6a88710', 'a:14:{s:3:"key";s:19:"field_57582d6a88710";s:5:"label";s:29:"Galerie Hover du 9eme losange";s:4:"name";s:29:"galerie_hover_du_9eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:17;}'),
+(1430, 117, 'field_57582d7688711', 'a:11:{s:3:"key";s:19:"field_57582d7688711";s:5:"label";s:30:"Galerie Image du 10eme losange";s:4:"name";s:30:"galerie_image_du_10eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:18;}'),
+(1431, 117, 'field_57582d8788712', 'a:14:{s:3:"key";s:19:"field_57582d8788712";s:5:"label";s:30:"Galerie Hover du 10eme losange";s:4:"name";s:30:"galerie_hover_du_10eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:19;}'),
+(1432, 117, 'field_57582d9288713', 'a:11:{s:3:"key";s:19:"field_57582d9288713";s:5:"label";s:30:"Galerie Image du 11eme losange";s:4:"name";s:30:"galerie_image_du_11eme_losange";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:20;}'),
+(1433, 117, 'field_57582da888714', 'a:14:{s:3:"key";s:19:"field_57582da888714";s:5:"label";s:30:"Galerie Hover du 11eme losange";s:4:"name";s:30:"galerie_hover_du_11eme_losange";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:21;}'),
+(1434, 117, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:1:"6";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(1436, 126, 'formation_image_du_1er_losange', '123'),
+(1437, 126, '_formation_image_du_1er_losange', 'field_5757f61c372c0'),
+(1438, 126, 'formation_hover_du_1er_losange', 'Façonnage industriel et routage'),
+(1439, 126, '_formation_hover_du_1er_losange', 'field_5757f67f372c1'),
+(1440, 126, 'formation_image_du_2eme_losange', '122'),
+(1441, 126, '_formation_image_du_2eme_losange', 'field_5757f72a372c2'),
+(1442, 126, 'formation_hover_du_2eme_losange', 'Production imprimée'),
+(1443, 126, '_formation_hover_du_2eme_losange', 'field_5757f73e372c3'),
+(1444, 126, 'formation_image_du_3eme_losange', '120'),
+(1445, 126, '_formation_image_du_3eme_losange', 'field_5757f74f372c4'),
+(1446, 126, 'formation_hover_du_3eme_losange', 'Production graphique'),
+(1447, 126, '_formation_hover_du_3eme_losange', 'field_5757f75b372c5'),
+(1448, 126, 'formation_image_du_4eme_losange', '121'),
+(1449, 126, '_formation_image_du_4eme_losange', 'field_5757f789372c6'),
+(1450, 126, 'formation_hover_du_4eme_losange', 'Études et réalisation de produits imprimés'),
+(1451, 126, '_formation_hover_du_4eme_losange', 'field_5757f79d372c7'),
+(1452, 126, 'formation_image_du_5eme_losange', '119'),
+(1453, 126, '_formation_image_du_5eme_losange', 'field_5757f7b1372c8'),
+(1454, 126, 'formation_hover_du_5eme_losange', 'Études et réalisations de produits graphiques'),
+(1455, 126, '_formation_hover_du_5eme_losange', 'field_5757f7bc372c9'),
+(1456, 126, 'formation_image_du_6eme_losange', '105'),
+(1457, 126, '_formation_image_du_6eme_losange', 'field_5757f7e2a5559'),
+(1458, 126, 'formation_hover_du_6eme_losange', 'Communication visuelle'),
+(1459, 126, '_formation_hover_du_6eme_losange', 'field_5757f7f2a555a'),
+(1460, 126, 'formation_image_du_7eme_losange', '123'),
+(1461, 126, '_formation_image_du_7eme_losange', 'field_5757f7fea555b'),
+(1462, 126, 'formation_hover_du_7eme_losange', 'Communication  et média imprimés'),
+(1463, 126, '_formation_hover_du_7eme_losange', 'field_5757f826a555c'),
+(1464, 126, 'galerie_image_du_1er_losange', ''),
+(1465, 126, '_galerie_image_du_1er_losange', 'field_57581aece8f6a'),
+(1466, 126, 'galerie_hover_du_1er_losange', ''),
+(1467, 126, '_galerie_hover_du_1er_losange', 'field_57581b04e8f6b'),
+(1468, 126, 'galerie_image_du_2eme_losange', ''),
+(1469, 126, '_galerie_image_du_2eme_losange', 'field_57581b27e8f6c'),
+(1470, 126, 'galerie_hover_du_2eme_losange', ''),
+(1471, 126, '_galerie_hover_du_2eme_losange', 'field_57582300e8f6d'),
+(1472, 126, 'galerie_image_du_3eme_losange', ''),
+(1473, 126, '_galerie_image_du_3eme_losange', 'field_57582a4f88703'),
+(1474, 126, 'galerie_hover_du_3eme_losange', ''),
+(1475, 126, '_galerie_hover_du_3eme_losange', 'field_57582a5f88704'),
+(1476, 126, 'galerie_image_du_4eme_losange', ''),
+(1477, 126, '_galerie_image_du_4eme_losange', 'field_57582a8288705'),
+(1478, 126, 'galerie_hover_du_4eme_losange', ''),
+(1479, 126, '_galerie_hover_du_4eme_losange', 'field_57582a9488706'),
+(1480, 126, 'galerie_image_du_5eme_losange', '');
+INSERT INTO `gt_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1481, 126, '_galerie_image_du_5eme_losange', 'field_57582aa288707'),
+(1482, 126, 'galerie_hover_du_5eme_losange', ''),
+(1483, 126, '_galerie_hover_du_5eme_losange', 'field_57582ab788708'),
+(1484, 126, 'galerie_image_du_6eme_losange', ''),
+(1485, 126, '_galerie_image_du_6eme_losange', 'field_57582ac188709'),
+(1486, 126, 'galerie_hover_du_6eme_losange', ''),
+(1487, 126, '_galerie_hover_du_6eme_losange', 'field_57582b008870a'),
+(1488, 126, 'galerie_image_du_7eme_losange', ''),
+(1489, 126, '_galerie_image_du_7eme_losange', 'field_57582b0f8870b'),
+(1490, 126, 'galerie_hover_du_7eme_losange', ''),
+(1491, 126, '_galerie_hover_du_7eme_losange', 'field_57582d1c8870c'),
+(1492, 126, 'galerie_image_du_8eme_losange', ''),
+(1493, 126, '_galerie_image_du_8eme_losange', 'field_57582d3d8870d'),
+(1494, 126, 'galerie_hover_du_8eme_losange', ''),
+(1495, 126, '_galerie_hover_du_8eme_losange', 'field_57582d4f8870e'),
+(1496, 126, 'galerie_image_du_9eme_losange', ''),
+(1497, 126, '_galerie_image_du_9eme_losange', 'field_57582d5f8870f'),
+(1498, 126, 'galerie_hover_du_9eme_losange', ''),
+(1499, 126, '_galerie_hover_du_9eme_losange', 'field_57582d6a88710'),
+(1500, 126, 'galerie_image_du_10eme_losange', ''),
+(1501, 126, '_galerie_image_du_10eme_losange', 'field_57582d7688711'),
+(1502, 126, 'galerie_hover_du_10eme_losange', ''),
+(1503, 126, '_galerie_hover_du_10eme_losange', 'field_57582d8788712'),
+(1504, 126, 'galerie_image_du_11eme_losange', ''),
+(1505, 126, '_galerie_image_du_11eme_losange', 'field_57582d9288713'),
+(1506, 126, 'galerie_hover_du_11eme_losange', ''),
+(1507, 126, '_galerie_hover_du_11eme_losange', 'field_57582da888714'),
+(1508, 6, 'formation_image_du_1er_losange', '123'),
+(1509, 6, '_formation_image_du_1er_losange', 'field_5757f61c372c0'),
+(1510, 6, 'formation_hover_du_1er_losange', 'Façonnage industriel et routage'),
+(1511, 6, '_formation_hover_du_1er_losange', 'field_5757f67f372c1'),
+(1512, 6, 'formation_image_du_2eme_losange', '122'),
+(1513, 6, '_formation_image_du_2eme_losange', 'field_5757f72a372c2'),
+(1514, 6, 'formation_hover_du_2eme_losange', 'Production imprimée'),
+(1515, 6, '_formation_hover_du_2eme_losange', 'field_5757f73e372c3'),
+(1516, 6, 'formation_image_du_3eme_losange', '120'),
+(1517, 6, '_formation_image_du_3eme_losange', 'field_5757f74f372c4'),
+(1518, 6, 'formation_hover_du_3eme_losange', 'Production graphique'),
+(1519, 6, '_formation_hover_du_3eme_losange', 'field_5757f75b372c5'),
+(1520, 6, 'formation_image_du_4eme_losange', '121'),
+(1521, 6, '_formation_image_du_4eme_losange', 'field_5757f789372c6'),
+(1522, 6, 'formation_hover_du_4eme_losange', 'Études et réalisation de produits imprimés'),
+(1523, 6, '_formation_hover_du_4eme_losange', 'field_5757f79d372c7'),
+(1524, 6, 'formation_image_du_5eme_losange', '119'),
+(1525, 6, '_formation_image_du_5eme_losange', 'field_5757f7b1372c8'),
+(1526, 6, 'formation_hover_du_5eme_losange', 'Études et réalisations de produits graphiques'),
+(1527, 6, '_formation_hover_du_5eme_losange', 'field_5757f7bc372c9'),
+(1528, 6, 'formation_image_du_6eme_losange', '105'),
+(1529, 6, '_formation_image_du_6eme_losange', 'field_5757f7e2a5559'),
+(1530, 6, 'formation_hover_du_6eme_losange', 'Communication visuelle'),
+(1531, 6, '_formation_hover_du_6eme_losange', 'field_5757f7f2a555a'),
+(1532, 6, 'formation_image_du_7eme_losange', '123'),
+(1533, 6, '_formation_image_du_7eme_losange', 'field_5757f7fea555b'),
+(1534, 6, 'formation_hover_du_7eme_losange', 'Communication et média imprimés'),
+(1535, 6, '_formation_hover_du_7eme_losange', 'field_5757f826a555c'),
+(1536, 6, 'galerie_image_du_1er_losange', '119'),
+(1537, 6, '_galerie_image_du_1er_losange', 'field_57581aece8f6a'),
+(1538, 6, 'galerie_hover_du_1er_losange', 'Projet'),
+(1539, 6, '_galerie_hover_du_1er_losange', 'field_57581b04e8f6b'),
+(1540, 6, 'galerie_image_du_2eme_losange', '121'),
+(1541, 6, '_galerie_image_du_2eme_losange', 'field_57581b27e8f6c'),
+(1542, 6, 'galerie_hover_du_2eme_losange', 'Projet'),
+(1543, 6, '_galerie_hover_du_2eme_losange', 'field_57582300e8f6d'),
+(1544, 6, 'galerie_image_du_3eme_losange', '120'),
+(1545, 6, '_galerie_image_du_3eme_losange', 'field_57582a4f88703'),
+(1546, 6, 'galerie_hover_du_3eme_losange', 'Projet'),
+(1547, 6, '_galerie_hover_du_3eme_losange', 'field_57582a5f88704'),
+(1548, 6, 'galerie_image_du_4eme_losange', '122'),
+(1549, 6, '_galerie_image_du_4eme_losange', 'field_57582a8288705'),
+(1550, 6, 'galerie_hover_du_4eme_losange', 'Projet'),
+(1551, 6, '_galerie_hover_du_4eme_losange', 'field_57582a9488706'),
+(1552, 6, 'galerie_image_du_5eme_losange', '123'),
+(1553, 6, '_galerie_image_du_5eme_losange', 'field_57582aa288707'),
+(1554, 6, 'galerie_hover_du_5eme_losange', 'Projet'),
+(1555, 6, '_galerie_hover_du_5eme_losange', 'field_57582ab788708'),
+(1556, 6, 'galerie_image_du_6eme_losange', '105'),
+(1557, 6, '_galerie_image_du_6eme_losange', 'field_57582ac188709'),
+(1558, 6, 'galerie_hover_du_6eme_losange', 'Projet'),
+(1559, 6, '_galerie_hover_du_6eme_losange', 'field_57582b008870a'),
+(1560, 6, 'galerie_image_du_7eme_losange', '119'),
+(1561, 6, '_galerie_image_du_7eme_losange', 'field_57582b0f8870b'),
+(1562, 6, 'galerie_hover_du_7eme_losange', 'Projet'),
+(1563, 6, '_galerie_hover_du_7eme_losange', 'field_57582d1c8870c'),
+(1564, 6, 'galerie_image_du_8eme_losange', '121'),
+(1565, 6, '_galerie_image_du_8eme_losange', 'field_57582d3d8870d'),
+(1566, 6, 'galerie_hover_du_8eme_losange', 'Projet'),
+(1567, 6, '_galerie_hover_du_8eme_losange', 'field_57582d4f8870e'),
+(1568, 6, 'galerie_image_du_9eme_losange', '120'),
+(1569, 6, '_galerie_image_du_9eme_losange', 'field_57582d5f8870f'),
+(1570, 6, 'galerie_hover_du_9eme_losange', 'Projet'),
+(1571, 6, '_galerie_hover_du_9eme_losange', 'field_57582d6a88710'),
+(1572, 6, 'galerie_image_du_10eme_losange', '122'),
+(1573, 6, '_galerie_image_du_10eme_losange', 'field_57582d7688711'),
+(1574, 6, 'galerie_hover_du_10eme_losange', 'Projet'),
+(1575, 6, '_galerie_hover_du_10eme_losange', 'field_57582d8788712'),
+(1576, 6, 'galerie_image_du_11eme_losange', '123'),
+(1577, 6, '_galerie_image_du_11eme_losange', 'field_57582d9288713'),
+(1578, 6, 'galerie_hover_du_11eme_losange', 'Projet'),
+(1579, 6, '_galerie_hover_du_11eme_losange', 'field_57582da888714'),
+(1580, 127, 'formation_image_du_1er_losange', '123'),
+(1581, 127, '_formation_image_du_1er_losange', 'field_5757f61c372c0'),
+(1582, 127, 'formation_hover_du_1er_losange', 'Façonnage industriel et routage'),
+(1583, 127, '_formation_hover_du_1er_losange', 'field_5757f67f372c1'),
+(1584, 127, 'formation_image_du_2eme_losange', '122'),
+(1585, 127, '_formation_image_du_2eme_losange', 'field_5757f72a372c2'),
+(1586, 127, 'formation_hover_du_2eme_losange', 'Production imprimée'),
+(1587, 127, '_formation_hover_du_2eme_losange', 'field_5757f73e372c3'),
+(1588, 127, 'formation_image_du_3eme_losange', '120'),
+(1589, 127, '_formation_image_du_3eme_losange', 'field_5757f74f372c4'),
+(1590, 127, 'formation_hover_du_3eme_losange', 'Production graphique'),
+(1591, 127, '_formation_hover_du_3eme_losange', 'field_5757f75b372c5'),
+(1592, 127, 'formation_image_du_4eme_losange', '121'),
+(1593, 127, '_formation_image_du_4eme_losange', 'field_5757f789372c6'),
+(1594, 127, 'formation_hover_du_4eme_losange', 'Études et réalisation de produits imprimés'),
+(1595, 127, '_formation_hover_du_4eme_losange', 'field_5757f79d372c7'),
+(1596, 127, 'formation_image_du_5eme_losange', '119'),
+(1597, 127, '_formation_image_du_5eme_losange', 'field_5757f7b1372c8'),
+(1598, 127, 'formation_hover_du_5eme_losange', 'Études et réalisations de produits graphiques'),
+(1599, 127, '_formation_hover_du_5eme_losange', 'field_5757f7bc372c9'),
+(1600, 127, 'formation_image_du_6eme_losange', '105'),
+(1601, 127, '_formation_image_du_6eme_losange', 'field_5757f7e2a5559'),
+(1602, 127, 'formation_hover_du_6eme_losange', 'Communication visuelle'),
+(1603, 127, '_formation_hover_du_6eme_losange', 'field_5757f7f2a555a'),
+(1604, 127, 'formation_image_du_7eme_losange', '123'),
+(1605, 127, '_formation_image_du_7eme_losange', 'field_5757f7fea555b'),
+(1606, 127, 'formation_hover_du_7eme_losange', 'Communication  et média imprimés'),
+(1607, 127, '_formation_hover_du_7eme_losange', 'field_5757f826a555c'),
+(1608, 127, 'galerie_image_du_1er_losange', '119'),
+(1609, 127, '_galerie_image_du_1er_losange', 'field_57581aece8f6a'),
+(1610, 127, 'galerie_hover_du_1er_losange', 'Projet'),
+(1611, 127, '_galerie_hover_du_1er_losange', 'field_57581b04e8f6b'),
+(1612, 127, 'galerie_image_du_2eme_losange', '121'),
+(1613, 127, '_galerie_image_du_2eme_losange', 'field_57581b27e8f6c'),
+(1614, 127, 'galerie_hover_du_2eme_losange', 'Projet'),
+(1615, 127, '_galerie_hover_du_2eme_losange', 'field_57582300e8f6d'),
+(1616, 127, 'galerie_image_du_3eme_losange', '120'),
+(1617, 127, '_galerie_image_du_3eme_losange', 'field_57582a4f88703'),
+(1618, 127, 'galerie_hover_du_3eme_losange', 'Projet'),
+(1619, 127, '_galerie_hover_du_3eme_losange', 'field_57582a5f88704'),
+(1620, 127, 'galerie_image_du_4eme_losange', '122'),
+(1621, 127, '_galerie_image_du_4eme_losange', 'field_57582a8288705'),
+(1622, 127, 'galerie_hover_du_4eme_losange', 'Projet'),
+(1623, 127, '_galerie_hover_du_4eme_losange', 'field_57582a9488706'),
+(1624, 127, 'galerie_image_du_5eme_losange', '123'),
+(1625, 127, '_galerie_image_du_5eme_losange', 'field_57582aa288707'),
+(1626, 127, 'galerie_hover_du_5eme_losange', 'Projet'),
+(1627, 127, '_galerie_hover_du_5eme_losange', 'field_57582ab788708'),
+(1628, 127, 'galerie_image_du_6eme_losange', '105'),
+(1629, 127, '_galerie_image_du_6eme_losange', 'field_57582ac188709'),
+(1630, 127, 'galerie_hover_du_6eme_losange', 'Projet'),
+(1631, 127, '_galerie_hover_du_6eme_losange', 'field_57582b008870a'),
+(1632, 127, 'galerie_image_du_7eme_losange', '119'),
+(1633, 127, '_galerie_image_du_7eme_losange', 'field_57582b0f8870b'),
+(1634, 127, 'galerie_hover_du_7eme_losange', 'Projet'),
+(1635, 127, '_galerie_hover_du_7eme_losange', 'field_57582d1c8870c'),
+(1636, 127, 'galerie_image_du_8eme_losange', '121'),
+(1637, 127, '_galerie_image_du_8eme_losange', 'field_57582d3d8870d'),
+(1638, 127, 'galerie_hover_du_8eme_losange', 'Projet'),
+(1639, 127, '_galerie_hover_du_8eme_losange', 'field_57582d4f8870e'),
+(1640, 127, 'galerie_image_du_9eme_losange', '120'),
+(1641, 127, '_galerie_image_du_9eme_losange', 'field_57582d5f8870f'),
+(1642, 127, 'galerie_hover_du_9eme_losange', 'Projet'),
+(1643, 127, '_galerie_hover_du_9eme_losange', 'field_57582d6a88710'),
+(1644, 127, 'galerie_image_du_10eme_losange', '122'),
+(1645, 127, '_galerie_image_du_10eme_losange', 'field_57582d7688711'),
+(1646, 127, 'galerie_hover_du_10eme_losange', 'Projet'),
+(1647, 127, '_galerie_hover_du_10eme_losange', 'field_57582d8788712'),
+(1648, 127, 'galerie_image_du_11eme_losange', '123'),
+(1649, 127, '_galerie_image_du_11eme_losange', 'field_57582d9288713'),
+(1650, 127, 'galerie_hover_du_11eme_losange', 'Projet'),
+(1651, 127, '_galerie_hover_du_11eme_losange', 'field_57582da888714'),
+(1652, 103, 'rule', 'a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:1:"6";s:8:"order_no";i:0;s:8:"group_no";i:0;}'),
+(1653, 128, 'formation_image_du_1er_losange', '123'),
+(1654, 128, '_formation_image_du_1er_losange', 'field_5757f61c372c0'),
+(1655, 128, 'formation_hover_du_1er_losange', 'Façonnage industriel et routage'),
+(1656, 128, '_formation_hover_du_1er_losange', 'field_5757f67f372c1'),
+(1657, 128, 'formation_image_du_2eme_losange', '122'),
+(1658, 128, '_formation_image_du_2eme_losange', 'field_5757f72a372c2'),
+(1659, 128, 'formation_hover_du_2eme_losange', 'Production imprimée'),
+(1660, 128, '_formation_hover_du_2eme_losange', 'field_5757f73e372c3'),
+(1661, 128, 'formation_image_du_3eme_losange', '120'),
+(1662, 128, '_formation_image_du_3eme_losange', 'field_5757f74f372c4'),
+(1663, 128, 'formation_hover_du_3eme_losange', 'Production graphique'),
+(1664, 128, '_formation_hover_du_3eme_losange', 'field_5757f75b372c5'),
+(1665, 128, 'formation_image_du_4eme_losange', '121'),
+(1666, 128, '_formation_image_du_4eme_losange', 'field_5757f789372c6'),
+(1667, 128, 'formation_hover_du_4eme_losange', 'Études et réalisation de produits imprimés'),
+(1668, 128, '_formation_hover_du_4eme_losange', 'field_5757f79d372c7'),
+(1669, 128, 'formation_image_du_5eme_losange', '119'),
+(1670, 128, '_formation_image_du_5eme_losange', 'field_5757f7b1372c8'),
+(1671, 128, 'formation_hover_du_5eme_losange', 'Études et réalisations de produits graphiques'),
+(1672, 128, '_formation_hover_du_5eme_losange', 'field_5757f7bc372c9'),
+(1673, 128, 'formation_image_du_6eme_losange', '105'),
+(1674, 128, '_formation_image_du_6eme_losange', 'field_5757f7e2a5559'),
+(1675, 128, 'formation_hover_du_6eme_losange', 'Communication visuelle'),
+(1676, 128, '_formation_hover_du_6eme_losange', 'field_5757f7f2a555a'),
+(1677, 128, 'formation_image_du_7eme_losange', '123'),
+(1678, 128, '_formation_image_du_7eme_losange', 'field_5757f7fea555b'),
+(1679, 128, 'formation_hover_du_7eme_losange', 'Communication et média imprimés'),
+(1680, 128, '_formation_hover_du_7eme_losange', 'field_5757f826a555c'),
+(1681, 128, 'galerie_image_du_1er_losange', '119'),
+(1682, 128, '_galerie_image_du_1er_losange', 'field_57581aece8f6a'),
+(1683, 128, 'galerie_hover_du_1er_losange', 'Projet'),
+(1684, 128, '_galerie_hover_du_1er_losange', 'field_57581b04e8f6b'),
+(1685, 128, 'galerie_image_du_2eme_losange', '121'),
+(1686, 128, '_galerie_image_du_2eme_losange', 'field_57581b27e8f6c'),
+(1687, 128, 'galerie_hover_du_2eme_losange', 'Projet'),
+(1688, 128, '_galerie_hover_du_2eme_losange', 'field_57582300e8f6d'),
+(1689, 128, 'galerie_image_du_3eme_losange', '120'),
+(1690, 128, '_galerie_image_du_3eme_losange', 'field_57582a4f88703'),
+(1691, 128, 'galerie_hover_du_3eme_losange', 'Projet'),
+(1692, 128, '_galerie_hover_du_3eme_losange', 'field_57582a5f88704'),
+(1693, 128, 'galerie_image_du_4eme_losange', '122'),
+(1694, 128, '_galerie_image_du_4eme_losange', 'field_57582a8288705'),
+(1695, 128, 'galerie_hover_du_4eme_losange', 'Projet'),
+(1696, 128, '_galerie_hover_du_4eme_losange', 'field_57582a9488706'),
+(1697, 128, 'galerie_image_du_5eme_losange', '123'),
+(1698, 128, '_galerie_image_du_5eme_losange', 'field_57582aa288707'),
+(1699, 128, 'galerie_hover_du_5eme_losange', 'Projet'),
+(1700, 128, '_galerie_hover_du_5eme_losange', 'field_57582ab788708'),
+(1701, 128, 'galerie_image_du_6eme_losange', '105'),
+(1702, 128, '_galerie_image_du_6eme_losange', 'field_57582ac188709'),
+(1703, 128, 'galerie_hover_du_6eme_losange', 'Projet'),
+(1704, 128, '_galerie_hover_du_6eme_losange', 'field_57582b008870a'),
+(1705, 128, 'galerie_image_du_7eme_losange', '119'),
+(1706, 128, '_galerie_image_du_7eme_losange', 'field_57582b0f8870b'),
+(1707, 128, 'galerie_hover_du_7eme_losange', 'Projet'),
+(1708, 128, '_galerie_hover_du_7eme_losange', 'field_57582d1c8870c'),
+(1709, 128, 'galerie_image_du_8eme_losange', '121'),
+(1710, 128, '_galerie_image_du_8eme_losange', 'field_57582d3d8870d'),
+(1711, 128, 'galerie_hover_du_8eme_losange', 'Projet'),
+(1712, 128, '_galerie_hover_du_8eme_losange', 'field_57582d4f8870e'),
+(1713, 128, 'galerie_image_du_9eme_losange', '120'),
+(1714, 128, '_galerie_image_du_9eme_losange', 'field_57582d5f8870f'),
+(1715, 128, 'galerie_hover_du_9eme_losange', 'Projet'),
+(1716, 128, '_galerie_hover_du_9eme_losange', 'field_57582d6a88710'),
+(1717, 128, 'galerie_image_du_10eme_losange', '122'),
+(1718, 128, '_galerie_image_du_10eme_losange', 'field_57582d7688711'),
+(1719, 128, 'galerie_hover_du_10eme_losange', 'Projet'),
+(1720, 128, '_galerie_hover_du_10eme_losange', 'field_57582d8788712'),
+(1721, 128, 'galerie_image_du_11eme_losange', '123'),
+(1722, 128, '_galerie_image_du_11eme_losange', 'field_57582d9288713'),
+(1723, 128, 'galerie_hover_du_11eme_losange', 'Projet'),
+(1724, 128, '_galerie_hover_du_11eme_losange', 'field_57582da888714');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_posts`
+-- Structure de la table `gt_posts`
 --
 
 CREATE TABLE `gt_posts` (
-  `ID` bigint(20) unsigned NOT NULL,
+`ID` bigint(20) unsigned NOT NULL,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1170,18 +1917,18 @@ CREATE TABLE `gt_posts` (
   `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
   `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_posts`
+-- Contenu de la table `gt_posts`
 --
 
 INSERT INTO `gt_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(1, 1, '2016-06-03 15:53:10', '2016-06-03 13:53:10', 'Bienvenue dans WordPress. Ceci est votre premier article. Modifiez-le ou supprimez-le, puis lancez-vous&nbsp;!', 'Bonjour tout le monde&nbsp;!', '', 'publish', 'open', 'open', '', 'bonjour-tout-le-monde', '', '', '2016-06-03 15:53:10', '2016-06-03 13:53:10', '', 0, 'http://localhost:8888/garamont/?p=1', 0, 'post', '', 1),
+(1, 1, '2016-06-03 15:53:10', '2016-06-03 13:53:10', 'Bienvenue dans WordPress. Ceci est votre premier article. Modifiez-le ou supprimez-le, puis lancez-vous&nbsp;!', 'Bonjour tout le monde&nbsp;!', '', 'trash', 'open', 'open', '', 'bonjour-tout-le-monde__trashed', '', '', '2016-06-08 14:28:54', '2016-06-08 12:28:54', '', 0, 'http://localhost:8888/garamont/?p=1', 0, 'post', '', 1),
 (2, 1, '2016-06-03 15:53:10', '2016-06-03 13:53:10', 'Voici un exemple de page. Elle est différente d’un article de blog, en cela qu’elle restera à la même place, et s’affichera dans le menu de navigation de votre site (en fonction de votre thème). La plupart des gens commencent par écrire une page « À Propos » qui les présente aux visiteurs potentiels du site. Vous pourriez y écrire quelque chose de ce tenant :\n\n<blockquote>Bonjour ! Je suis un mécanicien qui aspire à devenir un acteur, et voici mon blog. J’habite à Bordeaux, j’ai un super chien baptisé Russell, et j’aime la vodka-ananas (ainsi que regarder la pluie tomber).</blockquote>\n\n...ou bien quelque chose comme ça :\n\n<blockquote>La société 123 Machin Truc a été créée en 1971, et n’a cessé de proposer au public des machins-trucs de qualité depuis lors. Située à Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, 123 Machin Truc emploie 2 000 personnes, et fabrique toutes sortes de bidules super pour la communauté bouzemontoise.</blockquote>\n\nÉtant donné que vous êtes un nouvel utilisateur de WordPress, vous devriez vous rendre sur votre <a href="http://localhost:8888/garamont/wp-admin/">Tableau de bord</a> pour effacer la présente page, et créer de nouvelles pages avec votre propre contenu. Amusez-vous bien !', 'Page d&rsquo;exemple', '', 'trash', 'closed', 'open', '', 'page-d-exemple__trashed', '', '', '2016-06-03 15:56:39', '2016-06-03 13:56:39', '', 0, 'http://localhost:8888/garamont/?page_id=2', 0, 'page', '', 0),
 (3, 1, '2016-06-03 15:53:19', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-06-03 15:53:19', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/garamont/?p=3', 0, 'post', '', 0),
 (5, 1, '2016-06-03 15:56:39', '2016-06-03 13:56:39', 'Voici un exemple de page. Elle est différente d’un article de blog, en cela qu’elle restera à la même place, et s’affichera dans le menu de navigation de votre site (en fonction de votre thème). La plupart des gens commencent par écrire une page « À Propos » qui les présente aux visiteurs potentiels du site. Vous pourriez y écrire quelque chose de ce tenant :\n\n<blockquote>Bonjour ! Je suis un mécanicien qui aspire à devenir un acteur, et voici mon blog. J’habite à Bordeaux, j’ai un super chien baptisé Russell, et j’aime la vodka-ananas (ainsi que regarder la pluie tomber).</blockquote>\n\n...ou bien quelque chose comme ça :\n\n<blockquote>La société 123 Machin Truc a été créée en 1971, et n’a cessé de proposer au public des machins-trucs de qualité depuis lors. Située à Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, 123 Machin Truc emploie 2 000 personnes, et fabrique toutes sortes de bidules super pour la communauté bouzemontoise.</blockquote>\n\nÉtant donné que vous êtes un nouvel utilisateur de WordPress, vous devriez vous rendre sur votre <a href="http://localhost:8888/garamont/wp-admin/">Tableau de bord</a> pour effacer la présente page, et créer de nouvelles pages avec votre propre contenu. Amusez-vous bien !', 'Page d&rsquo;exemple', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2016-06-03 15:56:39', '2016-06-03 13:56:39', '', 2, 'http://localhost:8888/garamont/2016/06/03/2-revision-v1/', 0, 'revision', '', 0),
-(6, 1, '2016-06-03 15:56:48', '2016-06-03 13:56:48', '', 'Accueil', '', 'publish', 'closed', 'closed', '', 'accueil', '', '', '2016-06-03 15:57:50', '2016-06-03 13:57:50', '', 0, 'http://localhost:8888/garamont/?page_id=6', 0, 'page', '', 0),
+(6, 1, '2016-06-03 15:56:48', '2016-06-03 13:56:48', '', 'Accueil', '', 'publish', 'closed', 'closed', '', 'accueil', '', '', '2016-06-08 16:59:20', '2016-06-08 14:59:20', '', 0, 'http://localhost:8888/garamont/?page_id=6', 0, 'page', '', 0),
 (7, 1, '2016-06-03 15:56:48', '2016-06-03 13:56:48', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-03 15:56:48', '2016-06-03 13:56:48', '', 6, 'http://localhost:8888/garamont/2016/06/03/6-revision-v1/', 0, 'revision', '', 0),
 (8, 1, '2016-06-03 15:56:55', '2016-06-03 13:56:55', '<h2>Lorem Ipsum</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci asperiores distinctio dolor ducimus eaque eius error esse eum, ipsam nihil praesentium recusandae reprehenderit sed suscipit voluptas! Culpa, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci dolores esse eum perspiciatis possimus repudiandae sint ullam, voluptatibus! Deleniti dolorum ea, enim eveniet exercitationem iste labore modi molestiae similique! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur cum, cumque deleniti dignissimos dolor eos eum expedita hic id ipsam magni perferendis quia quis soluta tempore ullam velit veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, placeat, voluptatum. Amet expedita libero magni numquam optio quasi! Adipisci, atque eos harum necessitatibus omnis provident reprehenderit repudiandae saepe similique suscipit!', 'Contact', '', 'publish', 'closed', 'closed', '', 'contact', '', '', '2016-06-03 15:59:48', '2016-06-03 13:59:48', '', 0, 'http://localhost:8888/garamont/?page_id=8', 0, 'page', '', 0),
 (9, 1, '2016-06-03 15:56:55', '2016-06-03 13:56:55', '', 'Contact', '', 'inherit', 'closed', 'closed', '', '8-revision-v1', '', '', '2016-06-03 15:56:55', '2016-06-03 13:56:55', '', 8, 'http://localhost:8888/garamont/2016/06/03/8-revision-v1/', 0, 'revision', '', 0),
@@ -1189,7 +1936,7 @@ INSERT INTO `gt_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (11, 1, '2016-06-03 15:57:05', '2016-06-03 13:57:05', '', 'Formations', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2016-06-03 15:57:05', '2016-06-03 13:57:05', '', 10, 'http://localhost:8888/garamont/2016/06/03/10-revision-v1/', 0, 'revision', '', 0),
 (12, 1, '2016-06-03 15:57:13', '2016-06-03 13:57:13', '', 'Entreprise', '', 'publish', 'closed', 'closed', '', 'entreprise', '', '', '2016-06-03 16:50:02', '2016-06-03 14:50:02', '', 0, 'http://localhost:8888/garamont/?page_id=12', 0, 'page', '', 0),
 (13, 1, '2016-06-03 15:57:13', '2016-06-03 13:57:13', '', 'Entreprise', '', 'inherit', 'closed', 'closed', '', '12-revision-v1', '', '', '2016-06-03 15:57:13', '2016-06-03 13:57:13', '', 12, 'http://localhost:8888/garamont/2016/06/03/12-revision-v1/', 0, 'revision', '', 0),
-(14, 1, '2016-06-03 15:57:20', '2016-06-03 13:57:20', '', 'Projets', '', 'publish', 'closed', 'closed', '', 'projets', '', '', '2016-06-03 17:14:22', '2016-06-03 15:14:22', '', 0, 'http://localhost:8888/garamont/?page_id=14', 0, 'page', '', 0),
+(14, 1, '2016-06-03 15:57:20', '2016-06-03 13:57:20', '', 'Projets', '', 'publish', 'closed', 'closed', '', 'projets', '', '', '2016-06-06 23:39:00', '2016-06-06 21:39:00', '', 0, 'http://localhost:8888/garamont/?page_id=14', 0, 'page', '', 0),
 (15, 1, '2016-06-03 15:57:20', '2016-06-03 13:57:20', '', 'Projets', '', 'inherit', 'closed', 'closed', '', '14-revision-v1', '', '', '2016-06-03 15:57:20', '2016-06-03 13:57:20', '', 14, 'http://localhost:8888/garamont/2016/06/03/14-revision-v1/', 0, 'revision', '', 0),
 (16, 1, '2016-06-03 15:57:31', '2016-06-03 13:57:31', '', 'Lycée', '', 'publish', 'closed', 'closed', '', 'lycee', '', '', '2016-06-05 16:32:06', '2016-06-05 14:32:06', '', 0, 'http://localhost:8888/garamont/?page_id=16', 0, 'page', '', 0),
 (17, 1, '2016-06-03 15:57:31', '2016-06-03 13:57:31', '', 'Lycée', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2016-06-03 15:57:31', '2016-06-03 13:57:31', '', 16, 'http://localhost:8888/garamont/2016/06/03/16-revision-v1/', 0, 'revision', '', 0),
@@ -1225,18 +1972,18 @@ INSERT INTO `gt_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (52, 1, '2016-06-03 16:56:32', '2016-06-03 14:56:32', '', 'Projet 1', '', 'trash', 'closed', 'closed', '', '__trashed', '', '', '2016-06-03 16:57:09', '2016-06-03 14:57:09', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=52', 0, 'projets', '', 0),
 (53, 1, '2016-06-03 17:00:09', '2016-06-03 15:00:09', '', 'Single Projet', '', 'publish', 'closed', 'closed', '', 'acf_single-projet', '', '', '2016-06-03 21:29:51', '2016-06-03 19:29:51', '', 0, 'http://localhost:8888/garamont/?post_type=acf&#038;p=53', 0, 'acf', '', 0),
 (54, 1, '2016-06-03 17:00:13', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-06-03 17:00:13', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/garamont/?post_type=projets&p=54', 0, 'projets', '', 0),
-(55, 1, '2016-06-03 17:01:35', '2016-06-03 15:01:35', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur et ipsam minus nesciunt non odit officia tenetur veniam. Adipisci cumque facere nam necessitatibus, pariatur quae rerum. Fugit, obcaecati ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolorum earum eos, esse facere fugit hic nesciunt nihil placeat quisquam vel! Adipisci debitis expedita harum iste mollitia, sit veritatis!', 'Projet 1', '', 'publish', 'closed', 'closed', '', 'projet-1', '', '', '2016-06-03 21:30:59', '2016-06-03 19:30:59', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=55', 0, 'projets', '', 0),
+(55, 1, '2016-06-03 17:01:35', '2016-06-03 15:01:35', '<i>Guernica</i> est une peinture d''une taille <a title="Monument" href="https://fr.wikipedia.org/wiki/Monument">monumentale</a><sup id="cite_ref-17" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-17">17</a></sup> (<span class="nowrap">349 3 × <span class="nowrap">776 6 cm</span></span>)<sup id="cite_ref-museoreinasofia_1-4" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-museoreinasofia-1">1</a></sup>.\r\n\r\nC''est une <a title="Peinture d''histoire" href="https://fr.wikipedia.org/wiki/Peinture_d%27histoire">peinture d''histoire</a>, exécutée en noir et blanc, avec un <a title="Camaïeu (peinture)" href="https://fr.wikipedia.org/wiki/Cama%C3%AFeu_(peinture)">camaïeu</a> de nuances de gris (<a title="Grisaille" href="https://fr.wikipedia.org/wiki/Grisaille">grisaille</a>)<sup id="cite_ref-18" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-18">18</a></sup>.\r\n\r\nSelon le musée Reina Sofía, où le tableau est actuellement conservé, il a été réalisé avec de la <a title="Peinture à l''huile" href="https://fr.wikipedia.org/wiki/Peinture_%C3%A0_l%27huile">peinture à l''huile</a><sup id="cite_ref-museoreinasofia_1-5" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-museoreinasofia-1">1</a></sup>, mais plusieurs historiens de l''art précisent au contraire que Picasso a utilisé de la <a class="mw-disambig" title="Peinture à l''eau" href="https://fr.wikipedia.org/wiki/Peinture_%C3%A0_l%27eau">peinture à l''eau</a> industrielle <a title="Peinture acrylique" href="https://fr.wikipedia.org/wiki/Peinture_acrylique">vinylique</a> mate de marque <a title="Ripolin" href="https://fr.wikipedia.org/wiki/Ripolin">Ripolin</a><sup id="cite_ref-Ripolin_19-0" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-Ripolin-19">19</a></sup><sup class="reference cite_virgule">,</sup><sup id="cite_ref-20" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-20">20</a></sup>, dont il s''était déclaré totalement satisfait alors que ce n''était pas un type de peinture utilisé habituellement pour la <a title="Peinture" href="https://fr.wikipedia.org/wiki/Peinture">peinture d''art</a> mais pour la <a title="Peinture (bâtiment)" href="https://fr.wikipedia.org/wiki/Peinture_(b%C3%A2timent)">peinture en bâtiment</a><sup id="cite_ref-Ripolin_19-1" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-Ripolin-19">19</a></sup>, et que Jaume Vidal, employé de l''entreprise Castellucho, qui a fourni à Picasso la peinture ainsi que la toile de <a class="mw-disambig" title="Lin" href="https://fr.wikipedia.org/wiki/Lin">lin</a> et le châssis, lui avait conseillé d''utiliser une peinture de meilleure qualité car celle-ci allait se craqueler sur le lin, ce qui s''est effectivement produit dès la fin de l''Exposition internationale<sup id="cite_ref-Latour201361-62_21-0" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-Latour201361-62-21">21</a></sup>. Selon ces sources, il aurait recherché une peinture qui ne brille pas, peut-être pour s''approcher de l''aspect des maisons détruites<sup id="cite_ref-Latour201363_22-0" class="reference"><a href="https://fr.wikipedia.org/wiki/Guernica_(Picasso)#cite_note-Latour201363-22">22</a></sup>', 'Guernica', '', 'publish', 'closed', 'closed', '', 'projet-1', '', '', '2016-06-06 23:41:44', '2016-06-06 21:41:44', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=55', 0, 'projets', '', 0),
 (56, 1, '2016-06-03 17:01:50', '2016-06-03 15:01:50', '', 'formation', '', 'inherit', 'open', 'closed', '', 'formation', '', '', '2016-06-03 17:01:50', '2016-06-03 15:01:50', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/formation.jpg', 0, 'attachment', 'image/jpeg', 0),
-(57, 1, '2016-06-03 17:02:53', '2016-06-03 15:02:53', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur et ipsam minus nesciunt non odit officia tenetur veniam. Adipisci cumque facere nam necessitatibus, pariatur quae rerum. Fugit, obcaecati ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolorum earum eos, esse facere fugit hic nesciunt nihil placeat quisquam vel! Adipisci debitis expedita harum iste mollitia, sit veritatis!', 'Projet 2', '', 'publish', 'closed', 'closed', '', 'projet-2', '', '', '2016-06-03 21:31:13', '2016-06-03 19:31:13', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=57', 0, 'projets', '', 0),
+(57, 1, '2016-06-03 17:02:53', '2016-06-03 15:02:53', 'Following <a href="http://www.franzmarc.org/The-Red-Horses.jsp">Red Horses</a> and <a href="http://www.franzmarc.org/Yellow-Cow.jsp">Yellow Cow</a>, Marc completed his suite of monumental, primary-color compositions in 1911 with <strong>The Large Blue Horses</strong>. He returned to the <a href="http://www.franzmarc.org/Lenggries-Horse.jsp">Lenggries Horse Painting</a> for the pose of the animals and for the semi-circular arrangement, with all pointing to the left. The group of animals is rather awkward and bulky, as they are bunched in a small, constricted, entirely blue area, with the viewer''s vantage point close to the action. Compositionally, the animals are more fully integrated with a hilly landscape than was the case in <strong>Red Horses</strong>.', 'Blue Horses', '', 'publish', 'closed', 'closed', '', 'projet-2', '', '', '2016-06-06 23:49:17', '2016-06-06 21:49:17', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=57', 0, 'projets', '', 0),
 (58, 1, '2016-06-03 17:02:46', '2016-06-03 15:02:46', '', 'projet', '', 'inherit', 'open', 'closed', '', 'projet', '', '', '2016-06-03 17:02:46', '2016-06-03 15:02:46', '', 57, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/projet.jpg', 0, 'attachment', 'image/jpeg', 0),
-(59, 1, '2016-06-03 17:03:33', '2016-06-03 15:03:33', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur et ipsam minus nesciunt non odit officia tenetur veniam. Adipisci cumque facere nam necessitatibus, pariatur quae rerum. Fugit, obcaecati ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolorum earum eos, esse facere fugit hic nesciunt nihil placeat quisquam vel! Adipisci debitis expedita harum iste mollitia, sit veritatis!', 'Projet 3', '', 'publish', 'closed', 'closed', '', 'projet-3', '', '', '2016-06-03 21:30:06', '2016-06-03 19:30:06', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=59', 0, 'projets', '', 0),
+(59, 1, '2016-06-03 17:03:33', '2016-06-03 15:03:33', '<i><b>Vue de Tolède</b></i> est le nom de plusieurs tableaux peints par <a title="El Greco" href="https://fr.wikipedia.org/wiki/El_Greco">El Greco</a> ; celui-ci mesurant 121 × <span class="nowrap">106 cm</span>, réalisé entre 1596 et 1600 est conservé au <a title="Metropolitan Museum of Art" href="https://fr.wikipedia.org/wiki/Metropolitan_Museum_of_Art">Metropolitan Museum of Art</a> à <a title="New York" href="https://fr.wikipedia.org/wiki/New_York">New York</a>.', 'Vue de Tolède', '', 'publish', 'closed', 'closed', '', 'projet-3', '', '', '2016-06-06 23:57:08', '2016-06-06 21:57:08', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=59', 0, 'projets', '', 0),
 (60, 1, '2016-06-03 17:14:22', '2016-06-03 15:14:22', '', 'Projets', '', 'inherit', 'closed', 'closed', '', '14-revision-v1', '', '', '2016-06-03 17:14:22', '2016-06-03 15:14:22', '', 14, 'http://localhost:8888/garamont/2016/06/03/14-revision-v1/', 0, 'revision', '', 0),
 (61, 1, '2016-06-04 15:00:03', '2016-06-04 13:00:03', 'Duis non nisl mattis, tristique risus a, fringilla orci. Sed malesuada velit purus, sed porttitor augue blandit a. Duis id volutpat enim. Praesent ullamcorper lobortis euismod. Suspendisse neque nibh, iaculis vitae vulputate at, mollis eleifend ante. Nam eu dolor magna. Aenean nulla metus, faucibus vitae iaculis non, dapibus sit amet orci. Vestibulum mattis arcu ex, a suscipit augue luctus et. Nunc mattis vestibulum metus a elementum. Quisque nisi ligula, tempor nec convallis ac, dapibus sed leo.', 'Projet 4', '', 'trash', 'closed', 'closed', '', 'projet-4__trashed', '', '', '2016-06-04 17:13:20', '2016-06-04 15:13:20', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=61', 0, 'projets', '', 0),
 (62, 1, '2016-06-04 14:59:54', '2016-06-04 12:59:54', '', 'img_lycee', '', 'inherit', 'open', 'closed', '', 'img_lycee', '', '', '2016-06-04 14:59:54', '2016-06-04 12:59:54', '', 61, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/img_lycee.jpg', 0, 'attachment', 'image/jpeg', 0),
 (63, 1, '2016-06-04 15:17:31', '2016-06-04 13:17:31', '', 'lycee', '', 'inherit', 'open', 'closed', '', 'lycee-2', '', '', '2016-06-04 15:17:31', '2016-06-04 13:17:31', '', 16, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/lycee.jpg', 0, 'attachment', 'image/jpeg', 0),
 (64, 1, '2016-06-04 15:22:02', '2016-06-04 13:22:02', '', 'Page Lycée', '', 'publish', 'closed', 'closed', '', 'acf_page-lycee', '', '', '2016-06-05 16:22:34', '2016-06-05 14:22:34', '', 0, 'http://localhost:8888/garamont/?post_type=acf&#038;p=64', 0, 'acf', '', 0),
 (65, 1, '2016-06-04 17:05:13', '2016-06-04 15:05:13', '', 'pronote', '', 'publish', 'closed', 'closed', '', 'pronote', '', '', '2016-06-04 17:05:13', '2016-06-04 15:05:13', '', 0, 'http://localhost:8888/garamont/?p=65', 6, 'nav_menu_item', '', 0),
-(66, 1, '2016-06-04 17:14:06', '2016-06-04 15:14:06', 'azeazeaze', 'Projet 4', '', 'publish', 'closed', 'closed', '', 'projet-4', '', '', '2016-06-04 17:24:08', '2016-06-04 15:24:08', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=66', 0, 'projets', '', 0),
+(66, 1, '2016-06-04 17:14:06', '2016-06-04 15:14:06', 'La dame en veste verte, l’une des oeuvres majeures du peintre et l’un des premiers tableaux à avoir été réalisés après qu:il se soit installé avec sa famille à Hilterfingen sur le Thuner See, le confirme: du format presque carré émane un bel équilibre compositionnel. La dame qui donne son nom au tableau n’est que légèrement à l''écart de la ligne médiane verticale. Dénuée de visage, elle est anonyme et - exemplaire comme tous les personnages de Macke à cette époque. Sa silhouette allongée est entourée de quatre figures plus petites, vu qu’elles sont plus loin à l’arrière-plan; deux à gauche et deux à droite  s’avançant vers le parapet qui borde une rivière derrière laquelle se  déploie un paysage où l’on reconnaît des maisons simplifiées précubistes, à la manière de Georges Braque.', 'La dame en veste verte', '', 'publish', 'closed', 'closed', '', 'projet-4', '', '', '2016-06-06 23:58:35', '2016-06-06 21:58:35', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=66', 0, 'projets', '', 0),
 (67, 1, '2016-06-04 19:01:40', '2016-06-04 17:01:40', '', 'Lycée', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2016-06-04 19:01:40', '2016-06-04 17:01:40', '', 16, 'http://localhost:8888/garamont/16-revision-v1/', 0, 'revision', '', 0),
 (68, 1, '2016-06-04 19:03:21', '2016-06-04 17:03:21', '', 'Lycée', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2016-06-04 19:03:21', '2016-06-04 17:03:21', '', 16, 'http://localhost:8888/garamont/16-revision-v1/', 0, 'revision', '', 0),
 (69, 1, '2016-06-04 19:07:51', '2016-06-04 17:07:51', '', 'Lycée', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2016-06-04 19:07:51', '2016-06-04 17:07:51', '', 16, 'http://localhost:8888/garamont/16-revision-v1/', 0, 'revision', '', 0),
@@ -1251,16 +1998,63 @@ INSERT INTO `gt_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (78, 1, '2016-06-05 20:22:59', '2016-06-05 18:22:59', '', 'Formations', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2016-06-05 20:22:59', '2016-06-05 18:22:59', '', 10, 'http://localhost:8888/garamont/10-revision-v1/', 0, 'revision', '', 0),
 (79, 1, '2016-06-05 20:23:31', '2016-06-05 18:23:31', '', 'Formations', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2016-06-05 20:23:31', '2016-06-05 18:23:31', '', 10, 'http://localhost:8888/garamont/10-revision-v1/', 0, 'revision', '', 0),
 (80, 1, '2016-06-05 20:28:28', '2016-06-05 18:28:28', '', 'Formations', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2016-06-05 20:28:28', '2016-06-05 18:28:28', '', 10, 'http://localhost:8888/garamont/10-revision-v1/', 0, 'revision', '', 0),
-(81, 1, '2016-06-05 20:28:50', '2016-06-05 18:28:50', '', 'Formations', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2016-06-05 20:28:50', '2016-06-05 18:28:50', '', 10, 'http://localhost:8888/garamont/10-revision-v1/', 0, 'revision', '', 0);
+(81, 1, '2016-06-05 20:28:50', '2016-06-05 18:28:50', '', 'Formations', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2016-06-05 20:28:50', '2016-06-05 18:28:50', '', 10, 'http://localhost:8888/garamont/10-revision-v1/', 0, 'revision', '', 0),
+(82, 1, '2016-06-06 23:39:00', '2016-06-06 21:39:00', '', 'Projets', '', 'inherit', 'closed', 'closed', '', '14-revision-v1', '', '', '2016-06-06 23:39:00', '2016-06-06 21:39:00', '', 14, 'http://localhost:8888/garamont/14-revision-v1/', 0, 'revision', '', 0),
+(83, 1, '2016-06-06 23:40:11', '2016-06-06 21:40:11', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur et ipsam minus nesciunt non odit officia tenetur veniam. Adipisci cumque facere nam necessitatibus, pariatur quae rerum. Fugit, obcaecati ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolorum earum eos, esse facere fugit hic nesciunt nihil placeat quisquam vel! Adipisci debitis expedita harum iste mollitia, sit veritatis!', 'Guernica', '', 'inherit', 'closed', 'closed', '', '55-autosave-v1', '', '', '2016-06-06 23:40:11', '2016-06-06 21:40:11', '', 55, 'http://localhost:8888/garamont/55-autosave-v1/', 0, 'revision', '', 0),
+(84, 1, '2016-06-06 23:41:23', '2016-06-06 21:41:23', '', 'Expressionnisme-2', '', 'inherit', 'open', 'closed', '', 'expressionnisme-2', '', '', '2016-06-06 23:41:23', '2016-06-06 21:41:23', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/Expressionnisme-2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(85, 1, '2016-06-06 23:41:24', '2016-06-06 21:41:24', '', 'Expressionnisme-3', '', 'inherit', 'open', 'closed', '', 'expressionnisme-3', '', '', '2016-06-06 23:41:24', '2016-06-06 21:41:24', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/Expressionnisme-3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(86, 1, '2016-06-06 23:41:25', '2016-06-06 21:41:25', '', 'Expressionnisme', '', 'inherit', 'open', 'closed', '', 'expressionnisme', '', '', '2016-06-06 23:41:25', '2016-06-06 21:41:25', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/Expressionnisme.jpg', 0, 'attachment', 'image/jpeg', 0),
+(87, 1, '2016-06-06 23:41:28', '2016-06-06 21:41:28', '', 'cubisme-2', '', 'inherit', 'open', 'closed', '', 'cubisme-2', '', '', '2016-06-06 23:41:28', '2016-06-06 21:41:28', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/cubisme-2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(88, 1, '2016-06-06 23:41:29', '2016-06-06 21:41:29', '', 'cubisme', '', 'inherit', 'open', 'closed', '', 'cubisme', '', '', '2016-06-06 23:41:29', '2016-06-06 21:41:29', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/cubisme.jpg', 0, 'attachment', 'image/jpeg', 0),
+(89, 1, '2016-06-06 23:41:33', '2016-06-06 21:41:33', '', 'pointillisme-2', '', 'inherit', 'open', 'closed', '', 'pointillisme-2', '', '', '2016-06-06 23:41:33', '2016-06-06 21:41:33', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/pointillisme-2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(90, 1, '2016-06-06 23:41:34', '2016-06-06 21:41:34', '', 'pointillisme-3', '', 'inherit', 'open', 'closed', '', 'pointillisme-3', '', '', '2016-06-06 23:41:34', '2016-06-06 21:41:34', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/pointillisme-3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(91, 1, '2016-06-06 23:41:35', '2016-06-06 21:41:35', '', 'pointillisme', '', 'inherit', 'open', 'closed', '', 'pointillisme', '', '', '2016-06-06 23:41:35', '2016-06-06 21:41:35', '', 55, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/pointillisme.jpg', 0, 'attachment', 'image/jpeg', 0),
+(92, 1, '2016-06-06 23:49:06', '2016-06-06 21:49:06', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur et ipsam minus nesciunt non odit officia tenetur veniam. Adipisci cumque facere nam necessitatibus, pariatur quae rerum. Fugit, obcaecati ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolorum earum eos, esse facere fugit hic nesciunt nihil placeat quisquam vel! Adipisci debitis expedita harum iste mollitia, sit veritatis!', 'Blue Horses', '', 'inherit', 'closed', 'closed', '', '57-autosave-v1', '', '', '2016-06-06 23:49:06', '2016-06-06 21:49:06', '', 57, 'http://localhost:8888/garamont/57-autosave-v1/', 0, 'revision', '', 0),
+(93, 1, '2016-06-06 23:55:21', '2016-06-06 21:55:21', '', 'Expressionnisme-3', '', 'inherit', 'open', 'closed', '', 'expressionnisme-3-2', '', '', '2016-06-06 23:55:21', '2016-06-06 21:55:21', '', 59, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/Expressionnisme-3-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(94, 1, '2016-06-06 23:55:22', '2016-06-06 21:55:22', '', 'Expressionnisme', '', 'inherit', 'open', 'closed', '', 'expressionnisme-4', '', '', '2016-06-06 23:55:22', '2016-06-06 21:55:22', '', 59, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/Expressionnisme-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(95, 1, '2016-06-06 23:56:03', '2016-06-06 21:56:03', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur et ipsam minus nesciunt non odit officia tenetur veniam. Adipisci cumque facere nam necessitatibus, pariatur quae rerum. Fugit, obcaecati ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolorum earum eos, esse facere fugit hic nesciunt nihil placeat quisquam vel! Adipisci debitis expedita harum iste mollitia, sit veritatis!', 'La Vue de Tolède sous l’orage du Greco', '', 'inherit', 'closed', 'closed', '', '59-autosave-v1', '', '', '2016-06-06 23:56:03', '2016-06-06 21:56:03', '', 59, 'http://localhost:8888/garamont/59-autosave-v1/', 0, 'revision', '', 0),
+(96, 1, '2016-06-06 23:58:22', '2016-06-06 21:58:22', 'azeazeaze', 'La dame en veste verte', '', 'inherit', 'closed', 'closed', '', '66-autosave-v1', '', '', '2016-06-06 23:58:22', '2016-06-06 21:58:22', '', 66, 'http://localhost:8888/garamont/66-autosave-v1/', 0, 'revision', '', 0),
+(97, 1, '2016-06-07 00:04:36', '2016-06-06 22:04:36', 'Ce tableau poursuit, après <i>Chahut</i> (1890, conservé à <a title="Otterlo" href="https://fr.wikipedia.org/wiki/Otterlo">Otterlo</a>), les recherches de Seurat sur la représentation du mouvement, et ce malgré la rigueur de sa technique <a title="Divisionnisme" href="https://fr.wikipedia.org/wiki/Divisionnisme">divisionniste</a>. Élève de l''<i><a class="mw-redirect" title="Ingres" href="https://fr.wikipedia.org/wiki/Ingres">ingriste</a></i> <a class="mw-disambig" title="Lehmann" href="https://fr.wikipedia.org/wiki/Lehmann">Lehmann</a>, il porte un fort attachement à la ligne qui se traduit ici par de sinueuses <a class="mw-redirect" title="Arabesque (architecture)" href="https://fr.wikipedia.org/wiki/Arabesque_(architecture)">arabesques</a>. De nombreux artifices de composition permettent en outre de guider le regard, introduire le spectateur, créer une dynamique, etc.\r\n\r\nLe personnage du premier plan, la superposition des gradins ainsi que l''ouverture sur la droite de la toile permettent de creuser la profondeur. Celle-ci est accentuée par le subtil jeu des couleurs et l''alternance des lignes rouges et jaunes. Le cadrage est influencé par le <a title="Japonisme" href="https://fr.wikipedia.org/wiki/Japonisme">japonisme</a> alors en vogue.', 'Le Cirque', '', 'publish', 'closed', 'closed', '', 'le-cirque', '', '', '2016-06-07 00:04:36', '2016-06-06 22:04:36', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=97', 0, 'projets', '', 0),
+(98, 1, '2016-06-07 00:03:59', '2016-06-06 22:03:59', '', 'pointillisme-2', '', 'inherit', 'open', 'closed', '', 'pointillisme-2-2', '', '', '2016-06-07 00:03:59', '2016-06-06 22:03:59', '', 97, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/pointillisme-2-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(99, 1, '2016-06-07 00:04:00', '2016-06-06 22:04:00', '', 'pointillisme-3', '', 'inherit', 'open', 'closed', '', 'pointillisme-3-2', '', '', '2016-06-07 00:04:00', '2016-06-06 22:04:00', '', 97, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/pointillisme-3-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(100, 1, '2016-06-07 00:04:01', '2016-06-06 22:04:01', '', 'pointillisme', '', 'inherit', 'open', 'closed', '', 'pointillisme-4', '', '', '2016-06-07 00:04:01', '2016-06-06 22:04:01', '', 97, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/pointillisme-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(101, 1, '2016-06-07 00:07:24', '2016-06-06 22:07:24', 'Le <a title="Divisionnisme" href="https://fr.wikipedia.org/wiki/Divisionnisme">divisionnisme</a> est une variante plus technique du pointillisme, qui se définit spécifiquement par l''utilisation de points de peinture et ne se concentrant pas forcément sur la séparation des couleurs. La différence entre les deux techniques est que les coups de pinceau des divisionnistes sont plus longs et plus fluctuants que ceux des pointillistes comme Seurat ou Signac', 'Portrait de Metzinger', '', 'publish', 'closed', 'closed', '', 'portrait-de-metzinger', '', '', '2016-06-07 00:07:24', '2016-06-06 22:07:24', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=101', 0, 'projets', '', 0),
+(102, 1, '2016-06-07 00:08:21', '2016-06-06 22:08:21', 'Après la mort de Seurat, en 1891, Signac poursuit son oeuvre de peintre et de théoricien du groupe néo-impressionniste. En 1892, il décide de fuir Paris pour Saint-Tropez où il séjournera jusqu''en 1913. Après avoir réalisé, durant l''été, plusieurs petits formats consacrés au port de Saint-Tropez, Signac entreprend l''année suivante une grande composition, <span class="italiquenoir">Au Temps d''Harmonie</span>, allégorie de la société idéale et illustration du bonheur de vivre. Dans l''une des premières esquisses pour ce tableau, figurent deux femmes occupées à tirer l''eau d''un puits. Signac décide d''isoler ces deux personnages et de leur consacrer une toile.', 'Femmes au puits', '', 'publish', 'closed', 'closed', '', 'femmes-au-puits', '', '', '2016-06-07 00:08:21', '2016-06-06 22:08:21', '', 0, 'http://localhost:8888/garamont/?post_type=projets&#038;p=102', 0, 'projets', '', 0),
+(103, 1, '2016-06-08 12:50:54', '2016-06-08 10:50:54', '', 'Accueil Formation', '', 'publish', 'closed', 'closed', '', 'acf_accueil-formation', '', '', '2016-06-08 16:59:05', '2016-06-08 14:59:05', '', 0, 'http://localhost:8888/garamont/?post_type=acf&#038;p=103', 0, 'acf', '', 0),
+(104, 1, '2016-06-08 12:54:04', '2016-06-08 10:54:04', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 12:54:04', '2016-06-08 10:54:04', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(105, 1, '2016-06-08 13:01:46', '2016-06-08 11:01:46', '', 'protrait-1', '', 'inherit', 'open', 'closed', '', 'protrait-1', '', '', '2016-06-08 13:01:46', '2016-06-08 11:01:46', '', 6, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/protrait-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(106, 1, '2016-06-08 13:01:55', '2016-06-08 11:01:55', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 13:01:55', '2016-06-08 11:01:55', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(107, 1, '2016-06-08 13:16:50', '2016-06-08 11:16:50', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 13:16:50', '2016-06-08 11:16:50', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(108, 1, '2016-06-08 14:28:54', '2016-06-08 12:28:54', 'Bienvenue dans WordPress. Ceci est votre premier article. Modifiez-le ou supprimez-le, puis lancez-vous&nbsp;!', 'Bonjour tout le monde&nbsp;!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2016-06-08 14:28:54', '2016-06-08 12:28:54', '', 1, 'http://localhost:8888/garamont/1-revision-v1/', 0, 'revision', '', 0),
+(109, 1, '2016-06-08 14:36:07', '2016-06-08 12:36:07', '', 'Single Actualité', '', 'publish', 'closed', 'closed', '', 'acf_single-actualite', '', '', '2016-06-08 15:10:58', '2016-06-08 13:10:58', '', 0, 'http://localhost:8888/garamont/?post_type=acf&#038;p=109', 0, 'acf', '', 0),
+(110, 1, '2016-06-08 14:36:17', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-06-08 14:36:17', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&p=110', 0, 'actualites', '', 0),
+(111, 1, '2016-06-08 14:36:38', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-06-08 14:36:38', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&p=111', 0, 'actualites', '', 0),
+(112, 1, '2016-06-08 14:41:28', '2016-06-08 12:41:28', '', 'Actualités 1', '', 'publish', 'closed', 'closed', '', 'actualites-1', '', '', '2016-06-08 14:54:23', '2016-06-08 12:54:23', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&#038;p=112', 0, 'actualites', '', 0),
+(113, 1, '2016-06-08 14:44:18', '2016-06-08 12:44:18', '', 'Actualité 2', '', 'publish', 'closed', 'closed', '', 'actualite-2', '', '', '2016-06-08 14:54:35', '2016-06-08 12:54:35', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&#038;p=113', 0, 'actualites', '', 0),
+(114, 1, '2016-06-08 14:49:26', '2016-06-08 12:49:26', '', 'Actualité 3', '', 'publish', 'closed', 'closed', '', 'actualite-3', '', '', '2016-06-08 14:54:46', '2016-06-08 12:54:46', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&#038;p=114', 0, 'actualites', '', 0),
+(115, 1, '2016-06-08 14:50:00', '2016-06-08 12:50:00', '', 'Actualité 4', '', 'publish', 'closed', 'closed', '', 'actualite-4', '', '', '2016-06-08 14:50:00', '2016-06-08 12:50:00', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&#038;p=115', 0, 'actualites', '', 0),
+(116, 1, '2016-06-08 14:50:58', '2016-06-08 12:50:58', '', 'Actualité 5', '', 'publish', 'closed', 'closed', '', 'actualite-5', '', '', '2016-06-08 14:51:46', '2016-06-08 12:51:46', '', 0, 'http://localhost:8888/garamont/?post_type=actualites&#038;p=116', 0, 'actualites', '', 0),
+(117, 1, '2016-06-08 15:14:37', '2016-06-08 13:14:37', '', 'Accueil Galerie', '', 'publish', 'closed', 'closed', '', 'acf_accueil-galerie', '', '', '2016-06-08 16:39:55', '2016-06-08 14:39:55', '', 0, 'http://localhost:8888/garamont/?post_type=acf&#038;p=117', 0, 'acf', '', 0),
+(118, 1, '2016-06-08 15:54:24', '2016-06-08 13:54:24', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 15:54:24', '2016-06-08 13:54:24', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(119, 1, '2016-06-08 16:18:33', '2016-06-08 14:18:33', '', 'galerie-2', '', 'inherit', 'open', 'closed', '', 'galerie-2', '', '', '2016-06-08 16:18:33', '2016-06-08 14:18:33', '', 6, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/galerie-2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(120, 1, '2016-06-08 16:18:34', '2016-06-08 14:18:34', '', 'galerie-3', '', 'inherit', 'open', 'closed', '', 'galerie-3', '', '', '2016-06-08 16:18:34', '2016-06-08 14:18:34', '', 6, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/galerie-3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(121, 1, '2016-06-08 16:18:34', '2016-06-08 14:18:34', '', 'galerie-4', '', 'inherit', 'open', 'closed', '', 'galerie-4', '', '', '2016-06-08 16:18:34', '2016-06-08 14:18:34', '', 6, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/galerie-4.jpg', 0, 'attachment', 'image/jpeg', 0),
+(122, 1, '2016-06-08 16:18:36', '2016-06-08 14:18:36', '', 'galerie-5', '', 'inherit', 'open', 'closed', '', 'galerie-5', '', '', '2016-06-08 16:18:36', '2016-06-08 14:18:36', '', 6, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/galerie-5.jpg', 0, 'attachment', 'image/jpeg', 0),
+(123, 1, '2016-06-08 16:18:37', '2016-06-08 14:18:37', '', 'galerie-6', '', 'inherit', 'open', 'closed', '', 'galerie-6', '', '', '2016-06-08 16:18:37', '2016-06-08 14:18:37', '', 6, 'http://localhost:8888/garamont/wp-content/uploads/2016/06/galerie-6.jpg', 0, 'attachment', 'image/jpeg', 0),
+(124, 1, '2016-06-08 16:20:37', '2016-06-08 14:20:37', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 16:20:37', '2016-06-08 14:20:37', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(125, 1, '2016-06-08 16:21:09', '2016-06-08 14:21:09', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 16:21:09', '2016-06-08 14:21:09', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(126, 1, '2016-06-08 16:55:12', '2016-06-08 14:55:12', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 16:55:12', '2016-06-08 14:55:12', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(127, 1, '2016-06-08 16:56:28', '2016-06-08 14:56:28', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 16:56:28', '2016-06-08 14:56:28', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0),
+(128, 1, '2016-06-08 16:59:20', '2016-06-08 14:59:20', '', 'Accueil', '', 'inherit', 'closed', 'closed', '', '6-revision-v1', '', '', '2016-06-08 16:59:20', '2016-06-08 14:59:20', '', 6, 'http://localhost:8888/garamont/6-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_termmeta`
+-- Structure de la table `gt_termmeta`
 --
 
 CREATE TABLE `gt_termmeta` (
-  `meta_id` bigint(20) unsigned NOT NULL,
+`meta_id` bigint(20) unsigned NOT NULL,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
@@ -1269,18 +2063,18 @@ CREATE TABLE `gt_termmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_terms`
+-- Structure de la table `gt_terms`
 --
 
 CREATE TABLE `gt_terms` (
-  `term_id` bigint(20) unsigned NOT NULL,
+`term_id` bigint(20) unsigned NOT NULL,
   `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `term_group` bigint(10) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_terms`
+-- Contenu de la table `gt_terms`
 --
 
 INSERT INTO `gt_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -1290,7 +2084,7 @@ INSERT INTO `gt_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_term_relationships`
+-- Structure de la table `gt_term_relationships`
 --
 
 CREATE TABLE `gt_term_relationships` (
@@ -1300,7 +2094,7 @@ CREATE TABLE `gt_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_term_relationships`
+-- Contenu de la table `gt_term_relationships`
 --
 
 INSERT INTO `gt_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -1315,11 +2109,11 @@ INSERT INTO `gt_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_term_taxonomy`
+-- Structure de la table `gt_term_taxonomy`
 --
 
 CREATE TABLE `gt_term_taxonomy` (
-  `term_taxonomy_id` bigint(20) unsigned NOT NULL,
+`term_taxonomy_id` bigint(20) unsigned NOT NULL,
   `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `taxonomy` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -1328,28 +2122,28 @@ CREATE TABLE `gt_term_taxonomy` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_term_taxonomy`
+-- Contenu de la table `gt_term_taxonomy`
 --
 
 INSERT INTO `gt_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
-(1, 1, 'category', '', 0, 1),
+(1, 1, 'category', '', 0, 0),
 (3, 3, 'nav_menu', '', 0, 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_usermeta`
+-- Structure de la table `gt_usermeta`
 --
 
 CREATE TABLE `gt_usermeta` (
-  `umeta_id` bigint(20) unsigned NOT NULL,
+`umeta_id` bigint(20) unsigned NOT NULL,
   `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `meta_value` longtext COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_usermeta`
+-- Contenu de la table `gt_usermeta`
 --
 
 INSERT INTO `gt_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1375,17 +2169,19 @@ INSERT INTO `gt_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (20, 1, 'nav_menu_recently_edited', '3'),
 (21, 1, 'meta-box-order_page', 'a:4:{s:15:"acf_after_title";s:48:"acf_73,acf_74,acf_75,acf_50,acf_76,acf_64,acf_53";s:4:"side";s:43:"submitdiv,pageparentdiv,acf_42,postimagediv";s:6:"normal";s:78:"acf_39,acf_40,acf_41,postcustom,commentstatusdiv,commentsdiv,slugdiv,authordiv";s:8:"advanced";s:0:"";}'),
 (22, 1, 'screen_layout_page', '2'),
-(23, 1, 'closedpostboxes_page', 'a:0:{}'),
-(24, 1, 'metaboxhidden_page', 'a:12:{i:0;s:6:"acf_50";i:1;s:6:"acf_64";i:2;s:6:"acf_53";i:3;s:6:"acf_42";i:4;s:6:"acf_39";i:5;s:6:"acf_40";i:6;s:6:"acf_41";i:7;s:10:"postcustom";i:8;s:16:"commentstatusdiv";i:9;s:11:"commentsdiv";i:10;s:7:"slugdiv";i:11;s:9:"authordiv";}');
+(23, 1, 'closedpostboxes_page', 'a:1:{i:0;s:7:"acf_103";}'),
+(24, 1, 'metaboxhidden_page', 'a:17:{i:0;s:7:"acf_109";i:1;s:6:"acf_73";i:2;s:6:"acf_74";i:3;s:6:"acf_75";i:4;s:6:"acf_50";i:5;s:6:"acf_76";i:6;s:6:"acf_64";i:7;s:6:"acf_53";i:8;s:6:"acf_42";i:9;s:6:"acf_39";i:10;s:6:"acf_40";i:11;s:6:"acf_41";i:12;s:10:"postcustom";i:13;s:16:"commentstatusdiv";i:14;s:11:"commentsdiv";i:15;s:7:"slugdiv";i:16;s:9:"authordiv";}'),
+(25, 1, 'closedpostboxes_projets', 'a:0:{}'),
+(26, 1, 'metaboxhidden_projets', 'a:11:{i:0;s:6:"acf_75";i:1;s:6:"acf_50";i:2;s:6:"acf_74";i:3;s:6:"acf_76";i:4;s:6:"acf_73";i:5;s:6:"acf_64";i:6;s:6:"acf_42";i:7;s:6:"acf_40";i:8;s:6:"acf_41";i:9;s:6:"acf_39";i:10;s:7:"slugdiv";}');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gt_users`
+-- Structure de la table `gt_users`
 --
 
 CREATE TABLE `gt_users` (
-  `ID` bigint(20) unsigned NOT NULL,
+`ID` bigint(20) unsigned NOT NULL,
   `user_login` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_nicename` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1398,174 +2194,147 @@ CREATE TABLE `gt_users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `gt_users`
+-- Contenu de la table `gt_users`
 --
 
 INSERT INTO `gt_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'elies', '$P$BBQkqYlAcKRSZQwamN00Te86STnT1N1', 'elies', 'elies.makhlouf@gmail.com', '', '2016-06-03 13:53:10', '', 0, 'elies');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `gt_commentmeta`
+-- Index pour la table `gt_commentmeta`
 --
 ALTER TABLE `gt_commentmeta`
-  ADD PRIMARY KEY (`meta_id`),
-  ADD KEY `comment_id` (`comment_id`),
-  ADD KEY `meta_key` (`meta_key`(191));
+ ADD PRIMARY KEY (`meta_id`), ADD KEY `comment_id` (`comment_id`), ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `gt_comments`
+-- Index pour la table `gt_comments`
 --
 ALTER TABLE `gt_comments`
-  ADD PRIMARY KEY (`comment_ID`),
-  ADD KEY `comment_post_ID` (`comment_post_ID`),
-  ADD KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
-  ADD KEY `comment_date_gmt` (`comment_date_gmt`),
-  ADD KEY `comment_parent` (`comment_parent`),
-  ADD KEY `comment_author_email` (`comment_author_email`(10));
+ ADD PRIMARY KEY (`comment_ID`), ADD KEY `comment_post_ID` (`comment_post_ID`), ADD KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`), ADD KEY `comment_date_gmt` (`comment_date_gmt`), ADD KEY `comment_parent` (`comment_parent`), ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Indexes for table `gt_links`
+-- Index pour la table `gt_links`
 --
 ALTER TABLE `gt_links`
-  ADD PRIMARY KEY (`link_id`),
-  ADD KEY `link_visible` (`link_visible`);
+ ADD PRIMARY KEY (`link_id`), ADD KEY `link_visible` (`link_visible`);
 
 --
--- Indexes for table `gt_options`
+-- Index pour la table `gt_options`
 --
 ALTER TABLE `gt_options`
-  ADD PRIMARY KEY (`option_id`),
-  ADD UNIQUE KEY `option_name` (`option_name`);
+ ADD PRIMARY KEY (`option_id`), ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
--- Indexes for table `gt_postmeta`
+-- Index pour la table `gt_postmeta`
 --
 ALTER TABLE `gt_postmeta`
-  ADD PRIMARY KEY (`meta_id`),
-  ADD KEY `post_id` (`post_id`),
-  ADD KEY `meta_key` (`meta_key`(191));
+ ADD PRIMARY KEY (`meta_id`), ADD KEY `post_id` (`post_id`), ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `gt_posts`
+-- Index pour la table `gt_posts`
 --
 ALTER TABLE `gt_posts`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `post_name` (`post_name`(191)),
-  ADD KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
-  ADD KEY `post_parent` (`post_parent`),
-  ADD KEY `post_author` (`post_author`);
+ ADD PRIMARY KEY (`ID`), ADD KEY `post_name` (`post_name`(191)), ADD KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`), ADD KEY `post_parent` (`post_parent`), ADD KEY `post_author` (`post_author`);
 
 --
--- Indexes for table `gt_termmeta`
+-- Index pour la table `gt_termmeta`
 --
 ALTER TABLE `gt_termmeta`
-  ADD PRIMARY KEY (`meta_id`),
-  ADD KEY `term_id` (`term_id`),
-  ADD KEY `meta_key` (`meta_key`(191));
+ ADD PRIMARY KEY (`meta_id`), ADD KEY `term_id` (`term_id`), ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `gt_terms`
+-- Index pour la table `gt_terms`
 --
 ALTER TABLE `gt_terms`
-  ADD PRIMARY KEY (`term_id`),
-  ADD KEY `slug` (`slug`(191)),
-  ADD KEY `name` (`name`(191));
+ ADD PRIMARY KEY (`term_id`), ADD KEY `slug` (`slug`(191)), ADD KEY `name` (`name`(191));
 
 --
--- Indexes for table `gt_term_relationships`
+-- Index pour la table `gt_term_relationships`
 --
 ALTER TABLE `gt_term_relationships`
-  ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
-  ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
+ ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`), ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Indexes for table `gt_term_taxonomy`
+-- Index pour la table `gt_term_taxonomy`
 --
 ALTER TABLE `gt_term_taxonomy`
-  ADD PRIMARY KEY (`term_taxonomy_id`),
-  ADD UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
-  ADD KEY `taxonomy` (`taxonomy`);
+ ADD PRIMARY KEY (`term_taxonomy_id`), ADD UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`), ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Indexes for table `gt_usermeta`
+-- Index pour la table `gt_usermeta`
 --
 ALTER TABLE `gt_usermeta`
-  ADD PRIMARY KEY (`umeta_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `meta_key` (`meta_key`(191));
+ ADD PRIMARY KEY (`umeta_id`), ADD KEY `user_id` (`user_id`), ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `gt_users`
+-- Index pour la table `gt_users`
 --
 ALTER TABLE `gt_users`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `user_login_key` (`user_login`),
-  ADD KEY `user_nicename` (`user_nicename`),
-  ADD KEY `user_email` (`user_email`);
+ ADD PRIMARY KEY (`ID`), ADD KEY `user_login_key` (`user_login`), ADD KEY `user_nicename` (`user_nicename`), ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `gt_commentmeta`
+-- AUTO_INCREMENT pour la table `gt_commentmeta`
 --
 ALTER TABLE `gt_commentmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `gt_comments`
+-- AUTO_INCREMENT pour la table `gt_comments`
 --
 ALTER TABLE `gt_comments`
-  MODIFY `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `comment_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `gt_links`
+-- AUTO_INCREMENT pour la table `gt_links`
 --
 ALTER TABLE `gt_links`
-  MODIFY `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `gt_options`
+-- AUTO_INCREMENT pour la table `gt_options`
 --
 ALTER TABLE `gt_options`
-  MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=177;
+MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=221;
 --
--- AUTO_INCREMENT for table `gt_postmeta`
+-- AUTO_INCREMENT pour la table `gt_postmeta`
 --
 ALTER TABLE `gt_postmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=963;
+MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1725;
 --
--- AUTO_INCREMENT for table `gt_posts`
+-- AUTO_INCREMENT pour la table `gt_posts`
 --
 ALTER TABLE `gt_posts`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=82;
+MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
 --
--- AUTO_INCREMENT for table `gt_termmeta`
+-- AUTO_INCREMENT pour la table `gt_termmeta`
 --
 ALTER TABLE `gt_termmeta`
-  MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `meta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `gt_terms`
+-- AUTO_INCREMENT pour la table `gt_terms`
 --
 ALTER TABLE `gt_terms`
-  MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `term_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `gt_term_taxonomy`
+-- AUTO_INCREMENT pour la table `gt_term_taxonomy`
 --
 ALTER TABLE `gt_term_taxonomy`
-  MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `gt_usermeta`
+-- AUTO_INCREMENT pour la table `gt_usermeta`
 --
 ALTER TABLE `gt_usermeta`
-  MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+MODIFY `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
--- AUTO_INCREMENT for table `gt_users`
+-- AUTO_INCREMENT pour la table `gt_users`
 --
 ALTER TABLE `gt_users`
-  MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

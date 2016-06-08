@@ -6,7 +6,7 @@ Template Name: Accueil
 
 <?php get_header(); ?>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/back.jpg" data-speed="0.6">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php bloginfo('template_directory'); ?>/img/back.jpg" data-speed="0.6">
         <div class="home">
             <div class="container-fluid">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -22,19 +22,19 @@ Template Name: Accueil
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item">
-                            <img src="img/eleves.jpg" alt="...">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/eleves.jpg" alt="...">
                             <div class="mask"></div>
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-                                        <img src="img/logo_garamont.png" alt="">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/logo_garamont.png" alt="">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="arrow">
                                         <div class="text-center">
                                             <a href="#formations">
-                                                <img src="img/flecheHome.png" alt="">
+                                                <img src="<?php bloginfo('template_directory'); ?>/img/flecheHome.png" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -47,14 +47,14 @@ Template Name: Accueil
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-                                        <img src="img/logo_garamont.png" alt="">
+                                        <img src="<?php bloginfo('template_directory'); ?>/img/logo_garamont.png" alt="">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="arrow">
                                         <div class="text-center">
                                             <a href="#formations">
-                                                <img src="img/flecheHome.png" alt="">
+                                                <img src="<?php bloginfo('template_directory'); ?>/img/flecheHome.png" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -66,10 +66,10 @@ Template Name: Accueil
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <img src="img/FlecheGauche.png" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/FlecheGauche.png" alt="">
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <img src="img/FlecheDroite.png" alt="">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/FlecheDroite.png" alt="">
                     </a>
                 </div>
             </div>
@@ -103,7 +103,15 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12">
                                     <div class="tream-entry">
                                         <a href="formations.php" class="team-img">
-                                            <img src="img/formation-carré.jpg" alt="" class="img-responsive">
+                                            <?php
+
+                                            $image = get_field('formation_image_du_1er_losange');
+
+                                            if( !empty($image) ): ?>
+
+                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                            <?php endif; ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
@@ -114,7 +122,7 @@ Template Name: Accueil
                                                 </div>
                                                 <hr>
                                                 <div class="team-social">
-                                                    Façonnage industriel et routage
+                                                    <?php the_field('formation_hover_du_1er_losange')?>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,7 +133,15 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12">
                                     <div class="tream-entry">
                                         <a href="formations.php" class="team-img">
-                                            <img src="img/protrait-1.jpg" alt="" class="img-responsive">
+                                            <?php
+
+                                            $image = get_field('formation_image_du_2eme_losange');
+
+                                            if( !empty($image) ): ?>
+
+                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                            <?php endif; ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
@@ -136,8 +152,7 @@ Template Name: Accueil
                                                 </div>
                                                 <hr>
                                                 <div class="team-social">
-                                                    lorem
-                                                </div>
+                                                    <?php the_field('formation_hover_du_2eme_losange')?>                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -147,10 +162,10 @@ Template Name: Accueil
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
-                            <img src="img/FlecheGauche.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/FlecheGauche.png" alt="">
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
-                            <img src="img/FlecheDroite.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/FlecheDroite.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -162,9 +177,17 @@ Template Name: Accueil
                         <div class="teamrow row">
                             <div class="team-item col-xs-12 col-sm-2 col-sm-offset-2">
                                 <div class="tream-entry">
-                                    <a href="javascript:;">
+                                    <a href="#">
                                         <div class="team-img a-home-ind">
-                                            <img src="img/projet-portrait-1.jpg" alt="" class="img-responsive">
+                                            <?php
+
+                                            $image = get_field('formation_image_du_1er_losange');
+
+                                            if( !empty($image) ): ?>
+
+                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                            <?php endif; ?>
                                         </div>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
@@ -175,7 +198,7 @@ Template Name: Accueil
                                                 </div>
                                                 <hr>
                                                 <div class="team-social">
-                                                    Façonnage industriel <br> et routage
+                                                    <?php the_field('formation_hover_du_1er_losange')?>
                                                 </div>
                                             </div>
                                         </div>
@@ -185,7 +208,15 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="formations.php" class="team-img">
-                                        <img src="img/protrait-1.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('formation_image_du_2eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
@@ -196,7 +227,7 @@ Template Name: Accueil
                                             </div>
                                             <hr>
                                             <div class="team-social">
-                                                Production imprimée
+                                                <?php the_field('formation_hover_du_2eme_losange') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -205,14 +236,22 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="formations.php" class="team-img">
-                                        <img src="img/formation-carré.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('formation_image_du_3eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
                                             <div class="team-name">Formation</div>
                                             <hr>
                                             <div class="team-social">
-                                                Production graphique
+                                                <?php the_field('formation_hover_du_3eme_losange') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -221,14 +260,22 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="formations.php" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('formation_image_du_4eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
                                             <div class="team-name">Formation</div>
                                             <hr>
                                             <div class="team-social">
-                                                Études et réalisation <br> de produits imprimés
+                                                <?php the_field('formation_hover_du_4eme_losange') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -239,14 +286,22 @@ Template Name: Accueil
                             <div class="team-item col-xs-12  col-sm-offset-3 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="formations.php" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('formation_image_du_5eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
                                             <div class="team-name">Formation</div>
                                             <hr>
                                             <div class="team-social">
-                                                Études et réalisations <br> de produits graphiques
+                                                <?php the_field('formation_hover_du_5eme_losange') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -255,14 +310,22 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="formations.php" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('formation_image_du_6eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
                                             <div class="team-name">Formation</div>
                                             <hr>
                                             <div class="team-social">
-                                                Communication visuelle
+                                                <?php the_field('formation_hover_du_6eme_losange') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -271,14 +334,22 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="formations.php" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('formation_image_du_7eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
                                             <div class="team-name">Formation</div>
                                             <hr>
                                             <div class="team-social">
-                                                Communication <br> et média imprimés
+                                                <?php the_field('formation_hover_du_7eme_losange') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -301,14 +372,25 @@ Template Name: Accueil
             </div>
             <div class="wrapper">
                 <div class="owl-carousel">
+                <?php $myquery = new WP_Query(array('post_type' => 'actualites')); ?>
+                <?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
                     <div class="item">
                         <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE1</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
+                            <?php
+
+                            $image = get_field('image_actualite');
+
+                            if( !empty($image) ): ?>
+
+                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                            <?php endif; ?>
+                            <h6 class="h6"><?php the_field('titre_actualite') ?></h6>
+                            <?php the_field('contenu_de_lactualite') ?>
                         </a>
                     </div>
-                    <div class="item">
+                <?php endwhile; ?>
+                    <!--<div class="item">
                         <a class="lien" href="#">
                             <img src="img/pics.png" class="item"/>
                             <h6 class="h2">ACTUALITE2</h6>
@@ -365,7 +447,7 @@ Template Name: Accueil
                             <h6 class="h6">ACTUALITE9</h6>
                             <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -386,11 +468,21 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12">
                                     <div class="tream-entry">
                                         <a href="" class="team-img">
-                                            <img src="img/projet-portrait.jpg" alt="" class="img-responsive">
+                                            <?php
+
+                                            $image = get_field('galerie_image_du_1er_losange');
+
+                                            if( !empty($image) ): ?>
+
+                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                            <?php endif; ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
-                                                <div class="team-name">Projet</div>
+                                                <div class="team-name">
+                                                    <?php the_field('galerie_hover_du_1er_losange')?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -400,11 +492,21 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12">
                                     <div class="tream-entry">
                                         <a href="" class="team-img">
-                                            <img src="img/projet-portrait-1.jpg" alt="" class="img-responsive">
+                                            <?php
+
+                                            $image = get_field('galerie_image_du_2eme_losange');
+
+                                            if( !empty($image) ): ?>
+
+                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                            <?php endif; ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
-                                                <div class="team-name">Projet</div>
+                                                <div class="team-name">
+                                                    <?php the_field('galerie_hover_du_2eme_losange')?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -414,10 +516,10 @@ Template Name: Accueil
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic-3" role="button" data-slide="prev">
-                            <img src="img/FlecheGauche.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/FlecheGauche.png" alt="">
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic-3" role="button" data-slide="next">
-                            <img src="img/FlecheDroite.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/FlecheDroite.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -429,11 +531,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2 col-sm-offset-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/projet-portrait.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_1er_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_1er_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -441,11 +553,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/projet-portrait-1.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('image_du_2eme_losange_formation');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_2eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -453,11 +575,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/projet-portrait.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_3eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_3eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -465,11 +597,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/protrait-1.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_4eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_4eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -479,11 +621,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12  col-sm-offset-3 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_5eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_5eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -491,11 +643,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_6eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_6eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -503,11 +665,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_7eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_7eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -517,11 +689,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2 col-sm-offset-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_8eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_8eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -529,11 +711,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_9eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_9eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -541,11 +733,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_10eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_10eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -553,11 +755,21 @@ Template Name: Accueil
                             <div class="team-item col-xs-12 col-sm-2">
                                 <div class="tream-entry">
                                     <a href="" class="team-img">
-                                        <img src="img/back.jpg" alt="" class="img-responsive">
+                                        <?php
+
+                                        $image = get_field('galerie_image_du_11eme_losange');
+
+                                        if( !empty($image) ): ?>
+
+                                            <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                        <?php endif; ?>
                                     </a>
                                     <div class="team-hover table-view">
                                         <div class="cell-view">
-                                            <div class="team-name">Projet</div>
+                                            <div class="team-name">
+                                                <?php the_field('galerie_hover_du_11eme_losange')?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
