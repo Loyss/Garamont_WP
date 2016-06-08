@@ -32,7 +32,7 @@ function create_post_type()
                 'singular_name' => 'Actualité'
             ),
             'public' => true,
-            'supports' => array('thumbnail', 'editor', 'title')
+            'supports' => array('thumbnail', 'title')
         )
     );
 
@@ -43,7 +43,7 @@ function create_post_type()
                 'singular_name' => 'Slide home'
             ),
             'public' => true,
-            'supports' => array('thumbnail', 'editor', 'title')
+            'supports' => array('title')
         )
     );
 }
@@ -69,11 +69,10 @@ function hide_editor() {
     }
 }
 // Hide editor for custom post type.
-add_action('init', 'my_rem_editor_from_post_type');
+/*add_action('init', 'my_rem_editor_from_post_type');
 function my_rem_editor_from_post_type() {
     remove_post_type_support( 'actualites', 'editor' );
-    remove_post_type_support( 'slider_home', 'editor' );
-}
+}*/
 
 // Hide category from admin menu wordpress
 add_action('admin_menu', 'my_remove_menus');
