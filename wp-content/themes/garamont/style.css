@@ -2108,11 +2108,6 @@
     padding-right: 0;
   }
 }
-@media (max-width: 783px) {
-  .lycee {
-    margin-top: 50px;
-  }
-}
 @media (max-width: 767px) {
   .formations .img-section {
     margin-top: 50px;
@@ -2128,9 +2123,6 @@
   }
   .margin-top-xs-10 {
     margin-top: 10px;
-  }
-  .home {
-    margin-top: 50px;
   }
   .home #carousel-example-generic .arrow {
     margin-top: 50px;
@@ -2159,9 +2151,6 @@
     width: 140px;
     top: 1px;
     left: 10px;
-  }
-  .lycee {
-    margin-top: 50px;
   }
 }
 @media (max-width: 560px) {

@@ -35,6 +35,17 @@ function create_post_type()
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
+
+    register_post_type('slider_home',
+        array(
+            'labels' => array(
+                'name' => 'Slider home',
+                'singular_name' => 'Slide home'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
 }
 
 
@@ -61,6 +72,7 @@ function hide_editor() {
 add_action('init', 'my_rem_editor_from_post_type');
 function my_rem_editor_from_post_type() {
     remove_post_type_support( 'actualites', 'editor' );
+    remove_post_type_support( 'slider_home', 'editor' );
 }
 
 // Hide category from admin menu wordpress

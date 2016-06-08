@@ -21,8 +21,8 @@ Template Name: Accueil
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/eleves.jpg" alt="...">
+                        <div class="item active">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/eleves.jpg" alt="">
                             <div class="mask"></div>
                             <div class="carousel-caption">
                                 <div class="row">
@@ -42,7 +42,7 @@ Template Name: Accueil
                             </div>
                         </div>
                         <div class="item">
-                            <img src="img/eleves.jpg" alt="...">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/eleves.jpg" alt="">
                             <div class="mask"></div>
                             <div class="carousel-caption">
                                 <div class="row">
