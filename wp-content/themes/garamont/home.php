@@ -79,58 +79,54 @@ Template Name: Accueil
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <div class="team-item col-xs-12">
-                                    <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
-                                            <img src="img/formation-carré.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="team-hover table-view">
-                                            <div class="cell-view">
-                                                <div class="team-name">
-                                                    <div class="h5">
-                                                        Formation
+                            <?php
+                            $c = 0;
+                            $myquery = new WP_Query(array('post_type' => 'formations_home'));
+                            ?>
+                            <?php while ($myquery->have_posts()) : $myquery->the_post();
+                                $c++;
+                                if( $c == 1 ) $class .= 'active';
+                                else $class = '';
+                                ?>
+                                <div class="item <?php echo $class ?>">
+                                    <div class="team-item col-xs-12">
+                                        <div class="tream-entry">
+                                            <a href="formations.php" class="team-img">
+                                                <?php
+
+                                                $image = get_field('img_formation');
+
+                                                if( !empty($image) ): ?>
+
+                                                    <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+                                                <?php endif; ?>
+                                            </a>
+                                            <div class="team-hover table-view">
+                                                <div class="cell-view">
+                                                    <div class="team-name">
+                                                        <div class="h5">
+                                                            <?php the_field('diplome'); ?>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <hr>
-                                                <div class="team-social">
-                                                    Façonnage industriel et routage
+                                                    <hr>
+                                                    <div class="team-social">
+                                                        <?php the_title() ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="team-item col-xs-12">
-                                    <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
-                                            <img src="img/protrait-1.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="team-hover table-view">
-                                            <div class="cell-view">
-                                                <div class="team-name">
-                                                    <div class="h5">
-                                                        Formation
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <div class="team-social">
-                                                    lorem
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endwhile; ?>
                         </div>
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
-                            <img src="img/FlecheGauche.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/FlecheGauche.png" alt="">
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
-                            <img src="img/FlecheDroite.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/FlecheDroite.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -338,54 +334,33 @@ Template Name: Accueil
                     <div id="carousel-example-generic-3" class="carousel slide" data-ride="carousel">
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <div class="team-item col-xs-12">
-                                    <div class="tream-entry">
-                                        <a href="" class="team-img">
-                                            <?php
+                            <?php
+                            $c = 0;
+                            $myquery = new WP_Query(array('post_type' => 'projets'));
+                            ?>
+                            <?php while ($myquery->have_posts()) : $myquery->the_post();
+                                $c++;
+                                if( $c == 1 ) $class .= 'active';
+                                else $class = '';
+                                ?>
+                                <div class="item <?php echo $class ?>">
+                                    <div class="team-item col-xs-12">
+                                        <div class="tream-entry">
+                                            <a href="formations.php" class="team-img">
+                                                <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
 
-                                            $image = get_field('galerie_image_du_1er_losange');
-
-                                            if( !empty($image) ): ?>
-
-                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                                            <?php endif; ?>
-                                        </a>
-                                        <div class="team-hover table-view">
-                                            <div class="cell-view">
-                                                <div class="team-name">
-                                                    <?php the_field('galerie_hover_du_1er_losange')?>
+                                            </a>
+                                            <div class="team-hover table-view">
+                                                <div class="cell-view">
+                                                    <div class="team-name">
+                                                        <?php the_title() ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="team-item col-xs-12">
-                                    <div class="tream-entry">
-                                        <a href="" class="team-img">
-                                            <?php
-
-                                            $image = get_field('galerie_image_du_2eme_losange');
-
-                                            if( !empty($image) ): ?>
-
-                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                                            <?php endif; ?>
-                                        </a>
-                                        <div class="team-hover table-view">
-                                            <div class="cell-view">
-                                                <div class="team-name">
-                                                    <?php the_field('galerie_hover_du_2eme_losange')?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endwhile; ?>
                         </div>
 
                         <!-- Controls -->
