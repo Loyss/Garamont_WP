@@ -46,6 +46,17 @@ function create_post_type()
             'supports' => array('title')
         )
     );
+
+    register_post_type('formations_home',
+        array(
+            'labels' => array(
+                'name' => 'Formations home',
+                'singular_name' => 'Formation home'
+            ),
+            'public' => true,
+            'supports' => array('title')
+        )
+    );
 }
 
 
@@ -65,6 +76,9 @@ function hide_editor() {
         remove_post_type_support('page', 'editor');
     }
     if($template_file == 'home.php'){ // Page Accueil
+        remove_post_type_support('page', 'editor');
+    }
+    if($template_file == 'projets.php'){ // Page Accueil
         remove_post_type_support('page', 'editor');
     }
 }
