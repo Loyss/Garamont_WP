@@ -30,9 +30,9 @@
 </footer>
 
 </body>
-
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/parallax.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/jquery.sticky.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/javascript.js"></script>
     <script>
         $(document).ready(function(){
