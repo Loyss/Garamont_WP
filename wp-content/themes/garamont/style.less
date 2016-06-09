@@ -217,6 +217,7 @@
   }
 }
 .tream-entry {
+  background-color: rgb(227,252,227);
   border: 3px solid @vert;
   position: relative;
   width: 190px;
@@ -228,26 +229,7 @@
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  //-moz-box-shadow: 5px 1px 30px 5px rgba(207, 205, 205, 0.75);
-  //box-shadow: 5px 1px 30px 5px rgba(207, 205, 205, 0.75);
   cursor: pointer;
-}
-.tream-entry .table-view {
-  display: block;
-  width: 265px;
-  height: 265px;
-  -webkit-transform: translate(-14.5%, -14.5%) rotate(45deg);
-  -moz-transform: translate(-14.5%, -14.5%) rotate(45deg);
-  -ms-transform: translate(-14.5%, -14.5%) rotate(45deg);
-  -o-transform: translate(-14.5%, -14.5%) rotate(45deg);
-  transform: translate(-14.5%, -14.5%) rotate(45deg);
-}
-.tream-entry  {
   img {
     transform-origin: 0 0;
     -webkit-transform: rotate(45deg) translate(-18%, -50%);
@@ -260,6 +242,17 @@
     height: auto;
   }
 }
+.tream-entry .table-view {
+  display: block;
+  width: 265px;
+  height: 265px;
+  -webkit-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  -moz-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  -ms-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  -o-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  transform: translate(-14.5%, -14.5%) rotate(45deg);
+}
+
 /*.tream-entry  {
   img {
     -webkit-transform: rotate(45deg) scale(2.5,2.5);
@@ -1481,6 +1474,17 @@
     .img-row {
       padding-top: 0;
       padding-bottom: 0;
+      img {
+        position: relative;
+        z-index: 2;
+      }
+      &:nth-child(even) {
+        position: relative;
+        top: -3px;
+        img {
+          z-index: 1;
+        }
+      }
     }
     h3 {
       color: @vertMenu;
