@@ -98,7 +98,7 @@ Template Name: Accueil
 
                                                 if( !empty($image) ): ?>
 
-                                                    <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                                                 <?php endif; ?>
                                             </a>
@@ -159,7 +159,7 @@ Template Name: Accueil
 
                                             if( !empty($image) ): ?>
 
-                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                                             <?php endif; ?>
                                         </a>
@@ -205,7 +205,7 @@ Template Name: Accueil
 
                                             if( !empty($image) ): ?>
 
-                                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                                             <?php endif; ?>
                                         </a>
@@ -290,7 +290,7 @@ Template Name: Accueil
                                     <div class="team-item col-xs-12">
                                         <div class="tream-entry">
                                             <a href="formations.php" class="team-img">
-                                                <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+                                                <?php the_post_thumbnail('full'); ?>
 
                                             </a>
                                             <div class="team-hover table-view">
@@ -337,7 +337,7 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
                                         <a href="formations.php" class="team-img">
-                                            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+                                            <?php the_post_thumbnail('full'); ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
@@ -369,7 +369,7 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
                                         <a href="formations.php" class="team-img">
-                                            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+                                            <?php the_post_thumbnail('full'); ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">
@@ -400,7 +400,7 @@ Template Name: Accueil
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
                                         <a href="formations.php" class="team-img">
-                                            <?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+                                            <?php the_post_thumbnail('full'); ?>
                                         </a>
                                         <div class="team-hover table-view">
                                             <div class="cell-view">

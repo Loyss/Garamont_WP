@@ -199,7 +199,6 @@
   transform-origin: 50% 50%;
   cursor: pointer;
 }
-.tream-entry .team-img,
 .tream-entry .table-view {
   display: block;
   width: 265px;
@@ -210,6 +209,38 @@
   -o-transform: translate(-14.5%, -14.5%) rotate(45deg);
   transform: translate(-14.5%, -14.5%) rotate(45deg);
 }
+.tream-entry img {
+  transform-origin: 0 0;
+  -webkit-transform: rotate(45deg) translate(-18%, -50%);
+  -moz-transform: rotate(45deg) translate(-18%, -50%);
+  -ms-transform: rotate(45deg) translate(-18%, -50%);
+  -o-transform: rotate(45deg) translate(-18%, -50%);
+  transform: rotate(45deg) translate(-18%, -50%);
+  position: absolute;
+  width: 220%;
+  height: auto;
+}
+/*.tream-entry  {
+  img {
+    -webkit-transform: rotate(45deg) scale(2.5,2.5);
+    -moz-transform: rotate(45deg) scale(2.5,2.5);
+    -ms-transform: rotate(45deg) scale(2.5,2.5);
+    -o-transform: rotate(45deg) scale(2.5,2.5);
+    transform: rotate(45deg) scale(2.5,2.5);
+    position: absolute;
+    top: 30%;
+  }
+}*/
+/*.tream-entry .team-img, .tream-entry .table-view {
+  display: block;
+  width: 265px;
+  height: 265px;
+  !*-webkit-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  -moz-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  -ms-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  -o-transform: translate(-14.5%, -14.5%) rotate(45deg);
+  transform: translate(-14.5%, -14.5%) rotate(45deg);*!
+}*/
 .tream-entry .table-view {
   display: table;
 }
