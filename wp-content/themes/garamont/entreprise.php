@@ -89,4 +89,6 @@ Template Name: Entreprise
                 </div>
             </div>
         </div>
-    </div><?php get_footer(); ?>
+    </div>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/jquery.sticky.js"></script>
+<?php get_footer(); ?>

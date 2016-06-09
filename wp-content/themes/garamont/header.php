@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/animate.css">
         <!--    FONT-AWESOME-CDN    -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/jquery-2.1.3.min.js"></script>
+
         <?php wp_head(); ?>
     </head>
 

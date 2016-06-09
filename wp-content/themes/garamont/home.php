@@ -260,64 +260,7 @@ Template Name: Accueil
                         </a>
                     </div>
                 <?php endwhile; ?>
-                    <!--<div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h2">ACTUALITE2</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE3</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
 
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE4</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE 5</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
-
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE6</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE7</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE8</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="lien" href="#">
-                            <img src="img/pics.png" class="item"/>
-                            <h6 class="h6">ACTUALITE9</h6>
-                            <p>Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit.</p>
-                        </a>
-                    </div>-->
                 </div>
             </div>
         </div>
@@ -475,5 +418,40 @@ Template Name: Accueil
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/js/owl.carousel.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                lazyLoad: true,
+                merge: true,
+                video: true,
+                nav: true,
+                autoHeight:false,
+                navText:[
+                    '<span class="arr-l"><img src="<?php bloginfo('template_directory'); ?>/img/prev3.png"></span>',
+                    '<span class="arr-r"><img src="<?php bloginfo('template_directory'); ?>/img/next.png" ></span>'
+                ],
+                responsive:{ // 삭제시 반응형 작동 안함.
+                    480:{
+                        items:1
+                    },
+
+                    600:{
+                        items:2
+                    },
+
+                    960:{
+                        items:3
+                    }
+                }
+            });
+            $(window).load(function(){
+                window.dispatchEvent(new Event('resize'));
+            })
+        });
+    </script>
 
 <?php get_footer(); ?>
