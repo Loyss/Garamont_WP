@@ -535,6 +535,16 @@
   text-decoration: none;
   color: #000000;
 }
+.actus .lien .img {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.actus .lien .img img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .actus .item {
   /* height: 300px;
      width: 395px;

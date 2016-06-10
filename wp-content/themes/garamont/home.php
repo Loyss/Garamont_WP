@@ -246,15 +246,17 @@ Template Name: Accueil
                 <?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
                     <div class="item">
                         <a class="lien" href="#">
-                            <?php
+                            <div class="img">
+                                <?php
 
-                            $image = get_field('image_actualite');
+                                $image = get_field('image_actualite');
 
-                            if( !empty($image) ): ?>
+                                if( !empty($image) ): ?>
 
-                                <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-                            <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
                             <div class="text-center">
                                 <h3><?php the_field('titre_actualite') ?></h3>
                             </div>
