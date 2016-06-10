@@ -117,6 +117,7 @@ add_action('admin_menu', 'my_remove_menus');
 function my_remove_menus() {
     remove_menu_page('edit.php');
     remove_menu_page('edit-comments.php');
+    remove_menu_page('themes.php');
 }
 
 
