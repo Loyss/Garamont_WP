@@ -57,6 +57,7 @@ define('AUTH_SALT',        'y9;Kgm`6f|wfA<}bBjIqDnx@ xmq3D/*7v+|hrm0[MlI6y6%$WX,
 define('SECURE_AUTH_SALT', 'vqLn-N^,(=:(1y$q8YO%$Z!J`MBk+=zeX=]M0)0O5pUP}M6%[,+2p1L]oH7}<X{u');
 define('LOGGED_IN_SALT',   'fBdiwzDhdxrujl~C?xD,O!Cp77$zrHj4PNP;%hX4{221erH^+,bTKkircI?:@D^L');
 define('NONCE_SALT',       'Q`zd32.mkEW/>+y8@K{d./5Z{ah5IFC])S$`5:Uirt?{z)sZtW|}lgE1&?W&= +z');
+define ('WPCF7_LOAD_JS', false );
 /**#@-*/
 
 /**
