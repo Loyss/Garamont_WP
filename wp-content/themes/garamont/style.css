@@ -1686,53 +1686,53 @@
 .contact :-ms-input-placeholder {
   color: #777;
 }
-.contact #contact input[type="text"],
-.contact #contact input[type="email"],
-.contact #contact textarea {
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
   display: block;
   padding: 10px;
-  margin: 10px auto;
+  margin: 0 auto;
   width: 100%;
   font-size: 18px;
   color: #777;
   border: 1px solid #ccc;
 }
-.contact #contact textarea {
+.contact textarea {
   font-size: 18px;
 }
-.contact #contact input:hover,
-.contact #contact textarea:hover {
+.contact input:hover,
+.contact textarea:hover {
   border: 1px solid #888;
 }
-.contact #contact input:focus,
-.contact #contact textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
   border: 1px solid #777;
 }
-.contact #contact textarea {
+.contact textarea {
   max-width: 100%;
   min-width: 100%;
   max-height: 200px;
   min-height: 200px;
   resize: none;
 }
-.contact #contact .send-button {
-  text-align: center;
-}
-.contact #contact .send-button button[type="submit"] {
-  cursor: pointer;
-  background: #85ffc7;
-  color: #fff;
+.contact input[type="submit"] {
   border: none;
-  width: 30%;
-  padding: 10px 0;
-  font-size: 20px;
+  border-radius: 0;
   text-transform: uppercase;
-  transition: .5s ease;
+  padding: 10px 40px 10px 40px;
+  background-color: #a5f9d3;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  font-size: 18px;
+  margin: 15px 35%;
 }
-.contact #contact .send-button button[type="submit"]:hover {
-  background: #6cd0a2;
+.contact input[type="submit"]:hover {
+  background-color: #00ff8b;
 }
-.contact #contact .send-button button[type="submit"]:focus {
+.contact input[type="submit"]:focus {
   position: relative;
   top: 2px;
 }

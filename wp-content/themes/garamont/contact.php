@@ -31,18 +31,7 @@ Template Name: Contact
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <form id="contact" action="#" method="post">
-                        <div class="left">
-                            <input type="text" placeholder="Subject" required="required"/>
-                            <textarea placeholder="Message" required="required"></textarea>
-                            <input type="email" placeholder="Email" required="required"/>
-                            <input type="text" placeholder="Prénom" required="required"/>
-                            <input type="text" placeholder="Nom" required="required"/>
-                            <div class="send-button cl">
-                                <button class="text-center" type="submit">Send</button>
-                            </div>
-                        </div>
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="178" title="Contact"]'); ?>
                 </div>
             </div>
         </div>
