@@ -57,6 +57,27 @@ function create_post_type()
             'supports' => array('title')
         )
     );
+
+    register_post_type('articles_lycee',
+        array(
+            'labels' => array(
+                'name' => 'Articles page lycée',
+                'singular_name' => 'Article page lycée'
+            ),
+            'public' => true,
+            'supports' => array('title')
+        )
+    );
+    register_post_type('articles_histoire',
+        array(
+            'labels' => array(
+                'name' => 'Articles page histoire',
+                'singular_name' => 'Article page histoire'
+            ),
+            'public' => true,
+            'supports' => array('title')
+        )
+    );
 }
 
 
