@@ -255,7 +255,9 @@ Template Name: Accueil
                                 <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                             <?php endif; ?>
-                            <h6 class="h6"><?php the_field('titre_actualite') ?></h6>
+                            <div class="text-center">
+                                <h3><?php the_field('titre_actualite') ?></h3>
+                            </div>
                             <?php the_field('contenu_de_lactualite') ?>
                         </a>
                     </div>
@@ -431,8 +433,8 @@ Template Name: Accueil
                 nav: true,
                 autoHeight:false,
                 navText:[
-                    '<span class="arr-l"><img src="<?php bloginfo('template_directory'); ?>/img/prev3.png"></span>',
-                    '<span class="arr-r"><img src="<?php bloginfo('template_directory'); ?>/img/next.png" ></span>'
+                    '<span class="arr-l"><img src="<?php bloginfo('template_directory'); ?>/img/FlecheGauche.png"></span>',
+                    '<span class="arr-r"><img src="<?php bloginfo('template_directory'); ?>/img/FlecheGauche.png" ></span>'
                 ],
                 responsive:{ // 삭제시 반응형 작동 안함.
                     480:{
