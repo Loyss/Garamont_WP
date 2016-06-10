@@ -102,6 +102,9 @@ function hide_editor() {
     if($template_file == 'projets.php'){ // Page Accueil
         remove_post_type_support('page', 'editor');
     }
+    if($template_file == 'actus.php'){ // Page Accueil
+        remove_post_type_support('page', 'editor');
+    }
 }
 // Hide editor for custom post type.
 /*add_action('init', 'my_rem_editor_from_post_type');

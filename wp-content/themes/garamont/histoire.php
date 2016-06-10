@@ -16,7 +16,7 @@ Template Name: Histoire
         <div class="container-fluid temoignage-section">
             <div class="row">
                 <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3 titre">
-                    <h2 class="garamond">temoignages :</h2>
+                    <h2 class="garamond">temoignage :</h2>
                 </div>
                 <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
                     <div class="row">
