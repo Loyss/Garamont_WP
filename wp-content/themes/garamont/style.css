@@ -2,6 +2,9 @@
 .garamond {
   font-family: Garamond;
 }
+.margin-top-20 {
+  margin-top: 20px;
+}
 .no-padding {
   padding-left: 0;
   padding-right: 0;
@@ -1613,6 +1616,13 @@
 .contact {
   overflow-x: hidden;
 }
+.contact .anciens {
+  margin-top: 40px;
+}
+.contact .anciens a {
+  color: #000000;
+  font-size: 1.2em;
+}
 .contact .visuel-contact {
   position: relative;
   overflow: hidden;
@@ -1688,6 +1698,7 @@
 }
 .contact input[type="text"],
 .contact input[type="email"],
+.contact input[type="tel"],
 .contact textarea {
   display: block;
   padding: 10px;
@@ -1727,7 +1738,13 @@
   -moz-transition: all .3s;
   transition: all .3s;
   font-size: 18px;
-  margin: 15px 35%;
+  margin-top: 15px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-left: 50%;
 }
 .contact input[type="submit"]:hover {
   background-color: #00ff8b;

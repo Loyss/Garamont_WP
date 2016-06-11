@@ -34,6 +34,18 @@ Template Name: Contact
                     <?php echo do_shortcode('[contact-form-7 id="178" title="Contact"]'); ?>
                 </div>
             </div>
+            <div class="row">
+                <div class="text-center anciens" id="accordion" role="tablist" aria-multiselectable="true">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        > Voulez vous devenir membre de l'association des anciens étudiants ?
+                    </a>
+                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="margin-top-20 col-md-6 col-md-offset-3">
+                            <?php echo do_shortcode('[contact-form-7 id="179" title="Association anciens élèves"]'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
