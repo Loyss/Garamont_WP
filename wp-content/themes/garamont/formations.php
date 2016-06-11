@@ -154,12 +154,13 @@ Template Name: Formations
                     </div>
                 </div>
             </div>
+            <a class="greta-xs col-xs-6 col-xs-offset-3" href="https://0922427n.index-education.net/pronote/" target="_blank">greta</a>
         </div>
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-top hidden-xs" role="tablist">
 
-            <li role="presentation" class="active col-md-2 col-md-offset-1 col-sm-12 col-xs-12 text-center">
+            <li role="presentation" class="active col-md-2 col-sm-12 col-xs-12 text-center">
                 <a href="#toutes" aria-controls="toutes" role="tab" data-toggle="tab" id="li-toutes">
                     <span class="toutes">Toutes les formations</span>
                 </a>
@@ -209,9 +210,10 @@ Template Name: Formations
                 </a>
             </li>
 
-            <a class="col-xs-offset-2 col-xs-10 visible-xs formation-xs" href="javascript:;" id="a-ind">
-                <i class="fa fa-caret-right" aria-hidden="true"></i> Communication et médias imprimés
-            </a>
+            <li class="greta col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-4 text-center">
+                <a href="https://0922427n.index-education.net/pronote/" target="_blank">greta</a>
+            </li>
+
         </ul>
 
         <!-- Tab panes -->

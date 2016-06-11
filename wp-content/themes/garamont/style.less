@@ -94,6 +94,7 @@
         a {
           padding: 5px;
           color: @vertMenu;
+          font-weight: bold;
         }
       }
       margin-right: 50px;
@@ -643,7 +644,7 @@
       img {
         width: 60px;
       }
-      left: -100px;
+      left: -60px;
       top: 45%;
     }
     .owl-next {
@@ -651,22 +652,29 @@
         width: 60px;
       }
       top: 45%;
-      right: -100px;
+      right: -60px;
     }
   }
 
-  /*@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .owl-prev {
-      left: -100px;
-      top: 45%;
+      left: -50px;
     }
     .owl-next {
-      top: 45%;
-      right: -100px;
+      right: -50px;
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 470px) {
+    .owl-prev {
+      left: -47px;
+    }
+    .owl-next {
+      right: -47px;
+    }
+  }
+
+  /*@media (max-width: 700px) {
     .owl-theme .owl-controls {
       margin-bottom: 90px;
     }
@@ -691,111 +699,6 @@
     margin-top: 10px;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
-  }
-
-  .owl-theme .owl-controls .owl-nav [class*=owl-] {
-    color: #fff;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-
-    display: inline-block;
-    cursor: pointer;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px
-  }
-
-  @media (max-width: 768px) {
-    .owl-theme .owl-controls .owl-nav [class*=owl-] {
-      color: #fff;
-      font-size: 14px;
-      margin: 18px;
-      padding: 4px 7px;
-
-      display: inline-block;
-      cursor: pointer;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px
-    }
-  }
-
-
-  @media (max-width: 678px) {
-    .owl-theme .owl-controls .owl-nav [class*=owl-] {
-      color: #fff;
-      font-size: 14px;
-      margin: -58px;
-      padding: 4px 7px;
-      display: inline-block;
-      cursor: pointer;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-    }
-  }
-
-  @media (max-width: 599px) {
-    .owl-theme .owl-controls .owl-nav [class*=owl-] {
-      color: #fff;
-      font-size: 14px;
-      margin-left: -1%;
-      margin-top: -51px;
-      margin-right: 0%;
-      /* margin: -56px; */
-      padding: 13px 6px;
-      display: inline-block;
-      cursor: pointer;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-    }
-  }
-
-  @media (max-width: 425px) {
-    .owl-theme .owl-controls .owl-nav [class*=owl-] {
-      color: #fff;
-      font-size: 14px;
-      margin: -37px;
-      padding: 4px 7px;
-
-      display: inline-block;
-      cursor: pointer;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px
-    }
-  }
-
-  @media (max-width: 375px) {
-    .owl-theme .owl-controls .owl-nav [class*=owl-] {
-      color: #fff;
-      font-size: 14px;
-      margin: -29px;
-      padding: 4px 7px;
-
-      display: inline-block;
-      cursor: pointer;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px
-    }
-  }
-
-  @media (max-width: 320px) {
-    .owl-theme .owl-controls .owl-nav [class*=owl-] {
-      color: #fff;
-      font-size: 14px;
-      margin: -27px;
-      padding: 4px 7px;
-
-      display: inline-block;
-      cursor: pointer;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px
-    }
   }
 }
 
@@ -1550,9 +1453,29 @@
     }
   }
   .formations-xs {
+    .greta-xs {
+      text-align: center;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 5px;
+      color: #1fa17e;
+      font-weight: bold;
+      border-radius: 2px;
+      border: 1px solid #1fa17e;
+      &:hover {
+        background-color: #1fa17e;
+        color: #ffffff;
+      }
+    }
     padding-bottom: 10px;
     padding-top: 10px;
     a {
+      text-transform: uppercase;
       text-decoration: none;
       color: #000000;
     }
@@ -1594,6 +1517,26 @@
     box-shadow: 0 0 5px 0 #656565;
     padding-top: 10px;
     padding-bottom: 10px;
+    .greta {
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      a {
+        margin-top: 15px;
+        width: auto;
+        padding: 5px;
+        color: #1fa17e;
+        font-weight: bold;
+        border-radius: 2px;
+        border: 1px solid #1fa17e;
+        &:hover {
+          background-color: #1fa17e;
+          color: #ffffff;
+        }
+      }
+    }
     li {
       .toutes {
         font-size: 1.3em;
