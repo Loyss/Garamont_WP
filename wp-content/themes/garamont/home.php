@@ -91,7 +91,7 @@ Template Name: Accueil
                                 <div class="item <?php echo $class ?>">
                                     <div class="team-item col-xs-12">
                                         <div class="tream-entry">
-                                            <a href="formations.php" class="team-img">
+                                            <div class="team-img">
                                                 <?php
 
                                                 $image = get_field('img_formation');
@@ -101,8 +101,8 @@ Template Name: Accueil
                                                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                                                 <?php endif; ?>
-                                            </a>
-                                            <div class="team-hover table-view">
+                                            </div>
+                                            <a href="<?php bloginfo('url') ?>/formations"  class="team-hover table-view">
                                                 <div class="cell-view">
                                                     <div class="team-name">
                                                         <div class="h5">
@@ -114,7 +114,7 @@ Template Name: Accueil
                                                         <?php the_title() ?>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@ Template Name: Accueil
                             ?>
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
+                                        <div class="team-img">
                                             <?php
 
                                             $image = get_field('img_formation');
@@ -162,8 +162,8 @@ Template Name: Accueil
                                                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                                             <?php endif; ?>
-                                        </a>
-                                        <div class="team-hover table-view">
+                                        </div>
+                                        <a href="<?php bloginfo('url') ?>/formations"  class="team-hover table-view">
                                             <div class="cell-view">
                                                 <div class="team-name">
                                                     <div class="h5">
@@ -175,7 +175,7 @@ Template Name: Accueil
                                                     <?php the_title() ?>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
@@ -198,7 +198,7 @@ Template Name: Accueil
                                 ?>
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
+                                        <div class="team-img">
                                             <?php
 
                                             $image = get_field('img_formation');
@@ -208,8 +208,8 @@ Template Name: Accueil
                                                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                                             <?php endif; ?>
-                                        </a>
-                                        <div class="team-hover table-view">
+                                        </div>
+                                        <a href="<?php bloginfo('url') ?>/formations"  class="team-hover table-view">
                                             <div class="cell-view">
                                                 <div class="team-name">
                                                     <div class="h5">
@@ -221,7 +221,7 @@ Template Name: Accueil
                                                     <?php the_title() ?>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
@@ -245,7 +245,7 @@ Template Name: Accueil
                 <?php $myquery = new WP_Query(array('post_type' => 'actualites')); ?>
                 <?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
                     <div class="item">
-                        <a class="lien" href="#">
+                        <a class="lien" href="<?php bloginfo('url') ?>/actualites">
                             <div class="img">
                                 <?php
 
@@ -293,17 +293,16 @@ Template Name: Accueil
                                 <div class="item <?php echo $class ?>">
                                     <div class="team-item col-xs-12">
                                         <div class="tream-entry">
-                                            <a href="formations.php" class="team-img">
+                                            <div class="team-img">
                                                 <?php the_post_thumbnail('full'); ?>
-
-                                            </a>
-                                            <div class="team-hover table-view">
+                                            </div>
+                                            <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                                 <div class="cell-view">
                                                     <div class="team-name">
-                                                        <?php the_title() ?>
+                                                        <div class="team-name"><?php the_title() ?></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -340,16 +339,16 @@ Template Name: Accueil
                                 ?>
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
+                                        <div class="team-img">
                                             <?php the_post_thumbnail('full'); ?>
-                                        </a>
-                                        <div class="team-hover table-view">
+                                        </div>
+                                        <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                             <div class="cell-view">
                                                 <div class="team-name">
                                                     <div class="team-name"><?php the_title() ?></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
@@ -372,16 +371,16 @@ Template Name: Accueil
                                 ?>
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
+                                        <div class="team-img">
                                             <?php the_post_thumbnail('full'); ?>
-                                        </a>
-                                        <div class="team-hover table-view">
+                                        </div>
+                                        <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                             <div class="cell-view">
                                                 <div class="team-name">
                                                     <div class="team-name"><?php the_title() ?></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
@@ -403,16 +402,16 @@ Template Name: Accueil
                                 ?>
                                 <div class="team-item col-xs-12 col-sm-2 <?php echo $class ?>">
                                     <div class="tream-entry">
-                                        <a href="formations.php" class="team-img">
+                                        <div class="team-img">
                                             <?php the_post_thumbnail('full'); ?>
-                                        </a>
-                                        <div class="team-hover table-view">
+                                        </div>
+                                        <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                             <div class="cell-view">
                                                 <div class="team-name">
-                                                    <?php the_title() ?>
+                                                    <div class="team-name"><?php the_title() ?></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
