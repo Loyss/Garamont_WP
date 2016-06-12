@@ -106,12 +106,12 @@ Template Name: Accueil
                                                 <div class="cell-view">
                                                     <div class="team-name">
                                                         <div class="h5">
-                                                            <?php the_field('diplome'); ?>
+                                                            <?php the_title() ?>
                                                         </div>
                                                     </div>
                                                     <hr>
                                                     <div class="team-social">
-                                                        <?php the_title() ?>
+                                                        <?php the_field('diplome'); ?>
                                                     </div>
                                                 </div>
                                             </a>
@@ -167,12 +167,12 @@ Template Name: Accueil
                                             <div class="cell-view">
                                                 <div class="team-name">
                                                     <div class="h5">
-                                                        <?php the_field('diplome'); ?>
+                                                        <?php the_title() ?>
                                                     </div>
                                                 </div>
                                                 <hr>
                                                 <div class="team-social">
-                                                    <?php the_title() ?>
+                                                    <?php the_field('diplome'); ?>
                                                 </div>
                                             </div>
                                         </a>
@@ -213,12 +213,12 @@ Template Name: Accueil
                                             <div class="cell-view">
                                                 <div class="team-name">
                                                     <div class="h5">
-                                                        <?php the_field('diplome'); ?>
+                                                        <?php the_title() ?>
                                                     </div>
                                                 </div>
                                                 <hr>
                                                 <div class="team-social">
-                                                    <?php the_title() ?>
+                                                    <?php the_field('diplome'); ?>
                                                 </div>
                                             </div>
                                         </a>
@@ -298,9 +298,11 @@ Template Name: Accueil
                                             </div>
                                             <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                                 <div class="cell-view">
+                                                    <hr>
                                                     <div class="team-name">
                                                         <div class="team-name"><?php the_title() ?></div>
                                                     </div>
+                                                    <hr>
                                                 </div>
                                             </a>
                                         </div>
@@ -345,7 +347,9 @@ Template Name: Accueil
                                         <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                             <div class="cell-view">
                                                 <div class="team-name">
+                                                    <hr>
                                                     <div class="team-name"><?php the_title() ?></div>
+                                                    <hr>
                                                 </div>
                                             </div>
                                         </a>
@@ -376,9 +380,11 @@ Template Name: Accueil
                                         </div>
                                         <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                             <div class="cell-view">
+                                                <hr>
                                                 <div class="team-name">
                                                     <div class="team-name"><?php the_title() ?></div>
                                                 </div>
+                                                <hr>
                                             </div>
                                         </a>
                                     </div>
@@ -407,9 +413,11 @@ Template Name: Accueil
                                         </div>
                                         <a href="<?php bloginfo('url') ?>/projets" class="team-hover table-view">
                                             <div class="cell-view">
+                                                <hr>
                                                 <div class="team-name">
                                                     <div class="team-name"><?php the_title() ?></div>
                                                 </div>
+                                                <hr>
                                             </div>
                                         </a>
                                     </div>
