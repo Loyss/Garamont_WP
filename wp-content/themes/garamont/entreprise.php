@@ -28,12 +28,12 @@ Template Name: Entreprise
                                 </p>
                                 <p>
                                     <i class="fa fa-info-circle" aria-hidden="true"></i><strong> Information : </strong><?php the_field('information-1') ?> ou
-                                    <a href="www.dfc.ccip.fr">www.dfc.ccip.fr</a>
+                                    <a href="www.dfc.ccip.fr" target="_blank">www.dfc.ccip.fr</a>
                                 </p>
                             </div>
                             <div class="renseigner-choisir">
                                 <i class="fa fa-caret-right" aria-hidden="true"></i>
-                                <a href="<?php the_field('se_renseigner') ?>">Se renseigner</a> et <a href="<?php the_field('choisir') ?>">choisir</a>
+                                <a href="<?php the_field('se_renseigner') ?>" target="_blank">Se renseigner</a> et <a href="<?php the_field('choisir') ?>" target="_blank">choisir</a>
                             </div>
                         </div>
                         <div class="bourses">
@@ -49,11 +49,11 @@ Template Name: Entreprise
                                 </p>
                                 <p>
                                     <i class="fa fa-info-circle" aria-hidden="true"></i><strong> Information : </strong><?php the_field('information-2') ?> ou
-                                    <a href="#">www.dfc.ccip.fr</a>
+                                    <a href="www.dfc.ccip.fr" target="_blank">www.dfc.ccip.fr</a>
                                 </p>
                             </div>
                             <div class="button-bourses text-right">
-                                <a href="<?php the_field('en_savoir_+'); ?>" class="boutton-savoir">En savoir +</a>
+                                <a href="<?php the_field('en_savoir_+'); ?>" class="boutton-savoir" target="_blank">En savoir +</a>
                             </div>
                         </div>
                         <div class="marches">
@@ -61,7 +61,7 @@ Template Name: Entreprise
                             <h3><?php the_field('sous-titre-3') ?></h3>
                             <?php the_field('contenu-3') ?>
                             <div class="button-bourses text-right">
-                                <a href="" class="boutton-savoir">En savoir +</a>
+                                <a href="#" class="boutton-savoir" target="_blank">En savoir +</a>
                             </div>
                         </div>
                     </div>
@@ -71,17 +71,17 @@ Template Name: Entreprise
                             <div class="offres-arts-graphiques">
                                 <h4>Dans les arts graphiques</h4>
                                 <div class="list-group text-center contenu-offres-arts">
-                                    <a href="<?php the_field('offres_demploi_et_de_stage'); ?>" class="list-group-item">Offres d'emploi et de stage</a>
-                                    <a href="<?php the_field('offres_demploi_graphistes_et_infographistes'); ?>" class="list-group-item">Offres d'emploi graphistes et infographistes</a>
-                                    <a href="<?php the_field('studio_crea_web_design_illustration_graphisme'); ?>" class="list-group-item">Studio créa, web design, illustration, graphisme...</a>
-                                    <a href="<?php the_field('site_emploi_des_arts_graphiques'); ?>" class="list-group-item">Site emploi des arts graphiques</a>
+                                    <a href="<?php the_field('offres_demploi_et_de_stage'); ?>" class="list-group-item" target="_blank">Offres d'emploi et de stage</a>
+                                    <a href="<?php the_field('offres_demploi_graphistes_et_infographistes'); ?>" class="list-group-item" target="_blank">Offres d'emploi graphistes et infographistes</a>
+                                    <a href="<?php the_field('studio_crea_web_design_illustration_graphisme'); ?>" class="list-group-item" target="_blank">Studio créa, web design, illustration, graphisme...</a>
+                                    <a href="<?php the_field('site_emploi_des_arts_graphiques'); ?>" class="list-group-item" target="_blank">Site emploi des arts graphiques</a>
                                 </div>
                             </div>
                             <div class="offres-pif">
                                 <h4>En prépresse - Impression - Finition</h4>
                                 <div class="text-center contenu-pif">
-                                    <a href="<?php the_field('offres_impression'); ?>" class="list-group-item">Offres impression</a>
-                                    <a href="<?php the_field('offres_finition'); ?>" class="list-group-item">Offres finition</a>
+                                    <a href="<?php the_field('offres_impression'); ?>" class="list-group-item" target="_blank">Offres impression</a>
+                                    <a href="<?php the_field('offres_finition'); ?>" class="list-group-item" target="_blank">Offres finition</a>
                                 </div>
                             </div>
                         </div>
