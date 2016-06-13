@@ -2,9 +2,9 @@
 
     <div class="footer-right">
 
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
 
     </div>
 
@@ -44,6 +44,6 @@
         new WOW().init();
     </script>
 
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </html>
